@@ -1,0 +1,33 @@
+p {
+	hyphens: none;
+}
+
+.wrapper.footer {
+	background: #f4f6f8;
+
+	p {
+		font-size: 11px;
+	}
+}
+
+.no-margin-bottom {
+	margin-bottom: 0;
+}
+
+.no-padding-bottom {
+	padding-bottom: 0 !important;
+}
+
+.callout {
+	p {
+		margin-bottom: 10px;
+	}
+}
+
+span.dynamic {
+	border-left: 2px solid orange;
+	border-right: 2px solid orange;
+	border-radius: 2rem;
+	padding: 0 4px;
+	color: orange;
+}
