@@ -1,3 +1,10 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
 p {
 	hyphens: none;
 }
@@ -10,14 +17,6 @@ p {
 	}
 }
 
-.no-margin-bottom {
-	margin-bottom: 0;
-}
-
-.no-padding-bottom {
-	padding-bottom: 0 !important;
-}
-
 .callout {
 	p {
 		margin-bottom: 10px;
@@ -25,11 +24,10 @@ p {
 }
 
 span.dynamic {
-	border-left: 2px solid orange;
-	border-right: 2px solid orange;
-	border-radius: 2rem;
+	border: 1px dotted orange;
 	padding: 0 4px;
 	color: orange;
+	display: block;
 }
 
 label {
@@ -38,9 +36,34 @@ label {
 
 .form {
 	margin-bottom: 16px;
+	table-layout: fixed;
 
 	td {
 		border: 1px solid black;
-		padding: 2px 5px 26px;
+		padding: 2px 5px;
+		position: relative;
+		color: #ccc;
+
+		span.units {
+			float: right;
+			position: absolute;
+			right: 5px;
+			bottom: 2px;
+		}
 	}
+
+	.spacer-cell {
+		border: 0;
+	}
+}
+
+ol,
+ul {
+	-webkit-padding-start: 0 !important;
+	margin-left: 1rem;
+}
+
+hr {
+	border-style: none;
+	border-top: 1px solid #ccc;
 }
