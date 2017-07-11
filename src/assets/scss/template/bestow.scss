@@ -43,10 +43,15 @@ p {
 }
 
 span.dynamic {
+<<<<<<< HEAD
 	display: block;
+=======
+	border: 1px dotted orange;
+>>>>>>> 07dd599359f9685843cb64024aa1df4a48630bc5
 	padding: 0 4px;
 	border: 1px dotted orange;
 	color: orange;
+	display: block;
 }
 
 label {
@@ -61,6 +66,7 @@ label {
 		position: relative;
 		padding: 2px 5px;
 		border: 1px solid black;
+<<<<<<< HEAD
 		color: #ccc;
 
 		span.units {
@@ -68,6 +74,17 @@ label {
 			right: 5px;
 			bottom: 2px;
 			float: right;
+=======
+		padding: 2px 5px;
+		position: relative;
+		color: #ccc;
+
+		span.units {
+			float: right;
+			position: absolute;
+			right: 5px;
+			bottom: 2px;
+>>>>>>> 07dd599359f9685843cb64024aa1df4a48630bc5
 		}
 	}
 
@@ -78,9 +95,14 @@ label {
 
 ol,
 ul {
+<<<<<<< HEAD
 	margin-left: 1rem;
 
 	-webkit-padding-start: 0 !important;
+=======
+	-webkit-padding-start: 0 !important;
+	margin-left: 1rem;
+>>>>>>> 07dd599359f9685843cb64024aa1df4a48630bc5
 }
 
 hr {
