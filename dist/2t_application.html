@@ -53,7 +53,7 @@
                 </td>
               </tr>
               <tr>
-                <td colspan="2">3a. Height <span class="dynamic" reference="heightFeet" value="">6</span><span class="dynamic" reference="heightInches"><span class="units">Feet, Inches</span></span></td>
+                <td colspan="2">3a. Height <span class="height"><span class="dynamic" reference="heightFeet" value="">6</span><span class="dynamic" reference="heightInches">1</span></span><span class="units">Feet, Inches</span></td>
                 <td>3b. Weight <span class="dynamic" reference="weight" value="">190</span><span class="units">Pounds</span></td>
               </tr>
               <tr>
@@ -137,10 +137,10 @@
               <input reference="tobacco" name="tobacco" value="no" type="radio"><label>No</label>
             </p>
             <p>13. Are you: <small>(Select only one)</small><br>
-              <input reference="occupation" value="student" type="checkbox"><label>A full time student</label>
-              <input reference="occupation" value="homemaker" type="checkbox"><label>A homemaker</label>
-              <input reference="occupation" value="employed" type="checkbox"><label>Working more than 30 hours per week</label>
-              <input reference="occupation" value="unemployed" type="checkbox"><label>Working less than 30 hours per week</label>
+              <input reference="occupation" name="occupation" value="student" type="radio"><label>A full time student</label>
+              <input reference="occupation" name="occupation" value="homemaker" type="radio"><label>A homemaker</label>
+              <input reference="occupation" name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
+              <input reference="occupation" name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week</label>
             </p>
           
             <p>14. My annual income is $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;.
@@ -203,62 +203,62 @@
             <h2>Primary Beneficiaries</h2>
             <p>17. My beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
               <table class="form">
-                <tr>
-                  <td colspan="2">Name &ast; <span class="dynamic" reference="//" value="">Sue Stipple</span></td>
-                  <td>Relationship &ast; <span class="dynamic" reference="//" value="">Spouse</span></td>
-                  <td>Date of Birth <span class="dynamic" reference="//" value="">9/1/1989</span></td>
-                  <td rowspan="3">Share % &ast; <span class="dynamic" reference="//" value="">60</span></td>
+                <tr reference="beneficiary" index="1" class="show">
+                  <td colspan="2">Name &ast; <span class="dynamic" reference="beneficiary.person.first_name" value="">Sue Stipple</span></td>
+                  <td>Relationship &ast; <span class="dynamic" reference="beneficiary.person.relationship" value="">Spouse</span></td>
+                  <td>Date of Birth <span class="dynamic" reference="beneficiary.person.dob" value="">9/1/1989</span></td>
+                  <td rowspan="3">Share % &ast; <span class="dynamic" reference="beneficiary.person.allocation" value="">60</span></td>
                 </tr>
-                <tr>
-                  <td colspan="2">Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
-                  <td>Apt/Suite # <span class="dynamic" reference="//" value="">#102</span></td>
-                  <td>City <span class="dynamic" reference="//" value="">Tulsa</span></td>
+                <tr reference="beneficiary" index="1" class="show">
+                  <td colspan="2">Address <span class="dynamic" reference="beneficiary.person.address" parse="street" value="">123 Main St.</span></td>
+                  <td>Apt/Suite # <span class="dynamic" reference="beneficiary.person.address" parse="suite-apt-num" value="">#102</span></td>
+                  <td>City <span class="dynamic" reference="beneficiary.person.address" parse="city" value="">Tulsa</span></td>
                 </tr>
-                <tr>
-                  <td>State <span class="dynamic" reference="//" value="">OK</span></td>
-                  <td>Zip Code <span class="dynamic" reference="//" value="">70371</span></td>
-                  <td>Phone Number <span class="dynamic" reference="//" value="">(123) 123-1234</span></td>
-                  <td>SSN <span class="dynamic" reference="//" value="">321-32-3214</span></td>
-                </tr>
-          
-                <tr>
-                  <td colspan="2">Name &ast; <span class="dynamic" reference="//" value="">Sarah Stipple</span></td>
-                  <td>Relationship &ast; <span class="dynamic" reference="//" value="">Child</span></td>
-                  <td>Date of Birth <span class="dynamic" reference="//" value="">1/1/2010</span></td>
-                  <td rowspan="3">Share % &ast; <span class="dynamic" reference="//" value="">20</span></td>
-                </tr>
-                <tr>
-                  <td colspan="2">Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
-                  <td>Apt/Suite # <span class="dynamic" reference="//" value="">#101</span></td>
-                  <td>City <span class="dynamic" reference="//" value="">Tulsa</span></td>
-                </tr>
-                <tr>
-                  <td>State <span class="dynamic" reference="//" value="">OK</span></td>
-                  <td>Zip Code <span class="dynamic" reference="//" value="">70371</span></td>
-                  <td>Phone Number <span class="dynamic" reference="//" value="">(321) 321-4132</span></td>
-                  <td>SSN <span class="dynamic" reference="//" value="">432-32-3214</span></td>
+                <tr reference="beneficiary" index="1" class="show">
+                  <td>State <span class="dynamic" reference="beneficiary.person.address" parse="state" value="">OK</span></td>
+                  <td>Zip Code <span class="dynamic" reference="beneficiary.person.zipcode" value="">70371</span></td>
+                  <td>Phone Number <span class="dynamic" reference="beneficiary.person.phone" value="">(123) 123-1234</span></td>
+                  <td>SSN <span class="dynamic" reference="beneficiary.person.ssNum" value="">321-32-3214</span></td>
                 </tr>
           
-                <tr>
-                  <td colspan="2">Name &ast; <span class="dynamic" reference="//" value="">Caleb</span></td>
-                  <td>Relationship &ast; <span class="dynamic" reference="//" value="">Stipple</span></td>
-                  <td>Date of Birth <span class="dynamic" reference="//" value="">2/14/2013</span></td>
-                  <td rowspan="3">Share % &ast; <span class="dynamic" reference="//" value="">20</span></td>
+                <tr reference="beneficiary" index="2" class="show">
+                  <td colspan="2">Name &ast; <span class="dynamic" reference="beneficiary.person.first_name" value="">Sarah Stipple</span></td>
+                  <td>Relationship &ast; <span class="dynamic" reference="beneficiary.person.relationship" value="">Child</span></td>
+                  <td>Date of Birth <span class="dynamic" reference="beneficiary.person.dob" value="">1/1/2010</span></td>
+                  <td rowspan="3">Share % &ast; <span class="dynamic" reference="beneficiary.person.allocation" value="">20</span></td>
                 </tr>
-                <tr>
-                  <td colspan="2">Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
-                  <td>Apt/Suite # <span class="dynamic" reference="//" value="">#101</span></td>
-                  <td>City <span class="dynamic" reference="//" value="">Tulsa</span></td>
+                <tr reference="beneficiary" index="2" class="show">
+                  <td colspan="2">Address <span class="dynamic" reference="beneficiary.person.address" parse="street" value="">123 Main St.</span></td>
+                  <td>Apt/Suite # <span class="dynamic" reference="beneficiary.person.address" parse="suite-apt-num" value="">#101</span></td>
+                  <td>City <span class="dynamic" reference="beneficiary.person.address" parse="city" value="">Tulsa</span></td>
                 </tr>
-                <tr>
-                  <td>State <span class="dynamic" reference="//" value="">OK</span></td>
-                  <td>Zip Code <span class="dynamic" reference="//" value="">70312</span></td>
-                  <td>Phone Number <span class="dynamic" reference="//" value="">(123) 321-1234</span></td>
-                  <td>SSN <span class="dynamic" reference="//" value="">123-12-1234</span></td>
+                <tr reference="beneficiary" index="2" class="show">
+                  <td>State <span class="dynamic" reference="beneficiary.person.address" parse="state" value="">OK</span></td>
+                  <td>Zip Code <span class="dynamic" reference="beneficiary.person.zipcode" value="">70371</span></td>
+                  <td>Phone Number <span class="dynamic" reference="beneficiary.person.phone" value="">(321) 321-4132</span></td>
+                  <td>SSN <span class="dynamic" reference="beneficiary.person.ssNum" value="">432-32-3214</span></td>
+                </tr>
+          
+                <tr reference="beneficiary" index="3" class="show">
+                  <td colspan="2">Name &ast; <span class="dynamic" reference="beneficiary.person.first_name" value="">Caleb Stipple</span></td>
+                  <td>Relationship &ast; <span class="dynamic" reference="beneficiary.person.relationship" value="">Stipple</span></td>
+                  <td>Date of Birth <span class="dynamic" reference="beneficiary.person.dob" value="">2/14/2013</span></td>
+                  <td rowspan="3">Share % &ast; <span class="dynamic" reference="beneficiary.person.allocation" value="">20</span></td>
+                </tr>
+                <tr reference="beneficiary" index="3" class="show">
+                  <td colspan="2">Address <span class="dynamic" reference="beneficiary.person.address" parse="street" value="">123 Main St.</span></td>
+                  <td>Apt/Suite # <span class="dynamic" reference="beneficiary.person.address" parse="suite-apt-num" value="">#101</span></td>
+                  <td>City <span class="dynamic" reference="beneficiary.person.address" parse="city" value="">Tulsa</span></td>
+                </tr>
+                <tr reference="beneficiary" index="3" class="show">
+                  <td>State <span class="dynamic" reference="beneficiary.person.address" parse="state" value="">OK</span></td>
+                  <td>Zip Code <span class="dynamic" reference="beneficiary.person.zipcode" value="">70312</span></td>
+                  <td>Phone Number <span class="dynamic" reference="beneficiary.person.phone" value="">(123) 321-1234</span></td>
+                  <td>SSN <span class="dynamic" reference="beneficiary.person.ssNum" value="">123-12-1234</span></td>
                 </tr>
                 <tr>
                   <td class="spacer-cell" colspan="4"></td>
-                  <td>Total % <span class="dynamic" reference="//" value="">100</span></td>
+                  <td>Total % <span class="dynamic" reference="allocationTotal" value="">100</span></td>
                 </tr>
               </table>
             </p>
@@ -269,45 +269,45 @@
           
             <p>18. <small>(Optional)</small> My contingent beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
               <table class="form">
-                <tr>
-                  <td colspan="2">Name &ast; <span class="dynamic" reference="//" value="">Distant Relative</span></td>
-                  <td>Relationship &ast; <span class="dynamic" reference="//" value="">Trust</span></td>
-                  <td>Date of Birth <span class="dynamic" reference="//" value="">9/1/1989</span></td>
-                  <td rowspan="3">Share % &ast; <span class="dynamic" reference="//" value="">60</span></td>
+                <tr reference="contingent" index="1" class="show">
+                  <td colspan="2">Name &ast; <span class="dynamic" reference="contingent.person.first_name" value="">Distant Relative</span></td>
+                  <td>Relationship &ast; <span class="dynamic" reference="contingent.person.relationship" value="">Trust</span></td>
+                  <td>Date of Birth <span class="dynamic" reference="contingent.person.dob" value="">9/1/1989</span></td>
+                  <td rowspan="3">Share % &ast; <span class="dynamic" reference="contingent.person.allocation" value="">60</span></td>
                 </tr>
-                <tr>
-                  <td colspan="2">Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
-                  <td>Apt/Suite # <span class="dynamic" reference="//" value="">#102</span></td>
-                  <td>City <span class="dynamic" reference="//" value="">Tulsa</span></td>
+                <tr reference="contingent" index="1" class="show">
+                  <td colspan="2">Address <span class="dynamic" reference="contingent.person.address" parse="street" value="">123 Main St.</span></td>
+                  <td>Apt/Suite # <span class="dynamic" reference="contingent.person.address" parse="suite-apt-num" value="">#102</span></td>
+                  <td>City <span class="dynamic" reference="contingent.person.address" parse="city" value="">Tulsa</span></td>
                 </tr>
-                <tr>
-                  <td>State <span class="dynamic" reference="//" value="">OK</span></td>
-                  <td>Zip Code <span class="dynamic" reference="//" value="">70371</span></td>
-                  <td>Phone Number <span class="dynamic" reference="//" value="">(123) 123-1234</span></td>
-                  <td>SSN <span class="dynamic" reference="//" value="">321-32-3214</span></td>
+                <tr reference="contingent" index="1" class="show">
+                  <td>State <span class="dynamic" reference="contingent.person.address" parse="state" value="">OK</span></td>
+                  <td>Zip Code <span class="dynamic" reference="contingent.person.zipcode" value="">70371</span></td>
+                  <td>Phone Number <span class="dynamic" reference="contingent.person.phone" value="">(123) 123-1234</span></td>
+                  <td>SSN <span class="dynamic" reference="contingent.person.ssNum" value="">321-32-3214</span></td>
                 </tr>
           
-                <tr>
-                  <td colspan="2">Name &ast; <span class="dynamic" reference="//" value="">Ex Spouse</span></td>
-                  <td>Relationship &ast; <span class="dynamic" reference="//" value="">Trust</span></td>
-                  <td>Date of Birth <span class="dynamic" reference="//" value="">1/1/2010</span></td>
-                  <td rowspan="3">Share % &ast; <span class="dynamic" reference="//" value="">20</span></td>
+                <tr reference="contingent" index="2" class="show">
+                  <td colspan="2">Name &ast; <span class="dynamic" reference="contingent.person.first_name" value="">Ex Spouse</span></td>
+                  <td>Relationship &ast; <span class="dynamic" reference="contingent.person.relationship" value="">Trust</span></td>
+                  <td>Date of Birth <span class="dynamic" reference="contingent.person.dob" value="">1/1/2010</span></td>
+                  <td rowspan="3">Share % &ast; <span class="dynamic" reference="contingent.person.allocation" value="">20</span></td>
                 </tr>
-                <tr>
-                  <td colspan="2">Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
-                  <td>Apt/Suite # <span class="dynamic" reference="//" value="">#101</span></td>
-                  <td>City <span class="dynamic" reference="//" value="">Tulsa</span></td>
+                <tr reference="contingent" index="2" class="show">
+                  <td colspan="2">Address <span class="dynamic" reference="contingent.person.address" parse="street" value="">123 Main St.</span></td>
+                  <td>Apt/Suite # <span class="dynamic" reference="contingent.person.address" parse="suite-apt-num" value="">#101</span></td>
+                  <td>City <span class="dynamic" reference="contingent.person.address" parse="city" value="">Tulsa</span></td>
                 </tr>
-                <tr>
-                  <td>State <span class="dynamic" reference="//" value="">OK</span></td>
-                  <td>Zip Code <span class="dynamic" reference="//" value="">70371</span></td>
-                  <td>Phone Number <span class="dynamic" reference="//" value="">(321) 321-4132</span></td>
-                  <td>SSN <span class="dynamic" reference="//" value="">432-32-3214</span></td>
+                <tr reference="contingent" index="2" class="show">
+                  <td>State <span class="dynamic" reference="contingent.person.address" parse="state" value="">OK</span></td>
+                  <td>Zip Code <span class="dynamic" reference="contingent.person.zipcode" value="">70371</span></td>
+                  <td>Phone Number <span class="dynamic" reference="contingent.person.phone" value="">(321) 321-4132</span></td>
+                  <td>SSN <span class="dynamic" reference="contingent.person.ssNum" value="">432-32-3214</span></td>
                 </tr>
           
                 <tr>
                   <td class="spacer-cell" colspan="4"></td>
-                  <td>Total % <span class="dynamic" reference="//" value="">100</span></td>
+                  <td>Total % <span class="dynamic" reference="contingentAlloctionTotal" value="">100</span></td>
                 </tr>
               </table>
             </p>
@@ -361,24 +361,26 @@
           <p>  <hr>
             </p><h2>Payment Method</h2><p></p>
             <p>Modal Premium Frequency:<br>
-              <input reference="//" value="//" type="checkbox"><label>Annual</label> <input reference="//" value="//" type="checkbox"><label>Monthly</label>
+              <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
+              <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
             </p>
           
             <p>Payment Type:<br>
-              <input reference="//" value="//" type="checkbox"><label>EFT/ACH </label> <input reference="//" value="//" type="checkbox"><label>Credit Card</label>
+              <input reference="paymentType" name="paymentType" value="eft-Ach" type="radio"><label>EFT/ACH </label>
+              <input reference="paymentType" name="paymentType" value="creditCard" type="radio"><label>Credit Card</label>
             </p>
           
             <p>Billing Address:<br>
-              <input reference="//" value="//" type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. <small>(If P.O. Box, also include Street Address below)</small></label><br>
+              <input reference="billingAddressExists" value="yes" type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. <small>(If P.O. Box, also include Street Address below)</small></label><br>
               <table class="form">
                 <tr>
-                  <td colspan="2">Street Address <span class="dynamic" reference="//" value="">123 Smith St.</span></td>
-                  <td>Suite/Apt # <span class="dynamic" reference="//" value="">#101</span></td>
+                  <td colspan="2">Street Address <span class="dynamic" reference="billingAddressStreet" value="">123 Smith St.</span></td>
+                  <td>Suite/Apt # <span class="dynamic" reference="billingAddressSuite-AptNum" value="">#101</span></td>
                 </tr>
                 <tr>
-                  <td>City <span class="dynamic" reference="//" value="">Richardson</span></td>
-                  <td>State <span class="dynamic" reference="//" value="">TX</span></td>
-                  <td>ZIP <span class="dynamic" reference="//" value="">75082</span></td>
+                  <td>City <span class="dynamic" reference="billingCity" value="">Richardson</span></td>
+                  <td>State <span class="dynamic" reference="billingState" value="">TX</span></td>
+                  <td>ZIP <span class="dynamic" reference="billingZipcode" value="">75082</span></td>
                 </tr>
               </table>
             </p>
@@ -386,28 +388,28 @@
           <p></p><h2>Third Party Billing Notification</h2>
             <p>Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
               <table class="form">
-                <tr>
-                  <td colspan="3">Name <span class="dynamic" reference="//" value="">Jack Dorsey</span></td>
-                  <td colspan="2">Phone <span class="dynamic" reference="//" value="">(214) 432-1234</span></td>
+                <tr>/
+                  <td colspan="3">Name <span class="dynamic" reference="thirdPartyBillingName" value="">Jack Dorsey</span></td>
+                  <td colspan="2">Phone <span class="dynamic" reference="thirdPartyBillingPhone" value="">(214) 432-1234</span></td>
                 </tr>
                 <tr>
-                  <td colspan="3">Street Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
-                  <td colspan="2">Suite/Apt # <span class="dynamic" reference="//" value="">#808</span></td>
+                  <td colspan="3">Street Address <span class="dynamic" reference="thirdPartyBillingStreet" value="">123 Main St.</span></td>
+                  <td colspan="2">Suite/Apt # <span class="dynamic" reference="thirdPartyBillingSuite-AptNum" value="">#808</span></td>
                 </tr>
                 <tr>
-                  <td colspan="2">City <span class="dynamic" reference="//" value="">Kansas City</span></td>
-                  <td>State <span class="dynamic" reference="//" value="">MO</span></td>
-                  <td colspan="2">ZIP <span class="dynamic" reference="//" value="">39485</span></td>
+                  <td colspan="2">City <span class="dynamic" reference="thirdPartyBillingCity" value="">Kansas City</span></td>
+                  <td>State <span class="dynamic" reference="thirdPartyBillingState" value="">MO</span></td>
+                  <td colspan="2">ZIP <span class="dynamic" reference="thirdPartyBillingZipcode" value="">39485</span></td>
                 </tr>
               </table>
             </p><p></p>
           <p></p><h2>Your Signature</h2>
             <table class="form">
               <tr>
-                <td>Signed At <small>(Resident City and State)</small><span class="dynamic" reference="//" value="">Kansas City, MO</span></td>
+                <td>Signed At <small>(Resident City and State)</small><span class="dynamic" reference="signatureCity" value="">Kansas City, MO</span></td>
               </tr>
               <tr>
-                <td>Signature of Owner <span class="dynamic" reference="//" value="">&nbsp;</span>
+                <td>Signature of Owner <span class="dynamic">&nbsp;</span>
                 </td>
               </tr>
             </table><p></p>

@@ -7,6 +7,28 @@
 <p reference="beneficiary.person.first_name" value=''>
 <p reference="beneficiary.allocation value=''>
 
+
+
+<tr reference="beneficiary" index="1" class="show">
+  <td colspan="2">Name &ast; <span class="dynamic" reference="beneficiary.person.first_name" value="">Sue Stipple</span></td>
+  <td>Relationship &ast; <span class="dynamic" reference="beneficiary.person.relationship" value="">Spouse</span></td>
+  <td>Date of Birth <span class="dynamic" reference="beneficiary.person.dob" value="">9/1/1989</span></td>
+  <td rowspan="3">Share % &ast; <span class="dynamic" reference="beneficiary.person.allocation" value="">60</span></td>
+</tr>
+<tr>
+  <td colspan="2">Address <span class="dynamic" reference="beneficiary.person.address" value="">123 Main St.</span></td>
+  <td>Apt/Suite # <span class="dynamic" reference="beneficiary.person.address" value="">#102</span></td>
+  <td>City <span class="dynamic" reference="beneficiary.person.address" value="">Tulsa</span></td>
+</tr>
+<tr>
+  <td>State <span class="dynamic" reference="beneficiary.person.address" value="">OK</span></td>
+  <td>Zip Code <span class="dynamic" reference="beneficiary.person.zipcode" value="">70371</span></td>
+  <td>Phone Number <span class="dynamic" reference="beneficiary.person.phone" value="">(123) 123-1234</span></td>
+  <td>SSN <span class="dynamic" reference="beneficiary.person.ssNum" value="">321-32-3214</span></td>
+</tr>
+
+
+
 [
  {
    "beneficiary": {
