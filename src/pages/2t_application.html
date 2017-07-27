@@ -45,11 +45,11 @@ title: Individual Life Insurance Application
     </tr>
   </table>
 
-  <hr>
+  <!-- <hr> -->
   <h2>More About You</h2>
   <p>9. Are you a U.S. citizen, or do you have a U.S. permanent resident card <small>(green card)?</small><br>
-    <input reference="citizen" name="citizen" value="yes" type="checkbox" checked="checked"><label>Yes</label>
-    <input reference="citizen" name="citizen" value="no" type="checkbox"><label>No</label>
+    <input reference="citizen" name="citizen" value="yes" type="radio"><label>Yes</label>
+    <input reference="citizen" name="citizen" value="no" type="radio"><label>No</label>
   </p>
   <p>10. In the past 10 years, have you been medically diagnosed or medically treated or tested positive for: <small>(Select all that apply)</small><br>
     <input reference="medicalCondition" value="yes" type="checkbox"><label>Heart disease</label><br>
@@ -66,8 +66,8 @@ title: Individual Life Insurance Application
   {{> reflex2}}
 
   <p>11. Have you ever been convicted of a felony?<br>
-    <input reference="legalCondition" value="yes" type="checkbox"><label>Yes</label>
-    <input reference="legalCondition" value="no" type="checkbox"><label>No</label>
+    <input reference="legalCondition" name="legalCondition" value="yes" type="radio"><label>Yes</label>
+    <input reference="legalCondition" name="legalCondition" value="no" type="radio"><label>No</label>
   </p>
 
   <p>12. In the past 12 months, have you used any tobacco or nicotine products <small>(excluding less than 24 cigars)?</small><br>
@@ -89,7 +89,7 @@ title: Individual Life Insurance Application
     </table>
   </p>
 
-  <p>15. I currently have $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar; in existing life insurance or annuity contracts with this company <small>(or any other company).</small>
+  <p class="reinstatement-hidden">15. I currently have $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar; in existing life insurance or annuity contracts with this company <small>(or any other company).</small>
     <table class="form">
       <tr>
         <td>Current Life Insurance or Annuity Contract Amount<span class="dynamic" reference="currentInsValue" value="">$250,000</span><span class="units">USD</span></td>
@@ -108,7 +108,7 @@ title: Individual Life Insurance Application
     </table>
   </p>
 
-  <hr>
+  <div class="reinstatement-hidden">
   <h2>Primary Beneficiaries</h2>
   <p>17. My beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
     <table class="form">
@@ -171,9 +171,9 @@ title: Individual Life Insurance Application
       </tr>
     </table>
   </p>
+  </div>
 
-
-  <hr>
+  <div class="reinstatement-hidden">
   <h2>Contingent Beneficiaries</h2>
 
   <p>18. <small>(Optional)</small> My contingent beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
@@ -220,8 +220,8 @@ title: Individual Life Insurance Application
       </tr>
     </table>
   </p>
-
-  <hr>
+</div>
+  <!-- <hr> -->
   <h2>Legal</h2>
 
   <hr>
@@ -275,7 +275,7 @@ title: Individual Life Insurance Application
   <h4>W-9 Social Security Number&mdash;Taxpayer Identification Number Certification</h4>
   The Internal Revenue Service does not require the Owner’s consent to any provision of this document other than the certifications required to avoid backup withholding.
 
-  <hr>
+  <div class="reinstatement-hidden">
   <h2>Payment Method</h2>
 
   <p>Modal Premium Frequency:<br>
@@ -302,11 +302,11 @@ title: Individual Life Insurance Application
       </tr>
     </table>
   </p>
-
+</div>
 <h2>Third Party Billing Notification</h2>
   <p>Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
     <table class="form">
-      <tr>/
+      <tr>
         <td colspan="3">Name <span class="dynamic" reference="thirdPartyBillingName" value="">Jack Dorsey</span></td>
         <td colspan="2">Phone <span class="dynamic" reference="thirdPartyBillingPhone" value="">(214) 432-1234</span></td>
       </tr>
