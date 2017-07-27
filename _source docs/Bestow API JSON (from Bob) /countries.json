@@ -1,0 +1,32 @@
+[
+	{
+		"pageType": "countries",
+		"stage": "countries"
+	},
+	{
+		"elements": [
+			{
+				"reference": "travel",
+				"type": "buttons",
+				"label": "In the next 12 months do you plan traveling outside of the United States, Canada, or Mexico?",
+				"position": "newLine",
+				"valueComparison": [
+					{
+						"value": "no",
+						"action": "submit"
+					}
+				]
+			},
+			{
+				"reference": "countryList",
+				"type": "countryList",
+				"label": "Which countries do you plan on traveling to?"
+			},
+			{
+				"reference": "countryDuration",
+				"type": "buttons",
+				"label": "Do you plan to travel for longer than 30 consecutive days or greater than 90 days total?"
+			}
+		]
+	}
+]

@@ -1,0 +1,83 @@
+
+<div reference="beneficiary" index="1" style_present="display:block;" style_absent="display:none;">
+<p reference="beneficiary.person.first_name" value=''>
+<p reference="beneficiary.allocation value=''>
+
+<div reference="beneficiary" index="2" style_present="display:block;" style_absent="display:none;">
+<p reference="beneficiary.person.first_name" value=''>
+<p reference="beneficiary.allocation value=''>
+
+[
+ {
+   "beneficiary": {
+     "allocation": 50,
+     "beneficiary_type": "primary",
+     "id": 6,
+     "person_id": 110,
+     "policy_id": "c1f32ef663224e48b3788839cdff29a9",
+     "policy_revision": 1,
+     "relationship": "Father"
+   },
+   "person": {
+     "email": "",
+     "first_name": "Jim",
+     "id": 110,
+     "last_name": "",
+     "phone": ""
+   }
+ },
+ {
+   "beneficiary": {
+     "allocation": 50,
+     "beneficiary_type": "primary",
+     "id": 7,
+     "person_id": 111,
+     "policy_id": "c1f32ef663224e48b3788839cdff29a9",
+     "policy_revision": 1,
+     "relationship": "Mother"
+   },
+   "person": {
+     "email": "",
+     "first_name": "Spirit",
+     "id": 111,
+     "last_name": "",
+     "phone": ""
+   }
+ },
+ {
+   "beneficiary": {
+     "allocation": 50,
+     "beneficiary_type": "contingent",
+     "id": 8,
+     "person_id": 112,
+     "policy_id": "c1f32ef663224e48b3788839cdff29a9",
+     "policy_revision": 1,
+     "relationship": "Son"
+   },
+   "person": {
+     "email": "",
+     "first_name": "Fred",
+     "id": 112,
+     "last_name": "Smith",
+     "phone": ""
+   }
+ },
+   {
+   "beneficiary": {
+     "allocation": 50,
+     "beneficiary_type": "contingent",
+     "id": 8,
+     "person_id": 112,
+     "policy_id": "c1f32ef663224e48b3788839cdff29a9",
+     "policy_revision": 1,
+     "relationship": "Son"
+   },
+   "person": {
+     "email": "",
+     "first_name": "Bill",
+     "id": 112,
+     "last_name": "Smith",
+     "phone": ""
+   }
+ }
+]

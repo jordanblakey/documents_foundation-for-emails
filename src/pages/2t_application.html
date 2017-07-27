@@ -14,138 +14,77 @@ title: Individual Life Insurance Application
   <h2>Your Basic Information</h2>
   <table class="form">
     <tr>
-      <td>1a. Legal First Name <span class="dynamic">Melvin</span></td>
-      <td>1b. Middle Initial <span class="dynamic">K.</span></td>
-      <td>1c. Legal Last Name <span class="dynamic">Stipple</span></td>
+      <td>1a. Legal First Name <span class="dynamic" reference="firstName" value="">Melvin</span></td>
+      <td>1b. Middle Initial <span class="dynamic" reference="middleName" value="">K.</span></td>
+      <td>1c. Legal Last Name <span class="dynamic" reference="lastName" value="">Stipple</span></td>
     </tr>
     <tr>
-      <td>2a. Date of Birth <span class="dynamic">09/19/1986</span></td>
-      <td>2b. State/Country of Birth <span class="dynamic">TX</span></td>
+      <td>2a. Date of Birth <span class="dynamic" reference="birthdate" value="">09/19/1986</span></td>
+      <td>2b. State/Country of Birth <span class="dynamic" reference="birthstate" value="">TX</span></td>
       <td>
-        2c. Sex <br><input type="checkbox"><label>Male</label> <input type="checkbox"><label>Female</label>
+        2c. Sex <br><input reference="gender" value="male" type="radio" name="gender"><label>Male</label> <input reference="gender" value="female" type="radio" name="gender"><label>Female</label>
       </td>
     </tr>
     <tr>
-      <td colspan="2">3a. Height <span class="dynamic">Melvin</span><span class="units">Feet, Inches</span></td>
-      <td>3b. Weight <span class="dynamic">190</span><span class="units">Pounds</span></td>
+      <td colspan="2">3a. Height <span class="dynamic" reference="heightFeet" value="">6</span><span class="dynamic" reference="heightInches"><span class="units">Feet, Inches</span></td>
+      <td>3b. Weight <span class="dynamic" reference="weight" value="">190</span><span class="units">Pounds</span></td>
     </tr>
     <tr>
-      <td colspan="2">4a. Street Address <span class="dynamic">123 Main St.</span></td>
-      <td>4b. Suite/Apt # <span class="dynamic">#101</span></td>
+      <td colspan="2">4a. Street Address <span class="dynamic" reference="street" value="">123 Main St.</span></td>
+      <td>4b. Suite/Apt # <span class="dynamic" reference="street" value="">#101</span></td>
     </tr>
     <tr>
-      <td>4c. City <span class="dynamic">Tulsa</span></td>
-      <td>4d. State <span class="dynamic">OK</span></td>
-      <td>5. Zip Code <span class="dynamic">70371</span></td>
+      <td>4c. City <span class="dynamic" reference="street" value="">Tulsa</span></td>
+      <td>4d. State <span class="dynamic" reference="street" value="">OK</span></td>
+      <td>5. Zip Code <span class="dynamic" reference="zipcode" value="">70371</span></td>
     </tr>
     <tr>
-      <td>6. Email <span class="dynamic">mstipple@mail.com</span></td>
-      <td>7. Phone <span class="dynamic">(123) 123-1234</span></td>
-      <td>8. Social Security Number <span class="dynamic">123-12-1234</span></td>
+      <td>6. Email <span class="dynamic" reference="email" value="">mstipple@mail.com</span></td>
+      <td>7. Phone <span class="dynamic" reference="phone" value="">(123) 123-1234</span></td>
+      <td>8. Social Security Number <span class="dynamic" reference="ssNum" value="">123-12-1234</span></td>
     </tr>
   </table>
 
   <hr>
   <h2>More About You</h2>
   <p>9. Are you a U.S. citizen, or do you have a U.S. permanent resident card <small>(green card)?</small><br>
-    <input type="checkbox" checked="checked"><label>Yes</label>
-    <input type="checkbox"><label>No</label>
+    <input reference="citizen" name="citizen" value="yes" type="checkbox" checked="checked"><label>Yes</label>
+    <input reference="citizen" name="citizen" value="no" type="checkbox"><label>No</label>
   </p>
   <p>10. In the past 10 years, have you been medically diagnosed or medically treated or tested positive for: <small>(Select all that apply)</small><br>
-    <input type="checkbox"><label>Heart disease</label><br>
-    <input type="checkbox"><label>Stroke</label><br>
-    <input type="checkbox"><label>Cancer <small>(excluding basal and squamous cell skin cancer)</small></label><br>
-    <input type="checkbox"><label>Organ transplant</label><br>
-    <input type="checkbox"><label>Diabetes before age 30 <small>(excluding gestational diabetes)</small></label><br>
-    <input type="checkbox"><label>Alcohol or drug abuse</label><br>
-    <input type="checkbox"><label>HIV</label><br>
-    <input type="checkbox"><label>Kidney disease requiring dialysis</label>
+    <input reference="medicalCondition" value="yes" type="checkbox"><label>Heart disease</label><br>
+    <input reference="medicalCondition" value="yes" type="checkbox"><label>Stroke</label><br>
+    <input reference="medicalCondition" value="yes" type="checkbox"><label>Cancer <small>(excluding basal and squamous cell skin cancer)</small></label><br>
+    <input reference="medicalCondition" value="yes" type="checkbox"><label>Organ transplant</label><br>
+    <input reference="medicalCondition" value="yes" type="checkbox"><label>Diabetes before age 30 <small>(excluding gestational diabetes)</small></label><br>
+    <input reference="medicalCondition" value="yes" type="checkbox"><label>Alcohol or drug abuse</label><br>
+    <input reference="medicalCondition" value="yes" type="checkbox"><label>HIV</label><br>
+    <input reference="medicalCondition" value="yes" type="checkbox"><label>Kidney disease requiring dialysis</label>
   </p>
 
-  <div class="reflex" id="reflex1">
-    <h4>Your Alcohol Use <small>Reflex 1<small></h4>
-
-    <p>Do you have any life insurance or annuities currently in force or pending?<br>
-      <input type="radio" name="1-1-6" value="yes">
-      <label>Yes</label>
-      <!-- Next question -->
-      <input type="radio" name="1-1-6" value="no">
-      <label>No</label>
-      <!-- Stop -->
-    </p> 
-    <p>What is the total amount of all coverage in force or pending?<br>
-      <input type="text" name="1-1-7">
-      <!-- ranged value -->
-    </p>
-    <p>Is the coverage being applied for intended to replace or change any existing life insurance or annuity contract?<br>
-      <input type="radio" name="1-1-8" value="yes">
-      <label>Yes</label>
-      <!-- Next question -->
-      <input type="radio" name="1-1-8" value="no">
-      <label>No</label>
-      <!-- Stop -->
-    </p>
-    <p>What amount is being replaced?<br>
-      <input type="text" name="1-1-9">
-      <!-- ranged value -->
-    </p>
-
-  </div>
-
-  <div class="reflex" id="reflex2">
-    <h4>MIB Codes <small>Reflex 2<small></h4>
-
-      <!-- Medical MIB Code -->
-      <p>Have you seen a medical professional for any of the questions asked previously?<br>
-        <input type="radio" name="2-1">
-        <label>Yes</label>
-        <input type="radio" name="2-1">
-        <label>No</label>
-      </p>
-      <!-- Criminal MIB Code -->
-      <p>Have you been convicted of a felony?<br>
-        <input type="radio" name="2-2">
-        <label>No</label>
-        <!-- Next question -->
-        <input type="radio" name="2-2">
-        <label>Yes</label>
-        <!-- Decline -->
-        <input type="radio" name="2-2">
-        <label>Unknown</label>
-        <!-- Decline -->
-      </p>
-      <p>Have you been convicted of a misdemeanor?<br>
-        <input type="radio" name="2-3">
-        <label>No</label>
-        <!-- Incomplete and send MIB AUD letter -->
-        <input type="radio" name="2-3">
-        <label>Yes</label>
-        <!-- Accept -->
-        <input type="radio" name="2-3">
-        <label>Unknown</label>
-        <!-- Accept -->
-      </p>
-
-    </div>
+  <!-- MIB Codes -->
+  {{> reflex2}}
 
   <p>11. Have you ever been convicted of a felony?<br>
-    <input type="checkbox"><label>Yes</label> <input type="checkbox"><label>No</label>
+    <input reference="legalCondition" value="yes" type="checkbox"><label>Yes</label>
+    <input reference="legalCondition" value="no" type="checkbox"><label>No</label>
   </p>
 
   <p>12. In the past 12 months, have you used any tobacco or nicotine products <small>(excluding less than 24 cigars)?</small><br>
-    <input type="checkbox"><label>Yes</label> <input type="checkbox"><label>No</label>
+    <input reference="tobacco" name="tobacco" value="yes" type="radio"><label>Yes</label>
+    <input reference="tobacco" name="tobacco" value="no" type="radio"><label>No</label>
   </p>
   <p>13. Are you: <small>(Select only one)</small><br>
-    <input type="checkbox"><label>A full time student</label>
-    <input type="checkbox"><label>A homemaker</label>
-    <input type="checkbox"><label>Working more than 30 hours per week</label>
-    <input type="checkbox"><label>Working less than 30 hours per week</label>
+    <input reference="occupation" value="student" type="checkbox"><label>A full time student</label>
+    <input reference="occupation" value="homemaker" type="checkbox"><label>A homemaker</label>
+    <input reference="occupation" value="employed" type="checkbox"><label>Working more than 30 hours per week</label>
+    <input reference="occupation" value="unemployed" type="checkbox"><label>Working less than 30 hours per week</label>
   </p>
 
   <p>14. My annual income is $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;.
     <table class="form">
       <tr>
-        <td>Annual Income<span class="dynamic">$500,000</span><span class="units">USD</span></td>
+        <td>Annual Income<span class="dynamic" reference="income" value="">$500,000</span><span class="units">USD</span></td>
       </tr>
     </table>
   </p>
@@ -153,15 +92,18 @@ title: Individual Life Insurance Application
   <p>15. I currently have $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar; in existing life insurance or annuity contracts with this company <small>(or any other company).</small>
     <table class="form">
       <tr>
-        <td>Current Life Insurance or Annuity Contract Amount<span class="dynamic">$250,000</span><span class="units">USD</span></td>
+        <td>Current Life Insurance or Annuity Contract Amount<span class="dynamic" reference="currentInsValue" value="">$250,000</span><span class="units">USD</span></td>
       </tr>
     </table>
   </p>
 
+  <!-- In Force Policies -->
+  {{> reflex1}}
+
   <p>16. I am planning to replace or change $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar; of my existing life insurance or annuity contracts in force with this company <small>(or any other company)</small>.
     <table class="form">
       <tr>
-        <td>Amount of Current Life Insurance or Annuity Contract Being Replaced<span class="dynamic">$100,000</span><span class="units">USD</span></td>
+        <td>Amount of Current Life Insurance or Annuity Contract Being Replaced<span class="dynamic" reference="replacementInsValue" value="">$100,000</span><span class="units">USD</span></td>
       </tr>
     </table>
   </p>
@@ -171,61 +113,61 @@ title: Individual Life Insurance Application
   <p>17. My beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
     <table class="form">
       <tr>
-        <td colspan="2">Name &ast; <span class="dynamic">Sue Stipple</span></td>
-        <td>Relationship &ast; <span class="dynamic">Spouse</span></td>
-        <td>Date of Birth <span class="dynamic">9/1/1989</span></td>
-        <td rowspan="3">Share % &ast; <span class="dynamic">60</span></td>
+        <td colspan="2">Name &ast; <span class="dynamic" reference="//" value="">Sue Stipple</span></td>
+        <td>Relationship &ast; <span class="dynamic" reference="//" value="">Spouse</span></td>
+        <td>Date of Birth <span class="dynamic" reference="//" value="">9/1/1989</span></td>
+        <td rowspan="3">Share % &ast; <span class="dynamic" reference="//" value="">60</span></td>
       </tr>
       <tr>
-        <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
-        <td>Apt/Suite # <span class="dynamic">#102</span></td>
-        <td>City <span class="dynamic">Tulsa</span></td>
+        <td colspan="2">Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
+        <td>Apt/Suite # <span class="dynamic" reference="//" value="">#102</span></td>
+        <td>City <span class="dynamic" reference="//" value="">Tulsa</span></td>
       </tr>
       <tr>
-        <td>State <span class="dynamic">OK</span></td>
-        <td>Zip Code <span class="dynamic">70371</span></td>
-        <td>Phone Number <span class="dynamic">(123) 123-1234</span></td>
-        <td>SSN <span class="dynamic">321-32-3214</span></td>
-      </tr>
-
-      <tr>
-        <td colspan="2">Name &ast; <span class="dynamic">Sarah Stipple</span></td>
-        <td>Relationship &ast; <span class="dynamic">Child</span></td>
-        <td>Date of Birth <span class="dynamic">1/1/2010</span></td>
-        <td rowspan="3">Share % &ast; <span class="dynamic">20</span></td>
-      </tr>
-      <tr>
-        <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
-        <td>Apt/Suite # <span class="dynamic">#101</span></td>
-        <td>City <span class="dynamic">Tulsa</span></td>
-      </tr>
-      <tr>
-        <td>State <span class="dynamic">OK</span></td>
-        <td>Zip Code <span class="dynamic">70371</span></td>
-        <td>Phone Number <span class="dynamic">(321) 321-4132</span></td>
-        <td>SSN <span class="dynamic">432-32-3214</span></td>
+        <td>State <span class="dynamic" reference="//" value="">OK</span></td>
+        <td>Zip Code <span class="dynamic" reference="//" value="">70371</span></td>
+        <td>Phone Number <span class="dynamic" reference="//" value="">(123) 123-1234</span></td>
+        <td>SSN <span class="dynamic" reference="//" value="">321-32-3214</span></td>
       </tr>
 
       <tr>
-        <td colspan="2">Name &ast; <span class="dynamic">Caleb</span></td>
-        <td>Relationship &ast; <span class="dynamic">Stipple</span></td>
-        <td>Date of Birth <span class="dynamic">2/14/2013</span></td>
-        <td rowspan="3">Share % &ast; <span class="dynamic">20</span></td>
+        <td colspan="2">Name &ast; <span class="dynamic" reference="//" value="">Sarah Stipple</span></td>
+        <td>Relationship &ast; <span class="dynamic" reference="//" value="">Child</span></td>
+        <td>Date of Birth <span class="dynamic" reference="//" value="">1/1/2010</span></td>
+        <td rowspan="3">Share % &ast; <span class="dynamic" reference="//" value="">20</span></td>
       </tr>
       <tr>
-        <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
-        <td>Apt/Suite # <span class="dynamic">#101</span></td>
-        <td>City <span class="dynamic">Tulsa</span></td>
+        <td colspan="2">Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
+        <td>Apt/Suite # <span class="dynamic" reference="//" value="">#101</span></td>
+        <td>City <span class="dynamic" reference="//" value="">Tulsa</span></td>
       </tr>
       <tr>
-        <td>State <span class="dynamic">OK</span></td>
-        <td>Zip Code <span class="dynamic">70312</span></td>
-        <td>Phone Number <span class="dynamic">(123) 321-1234</span></td>
-        <td>SSN <span class="dynamic">123-12-1234</span></td>
+        <td>State <span class="dynamic" reference="//" value="">OK</span></td>
+        <td>Zip Code <span class="dynamic" reference="//" value="">70371</span></td>
+        <td>Phone Number <span class="dynamic" reference="//" value="">(321) 321-4132</span></td>
+        <td>SSN <span class="dynamic" reference="//" value="">432-32-3214</span></td>
+      </tr>
+
+      <tr>
+        <td colspan="2">Name &ast; <span class="dynamic" reference="//" value="">Caleb</span></td>
+        <td>Relationship &ast; <span class="dynamic" reference="//" value="">Stipple</span></td>
+        <td>Date of Birth <span class="dynamic" reference="//" value="">2/14/2013</span></td>
+        <td rowspan="3">Share % &ast; <span class="dynamic" reference="//" value="">20</span></td>
+      </tr>
+      <tr>
+        <td colspan="2">Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
+        <td>Apt/Suite # <span class="dynamic" reference="//" value="">#101</span></td>
+        <td>City <span class="dynamic" reference="//" value="">Tulsa</span></td>
+      </tr>
+      <tr>
+        <td>State <span class="dynamic" reference="//" value="">OK</span></td>
+        <td>Zip Code <span class="dynamic" reference="//" value="">70312</span></td>
+        <td>Phone Number <span class="dynamic" reference="//" value="">(123) 321-1234</span></td>
+        <td>SSN <span class="dynamic" reference="//" value="">123-12-1234</span></td>
       </tr>
       <tr>
         <td class="spacer-cell" colspan="4"></td>
-        <td>Total % <span class="dynamic">100</span></td>
+        <td>Total % <span class="dynamic" reference="//" value="">100</span></td>
       </tr>
     </table>
   </p>
@@ -237,44 +179,44 @@ title: Individual Life Insurance Application
   <p>18. <small>(Optional)</small> My contingent beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
     <table class="form">
       <tr>
-        <td colspan="2">Name &ast; <span class="dynamic">Distant Relative</span></td>
-        <td>Relationship &ast; <span class="dynamic">Trust</span></td>
-        <td>Date of Birth <span class="dynamic">9/1/1989</span></td>
-        <td rowspan="3">Share % &ast; <span class="dynamic">60</span></td>
+        <td colspan="2">Name &ast; <span class="dynamic" reference="//" value="">Distant Relative</span></td>
+        <td>Relationship &ast; <span class="dynamic" reference="//" value="">Trust</span></td>
+        <td>Date of Birth <span class="dynamic" reference="//" value="">9/1/1989</span></td>
+        <td rowspan="3">Share % &ast; <span class="dynamic" reference="//" value="">60</span></td>
       </tr>
       <tr>
-        <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
-        <td>Apt/Suite # <span class="dynamic">#102</span></td>
-        <td>City <span class="dynamic">Tulsa</span></td>
+        <td colspan="2">Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
+        <td>Apt/Suite # <span class="dynamic" reference="//" value="">#102</span></td>
+        <td>City <span class="dynamic" reference="//" value="">Tulsa</span></td>
       </tr>
       <tr>
-        <td>State <span class="dynamic">OK</span></td>
-        <td>Zip Code <span class="dynamic">70371</span></td>
-        <td>Phone Number <span class="dynamic">(123) 123-1234</span></td>
-        <td>SSN <span class="dynamic">321-32-3214</span></td>
+        <td>State <span class="dynamic" reference="//" value="">OK</span></td>
+        <td>Zip Code <span class="dynamic" reference="//" value="">70371</span></td>
+        <td>Phone Number <span class="dynamic" reference="//" value="">(123) 123-1234</span></td>
+        <td>SSN <span class="dynamic" reference="//" value="">321-32-3214</span></td>
       </tr>
 
       <tr>
-        <td colspan="2">Name &ast; <span class="dynamic">Ex Spouse</span></td>
-        <td>Relationship &ast; <span class="dynamic">Trust</span></td>
-        <td>Date of Birth <span class="dynamic">1/1/2010</span></td>
-        <td rowspan="3">Share % &ast; <span class="dynamic">20</span></td>
+        <td colspan="2">Name &ast; <span class="dynamic" reference="//" value="">Ex Spouse</span></td>
+        <td>Relationship &ast; <span class="dynamic" reference="//" value="">Trust</span></td>
+        <td>Date of Birth <span class="dynamic" reference="//" value="">1/1/2010</span></td>
+        <td rowspan="3">Share % &ast; <span class="dynamic" reference="//" value="">20</span></td>
       </tr>
       <tr>
-        <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
-        <td>Apt/Suite # <span class="dynamic">#101</span></td>
-        <td>City <span class="dynamic">Tulsa</span></td>
+        <td colspan="2">Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
+        <td>Apt/Suite # <span class="dynamic" reference="//" value="">#101</span></td>
+        <td>City <span class="dynamic" reference="//" value="">Tulsa</span></td>
       </tr>
       <tr>
-        <td>State <span class="dynamic">OK</span></td>
-        <td>Zip Code <span class="dynamic">70371</span></td>
-        <td>Phone Number <span class="dynamic">(321) 321-4132</span></td>
-        <td>SSN <span class="dynamic">432-32-3214</span></td>
+        <td>State <span class="dynamic" reference="//" value="">OK</span></td>
+        <td>Zip Code <span class="dynamic" reference="//" value="">70371</span></td>
+        <td>Phone Number <span class="dynamic" reference="//" value="">(321) 321-4132</span></td>
+        <td>SSN <span class="dynamic" reference="//" value="">432-32-3214</span></td>
       </tr>
 
       <tr>
         <td class="spacer-cell" colspan="4"></td>
-        <td>Total % <span class="dynamic">100</span></td>
+        <td>Total % <span class="dynamic" reference="//" value="">100</span></td>
       </tr>
     </table>
   </p>
@@ -286,7 +228,7 @@ title: Individual Life Insurance Application
   <h4>IRS Substitute W-9 Social Security Number-Taxpayer Identification Number Certification</h4>
   To be completed by Owner. Under penalties of perjury, as Owner of this policy, I certify that: 1. The taxpayer identification number shown on this application
   is my correct taxpayer identification number; 2. I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service that I am subject to backup withholding as
-  a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding. Check this box: <input type="checkbox"><label>if you ARE subject to backup withholding;</label> 3. I am
+  a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding. Check this box: <input reference="//" value="//" type="checkbox"><label>if you ARE subject to backup withholding;</label> 3. I am
   a U.S. citizen or other U.S. person as defined by the IRS for federal tax purposes. 4. I am exempt from Foreign Account Tax Compliance Act (FATCA) reporting.
 
   <hr>
@@ -337,24 +279,24 @@ title: Individual Life Insurance Application
   <h2>Payment Method</h2>
 
   <p>Modal Premium Frequency:<br>
-    <input type="checkbox"><label>Annual</label> <input type="checkbox"><label>Monthly</label>
+    <input reference="//" value="//" type="checkbox"><label>Annual</label> <input reference="//" value="//" type="checkbox"><label>Monthly</label>
   </p>
 
   <p>Payment Type:<br>
-    <input type="checkbox"><label>EFT/ACH </label> <input type="checkbox"><label>Credit Card</label>
+    <input reference="//" value="//" type="checkbox"><label>EFT/ACH </label> <input reference="//" value="//" type="checkbox"><label>Credit Card</label>
   </p>
 
   <p>Billing Address:<br>
-    <input type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. <small>(If P.O. Box, also include Street Address below)</small></label><br>
+    <input reference="//" value="//" type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. <small>(If P.O. Box, also include Street Address below)</small></label><br>
     <table class="form">
       <tr>
-        <td colspan="2">Street Address <span class="dynamic">123 Smith St.</span></td>
-        <td>Suite/Apt # <span class="dynamic">#101</span></td>
+        <td colspan="2">Street Address <span class="dynamic" reference="//" value="">123 Smith St.</span></td>
+        <td>Suite/Apt # <span class="dynamic" reference="//" value="">#101</span></td>
       </tr>
       <tr>
-        <td>City <span class="dynamic">Richardson</span></td>
-        <td>State <span class="dynamic">TX</span></td>
-        <td>ZIP <span class="dynamic">75082</span></td>
+        <td>City <span class="dynamic" reference="//" value="">Richardson</span></td>
+        <td>State <span class="dynamic" reference="//" value="">TX</span></td>
+        <td>ZIP <span class="dynamic" reference="//" value="">75082</span></td>
       </tr>
     </table>
   </p>
@@ -363,17 +305,17 @@ title: Individual Life Insurance Application
   <p>Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
     <table class="form">
       <tr>
-        <td colspan="3">Name <span class="dynamic">Jack Dorsey</span></td>
-        <td colspan="2">Phone <span class="dynamic">(214) 432-1234</span></td>
+        <td colspan="3">Name <span class="dynamic" reference="//" value="">Jack Dorsey</span></td>
+        <td colspan="2">Phone <span class="dynamic" reference="//" value="">(214) 432-1234</span></td>
       </tr>
       <tr>
-        <td colspan="3">Street Address <span class="dynamic">123 Main St.</span></td>
-        <td colspan="2">Suite/Apt # <span class="dynamic">#808</span></td>
+        <td colspan="3">Street Address <span class="dynamic" reference="//" value="">123 Main St.</span></td>
+        <td colspan="2">Suite/Apt # <span class="dynamic" reference="//" value="">#808</span></td>
       </tr>
       <tr>
-        <td colspan="2">City <span class="dynamic">Kansas City</span></td>
-        <td>State <span class="dynamic">MO</span></td>
-        <td colspan="2">ZIP <span class="dynamic">39485</span></td>
+        <td colspan="2">City <span class="dynamic" reference="//" value="">Kansas City</span></td>
+        <td>State <span class="dynamic" reference="//" value="">MO</span></td>
+        <td colspan="2">ZIP <span class="dynamic" reference="//" value="">39485</span></td>
       </tr>
     </table>
   </p>
@@ -381,10 +323,10 @@ title: Individual Life Insurance Application
 <h2>Your Signature</h2>
   <table class="form">
     <tr>
-      <td>Signed At <small>(Resident City and State)</small><span class="dynamic">Kansas City, MO</span></td>
+      <td>Signed At <small>(Resident City and State)</small><span class="dynamic" reference="//" value="">Kansas City, MO</span></td>
     </tr>
     <tr>
-      <td>Signature of Owner <span class="dynamic">&nbsp;</span>
+      <td>Signature of Owner <span class="dynamic" reference="//" value="">&nbsp;</span>
       </td>
     </tr>
   </table>
