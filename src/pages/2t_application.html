@@ -3,315 +3,393 @@ title: Individual Life Insurance Application
 ---
 
 <container>
-	<row>
-		<columns>
+  <row>
+    <columns>
       <hr>
       <spacer size="16"></spacer>
 
-			<h1>{{title}} <br><small>For New Business and Reinstatements</small></h1>
+      <h1>{{title}}</h1>
 {{#markdown}}
 
-## Your Basic Information
-
-<table class="form">
-  <tr>
-    <td>1a. Legal First Name <span class="dynamic">Melvin</span></td>
-    <td>1b. Middle Initial <span class="dynamic">K.</span></td>
-    <td>1c. Legal Last Name <span class="dynamic">Stipple</span></td>
-  </tr>
-  <tr>
-    <td>2a. Date of Birth <span class="dynamic">09/19/1986</span></td>
-    <td>2b. State/Country of Birth <span class="dynamic">TX</span></td>
-    <td>
-      2c. Sex <br><input type="checkbox"><label>Male</label>  <input type="checkbox"><label>Female</label>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">3a. Height  <span class="dynamic">Melvin</span><span class="units">Feet, Inches</span></td>
-    <td>3b. Weight <span class="dynamic">190</span><span class="units">Pounds</span></td>
-  </tr>
-  <tr>
-    <td colspan="2">4a. Street Address <span class="dynamic">123 Main St.</span></td>
-    <td>4b. Suite/Apt # <span class="dynamic">#101</span></td>
-  </tr>
-  <tr>
-    <td>4c. City <span class="dynamic">Tulsa</span></td>
-    <td>4d. State <span class="dynamic">OK</span></td>
-    <td>5. Zip Code <span class="dynamic">70371</span></td>
-  </tr>
-  <tr>
-    <td>6. Email <span class="dynamic">mstipple@mail.com</span></td>
-    <td>7. Phone <span class="dynamic">(123) 123-1234</span></td>
-    <td>8. Social Security Number <span class="dynamic">123-12-1234</span></td>
-  </tr>
-</table>
-
-
-<hr>
-## More About You
-<p>9. Are you a U.S. citizen, or do you have a U.S. permanent resident card <small>(green card)?</small><br>
-  <input type="checkbox" checked="checked"><label>Yes</label>
-  <input type="checkbox"><label>No</label>
-</p>
-<p>10. In the past 10 years, have you been medically diagnosed or medically treated or tested positive for: <small>(Select all that apply)</small><br>
-  <input type="checkbox"><label>Heart disease</label><br>
-  <input type="checkbox"><label>Stroke</label><br>
-  <input type="checkbox"><label>Cancer <small>(excluding basal and squamous cell skin cancer)</label><br>
-  <input type="checkbox"><label>Organ transplant</label><br>
-  <input type="checkbox"><label>Diabetes before age 30 <small>(excluding gestational diabetes)</label><br>
-  <input type="checkbox"><label>Alcohol or drug abuse</label><br>
-  <input type="checkbox"><label>HIV</label><br>
-  <input type="checkbox"><label>Kidney disease requiring dialysis</label>
-</p>
-<p>11. Have you ever been convicted of a felony?<br>
-  <input type="checkbox"><label>Yes</label>  <input type="checkbox"><label>No</label>
-</p>
-<p>12. In the past 12 months, have you used any tobacco or nicotine products <small>(excluding less than 24 cigars)?</small><br>
-  <input type="checkbox"><label>Yes</label>  <input type="checkbox"><label>No</label>
-</p>
-<p>13. Are you: <small>(Select only one)</small><br>
-  <input type="checkbox"><label>A full time student</label>
-  <input type="checkbox"><label>A homemaker</label>
-  <input type="checkbox"><label>Working more than 30 hours per week</label>
-  <input type="checkbox"><label>Working less than 30 hours per week</label>
-</p>
-
-<p>14. My annual income is $___.
+  <h2>Your Basic Information</h2>
   <table class="form">
     <tr>
-      <td>Annual Income<span class="dynamic">$500,000</span><span class="units">USD</span></td>
+      <td>1a. Legal First Name <span class="dynamic">Melvin</span></td>
+      <td>1b. Middle Initial <span class="dynamic">K.</span></td>
+      <td>1c. Legal Last Name <span class="dynamic">Stipple</span></td>
+    </tr>
+    <tr>
+      <td>2a. Date of Birth <span class="dynamic">09/19/1986</span></td>
+      <td>2b. State/Country of Birth <span class="dynamic">TX</span></td>
+      <td>
+        2c. Sex <br><input type="checkbox"><label>Male</label> <input type="checkbox"><label>Female</label>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">3a. Height <span class="dynamic">Melvin</span><span class="units">Feet, Inches</span></td>
+      <td>3b. Weight <span class="dynamic">190</span><span class="units">Pounds</span></td>
+    </tr>
+    <tr>
+      <td colspan="2">4a. Street Address <span class="dynamic">123 Main St.</span></td>
+      <td>4b. Suite/Apt # <span class="dynamic">#101</span></td>
+    </tr>
+    <tr>
+      <td>4c. City <span class="dynamic">Tulsa</span></td>
+      <td>4d. State <span class="dynamic">OK</span></td>
+      <td>5. Zip Code <span class="dynamic">70371</span></td>
+    </tr>
+    <tr>
+      <td>6. Email <span class="dynamic">mstipple@mail.com</span></td>
+      <td>7. Phone <span class="dynamic">(123) 123-1234</span></td>
+      <td>8. Social Security Number <span class="dynamic">123-12-1234</span></td>
     </tr>
   </table>
-</p>
 
-<p>15. I currently have $___ in existing life insurance or annuity contracts with this company <small>(or any other company).</small>
+  <hr>
+  <h2>More About You</h2>
+  <p>9. Are you a U.S. citizen, or do you have a U.S. permanent resident card <small>(green card)?</small><br>
+    <input type="checkbox" checked="checked"><label>Yes</label>
+    <input type="checkbox"><label>No</label>
+  </p>
+  <p>10. In the past 10 years, have you been medically diagnosed or medically treated or tested positive for: <small>(Select all that apply)</small><br>
+    <input type="checkbox"><label>Heart disease</label><br>
+    <input type="checkbox"><label>Stroke</label><br>
+    <input type="checkbox"><label>Cancer <small>(excluding basal and squamous cell skin cancer)</small></label><br>
+    <input type="checkbox"><label>Organ transplant</label><br>
+    <input type="checkbox"><label>Diabetes before age 30 <small>(excluding gestational diabetes)</small></label><br>
+    <input type="checkbox"><label>Alcohol or drug abuse</label><br>
+    <input type="checkbox"><label>HIV</label><br>
+    <input type="checkbox"><label>Kidney disease requiring dialysis</label>
+  </p>
+
+  <div class="reflex" id="reflex1">
+    <h4>Your Alcohol Use <small>Reflex 1<small></h4>
+
+    <p>Do you have any life insurance or annuities currently in force or pending?<br>
+      <input type="radio" name="1-1-6" value="yes">
+      <label>Yes</label>
+      <!-- Next question -->
+      <input type="radio" name="1-1-6" value="no">
+      <label>No</label>
+      <!-- Stop -->
+    </p> 
+    <p>What is the total amount of all coverage in force or pending?<br>
+      <input type="text" name="1-1-7">
+      <!-- ranged value -->
+    </p>
+    <p>Is the coverage being applied for intended to replace or change any existing life insurance or annuity contract?<br>
+      <input type="radio" name="1-1-8" value="yes">
+      <label>Yes</label>
+      <!-- Next question -->
+      <input type="radio" name="1-1-8" value="no">
+      <label>No</label>
+      <!-- Stop -->
+    </p>
+    <p>What amount is being replaced?<br>
+      <input type="text" name="1-1-9">
+      <!-- ranged value -->
+    </p>
+
+  </div>
+
+  <div class="reflex" id="reflex2">
+    <h4>MIB Codes <small>Reflex 2<small></h4>
+
+      <!-- Medical MIB Code -->
+      <p>Have you seen a medical professional for any of the questions asked previously?<br>
+        <input type="radio" name="2-1">
+        <label>Yes</label>
+        <input type="radio" name="2-1">
+        <label>No</label>
+      </p>
+      <!-- Criminal MIB Code -->
+      <p>Have you been convicted of a felony?<br>
+        <input type="radio" name="2-2">
+        <label>No</label>
+        <!-- Next question -->
+        <input type="radio" name="2-2">
+        <label>Yes</label>
+        <!-- Decline -->
+        <input type="radio" name="2-2">
+        <label>Unknown</label>
+        <!-- Decline -->
+      </p>
+      <p>Have you been convicted of a misdemeanor?<br>
+        <input type="radio" name="2-3">
+        <label>No</label>
+        <!-- Incomplete and send MIB AUD letter -->
+        <input type="radio" name="2-3">
+        <label>Yes</label>
+        <!-- Accept -->
+        <input type="radio" name="2-3">
+        <label>Unknown</label>
+        <!-- Accept -->
+      </p>
+
+    </div>
+
+  <p>11. Have you ever been convicted of a felony?<br>
+    <input type="checkbox"><label>Yes</label> <input type="checkbox"><label>No</label>
+  </p>
+
+  <p>12. In the past 12 months, have you used any tobacco or nicotine products <small>(excluding less than 24 cigars)?</small><br>
+    <input type="checkbox"><label>Yes</label> <input type="checkbox"><label>No</label>
+  </p>
+  <p>13. Are you: <small>(Select only one)</small><br>
+    <input type="checkbox"><label>A full time student</label>
+    <input type="checkbox"><label>A homemaker</label>
+    <input type="checkbox"><label>Working more than 30 hours per week</label>
+    <input type="checkbox"><label>Working less than 30 hours per week</label>
+  </p>
+
+  <p>14. My annual income is $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;.
+    <table class="form">
+      <tr>
+        <td>Annual Income<span class="dynamic">$500,000</span><span class="units">USD</span></td>
+      </tr>
+    </table>
+  </p>
+
+  <p>15. I currently have $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar; in existing life insurance or annuity contracts with this company <small>(or any other company).</small>
+    <table class="form">
+      <tr>
+        <td>Current Life Insurance or Annuity Contract Amount<span class="dynamic">$250,000</span><span class="units">USD</span></td>
+      </tr>
+    </table>
+  </p>
+
+  <p>16. I am planning to replace or change $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar; of my existing life insurance or annuity contracts in force with this company <small>(or any other company)</small>.
+    <table class="form">
+      <tr>
+        <td>Amount of Current Life Insurance or Annuity Contract Being Replaced<span class="dynamic">$100,000</span><span class="units">USD</span></td>
+      </tr>
+    </table>
+  </p>
+
+  <hr>
+  <h2>Primary Beneficiaries</h2>
+  <p>17. My beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
+    <table class="form">
+      <tr>
+        <td colspan="2">Name &ast; <span class="dynamic">Sue Stipple</span></td>
+        <td>Relationship &ast; <span class="dynamic">Spouse</span></td>
+        <td>Date of Birth <span class="dynamic">9/1/1989</span></td>
+        <td rowspan="3">Share % &ast; <span class="dynamic">60</span></td>
+      </tr>
+      <tr>
+        <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
+        <td>Apt/Suite # <span class="dynamic">#102</span></td>
+        <td>City <span class="dynamic">Tulsa</span></td>
+      </tr>
+      <tr>
+        <td>State <span class="dynamic">OK</span></td>
+        <td>Zip Code <span class="dynamic">70371</span></td>
+        <td>Phone Number <span class="dynamic">(123) 123-1234</span></td>
+        <td>SSN <span class="dynamic">321-32-3214</span></td>
+      </tr>
+
+      <tr>
+        <td colspan="2">Name &ast; <span class="dynamic">Sarah Stipple</span></td>
+        <td>Relationship &ast; <span class="dynamic">Child</span></td>
+        <td>Date of Birth <span class="dynamic">1/1/2010</span></td>
+        <td rowspan="3">Share % &ast; <span class="dynamic">20</span></td>
+      </tr>
+      <tr>
+        <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
+        <td>Apt/Suite # <span class="dynamic">#101</span></td>
+        <td>City <span class="dynamic">Tulsa</span></td>
+      </tr>
+      <tr>
+        <td>State <span class="dynamic">OK</span></td>
+        <td>Zip Code <span class="dynamic">70371</span></td>
+        <td>Phone Number <span class="dynamic">(321) 321-4132</span></td>
+        <td>SSN <span class="dynamic">432-32-3214</span></td>
+      </tr>
+
+      <tr>
+        <td colspan="2">Name &ast; <span class="dynamic">Caleb</span></td>
+        <td>Relationship &ast; <span class="dynamic">Stipple</span></td>
+        <td>Date of Birth <span class="dynamic">2/14/2013</span></td>
+        <td rowspan="3">Share % &ast; <span class="dynamic">20</span></td>
+      </tr>
+      <tr>
+        <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
+        <td>Apt/Suite # <span class="dynamic">#101</span></td>
+        <td>City <span class="dynamic">Tulsa</span></td>
+      </tr>
+      <tr>
+        <td>State <span class="dynamic">OK</span></td>
+        <td>Zip Code <span class="dynamic">70312</span></td>
+        <td>Phone Number <span class="dynamic">(123) 321-1234</span></td>
+        <td>SSN <span class="dynamic">123-12-1234</span></td>
+      </tr>
+      <tr>
+        <td class="spacer-cell" colspan="4"></td>
+        <td>Total % <span class="dynamic">100</span></td>
+      </tr>
+    </table>
+  </p>
+
+
+  <hr>
+  <h2>Contingent Beneficiaries</h2>
+
+  <p>18. <small>(Optional)</small> My contingent beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
+    <table class="form">
+      <tr>
+        <td colspan="2">Name &ast; <span class="dynamic">Distant Relative</span></td>
+        <td>Relationship &ast; <span class="dynamic">Trust</span></td>
+        <td>Date of Birth <span class="dynamic">9/1/1989</span></td>
+        <td rowspan="3">Share % &ast; <span class="dynamic">60</span></td>
+      </tr>
+      <tr>
+        <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
+        <td>Apt/Suite # <span class="dynamic">#102</span></td>
+        <td>City <span class="dynamic">Tulsa</span></td>
+      </tr>
+      <tr>
+        <td>State <span class="dynamic">OK</span></td>
+        <td>Zip Code <span class="dynamic">70371</span></td>
+        <td>Phone Number <span class="dynamic">(123) 123-1234</span></td>
+        <td>SSN <span class="dynamic">321-32-3214</span></td>
+      </tr>
+
+      <tr>
+        <td colspan="2">Name &ast; <span class="dynamic">Ex Spouse</span></td>
+        <td>Relationship &ast; <span class="dynamic">Trust</span></td>
+        <td>Date of Birth <span class="dynamic">1/1/2010</span></td>
+        <td rowspan="3">Share % &ast; <span class="dynamic">20</span></td>
+      </tr>
+      <tr>
+        <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
+        <td>Apt/Suite # <span class="dynamic">#101</span></td>
+        <td>City <span class="dynamic">Tulsa</span></td>
+      </tr>
+      <tr>
+        <td>State <span class="dynamic">OK</span></td>
+        <td>Zip Code <span class="dynamic">70371</span></td>
+        <td>Phone Number <span class="dynamic">(321) 321-4132</span></td>
+        <td>SSN <span class="dynamic">432-32-3214</span></td>
+      </tr>
+
+      <tr>
+        <td class="spacer-cell" colspan="4"></td>
+        <td>Total % <span class="dynamic">100</span></td>
+      </tr>
+    </table>
+  </p>
+
+  <hr>
+  <h2>Legal</h2>
+
+  <hr>
+  <h4>IRS Substitute W-9 Social Security Number-Taxpayer Identification Number Certification</h4>
+  To be completed by Owner. Under penalties of perjury, as Owner of this policy, I certify that: 1. The taxpayer identification number shown on this application
+  is my correct taxpayer identification number; 2. I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service that I am subject to backup withholding as
+  a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding. Check this box: <input type="checkbox"><label>if you ARE subject to backup withholding;</label> 3. I am
+  a U.S. citizen or other U.S. person as defined by the IRS for federal tax purposes. 4. I am exempt from Foreign Account Tax Compliance Act (FATCA) reporting.
+
+  <hr>
+  <h4>It Is Declared That</h4>
+  Statements and answers in this application, including statements by me in any medical questionnaire or supplement that become part of this application, are complete and true to the best of my knowledge and belief. IT IS
+  AGREED THAT: (1) any waiver or modification of this application will not be effective unless in writing and signed by the President or the Secretary of North American Company for Life and Health Insurance (the Company); (2) the acceptance of any
+  policy or policy change issued on this application shall constitute a ratification of any correction or amendment made by the Company; and (3) No change in amount, risk classification, plan of insurance, or benefits shall be effective unless agreed
+  to in writing by me. I FURTHER AGREE to immediately advise the Company’s Administrative Office of any change to any of my responses contained in the application, including any change in my health or habits, that arises or is discovered after completing
+  this application, but before the policy or reinstatement is effective, as defined herein.
+
+  <hr>
+  <h4>Effective Date</h4>
+  Any insurance issued as a result of this application will not take effect until the full first premium is paid and the contract is delivered to and accepted by the Owner during the lifetime of the Proposed Insured and while
+  such person is in the state of health and financial condition described in all parts of this application. For Reinstatements, the reinstatement is effective as of the date approved by the Company, payment of all required premium and while the
+  insured is living and in the same state of health as stated in all parts of this application.
+
+  <hr>
+  <h4>Authorization</h4>
+  To determine eligibility for insurance, I authorize any licensed physician, licensed medical practitioner, health care professional, hospital, clinic, or other medically related facility, laboratory, pharmacy or pharmacy benefit
+  manager, MIB, Inc (MIB), consumer reporting agency, insurance support organization, insurance or reinsuring company, or independent administrator having information available as to diagnosis, prescription history, medications prescribed, treatment
+  and prognosis with respect to information regarding alcoholism, drug abuse, and psychiatric care or any physical or mental condition and/or treatment of me and any other nonmedical information about me to give to North American Company for Life
+  and Health Insurance (the Company’s Administrative Office) or its legal representative, any and all such information. I authorize the Company’s Administrative Office or its reinsurers to make a brief report of my personal health information to
+  MIB. I also authorize the Company’s Administrative Office to conduct a personal telephone interview in connection with my application; to collect information about me from public and nonpublic sources, including my Social Security number, financial
+  and credit history, employment, general character and reputation, personal characteristics and mode of living; and to release any such data to its reinsurers, MIB, or other persons or organizations performing business or legal services in connection
+  with my application, or as required by law when given a copy of this authorization. This authorization is valid from the date signed for the length of time permitted by applicable law in the state where the policy is delivered or issued for delivery.
+  I may revoke this authorization for information not then obtained by notifying the Company’s Administrative Office in writing. Such revocation will not be effective until received by the Company’s Administrative Office. I understand that I or
+  any authorized representative will receive a copy of this authorization upon request.
+
+  <hr>
+  <h4>Community Property</h4>
+  We assume that there is no marital property interest in the policy unless we are notified otherwise in writing by you.   We are not responsible to determine whether there are any martial interests in this policy that may
+  be affected by your requested to purchase a policy or making any change to an existing policy.  By signing below, you agree to indemnify and hold us harmless to any marital property claims that are made in connection with purchasing a policy or
+  any requested policy changes.
+
+  <hr>
+  <h4>Electronic Signature Notice and Consent</h4>
+  By signing and dating this application, I voluntarily consent to submission of this application electronically and use of my electronic signature, including voice signatures, on this application and
+  related forms. I understand that I may elect to be provided an electronic copy, or paper copy, of the completed application bearing his/her electronic signature at policy delivery. Should the I elect to receive an electronic copy, I agree to provide
+  the Company’s Administrative Office with a current Internet email address and have access to the Internet for the purpose of accepting electronic delivery of the document and a computer with Adobe Acrobat Reader and a Windows Operating System
+  to view the completed application. I understand and agree that if coverage is declined, a copy of the application will not be provided, unless requested. I acknowledge receipt of the Consumer Protection Notice that includes the Fair Credit Reporting
+  Act Notice/MIB, Inc., Notice and Notice of Insurance of Information Practices. Any person who knowingly presents a false statement in an application for insurance may be guilty of a criminal offense and subject to penalties under state law.
+
+  <hr>
+  <h4>W-9 Social Security Number&mdash;Taxpayer Identification Number Certification</h4>
+  The Internal Revenue Service does not require the Owner’s consent to any provision of this document other than the certifications required to avoid backup withholding.
+
+  <hr>
+  <h2>Payment Method</h2>
+
+  <p>Modal Premium Frequency:<br>
+    <input type="checkbox"><label>Annual</label> <input type="checkbox"><label>Monthly</label>
+  </p>
+
+  <p>Payment Type:<br>
+    <input type="checkbox"><label>EFT/ACH </label> <input type="checkbox"><label>Credit Card</label>
+  </p>
+
+  <p>Billing Address:<br>
+    <input type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. <small>(If P.O. Box, also include Street Address below)</small></label><br>
+    <table class="form">
+      <tr>
+        <td colspan="2">Street Address <span class="dynamic">123 Smith St.</span></td>
+        <td>Suite/Apt # <span class="dynamic">#101</span></td>
+      </tr>
+      <tr>
+        <td>City <span class="dynamic">Richardson</span></td>
+        <td>State <span class="dynamic">TX</span></td>
+        <td>ZIP <span class="dynamic">75082</span></td>
+      </tr>
+    </table>
+  </p>
+
+<h2>Third Party Billing Notification</h2>
+  <p>Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
+    <table class="form">
+      <tr>
+        <td colspan="3">Name <span class="dynamic">Jack Dorsey</span></td>
+        <td colspan="2">Phone <span class="dynamic">(214) 432-1234</span></td>
+      </tr>
+      <tr>
+        <td colspan="3">Street Address <span class="dynamic">123 Main St.</span></td>
+        <td colspan="2">Suite/Apt # <span class="dynamic">#808</span></td>
+      </tr>
+      <tr>
+        <td colspan="2">City <span class="dynamic">Kansas City</span></td>
+        <td>State <span class="dynamic">MO</span></td>
+        <td colspan="2">ZIP <span class="dynamic">39485</span></td>
+      </tr>
+    </table>
+  </p>
+
+<h2>Your Signature</h2>
   <table class="form">
     <tr>
-      <td>Current Life Insurance or Annuity Contract Amount<span class="dynamic">$250,000</span><span class="units">USD</span></td>
+      <td>Signed At <small>(Resident City and State)</small><span class="dynamic">Kansas City, MO</span></td>
+    </tr>
+    <tr>
+      <td>Signature of Owner <span class="dynamic">&nbsp;</span>
+      </td>
     </tr>
   </table>
-</p>
-
-<p>16. I am planning to replace or change $___ of my existing life insurance or annuity contracts in force with this company <small>(or any other company)</small>.
-  <table class="form">
-    <tr>
-      <td>Amount of Current Life Insurance or Annuity Contract Being Replaced<span class="dynamic">$100,000</span><span class="units">USD</span></td>
-    </tr>
-  </table>
-</p>
-
-
-<hr>
-## Primary Beneficiaries
-<p>17. My beneficiary is [name], my [relationship], who will receive a [percentage] share.  &ast;Required Fields<br>
-  <table class="form">
-    <tr>
-      <td colspan="2">Name &ast; <span class="dynamic">Sue Stipple</span></td>
-      <td>Relationship &ast; <span class="dynamic">Spouse</span></td>
-      <td>Date of Birth <span class="dynamic">9/1/1989</span></td>
-      <td rowspan="3">Share % &ast; <span class="dynamic">60</span></td>
-    </tr>
-    <tr>
-      <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
-      <td>Apt/Suite # <span class="dynamic">#102</span></td>
-      <td>City <span class="dynamic">Tulsa</span></td>
-    </tr>
-    <tr>
-      <td>State <span class="dynamic">OK</span></td>
-      <td>Zip Code <span class="dynamic">70371</span></td>
-      <td>Phone Number <span class="dynamic">(123) 123-1234</span></td>
-      <td>SSN <span class="dynamic">321-32-3214</span></td>
-    </tr>
-
-    <tr>
-      <td colspan="2">Name &ast; <span class="dynamic">Sarah Stipple</span></td>
-      <td>Relationship &ast; <span class="dynamic">Child</span></td>
-      <td>Date of Birth <span class="dynamic">1/1/2010</span></td>
-      <td rowspan="3">Share % &ast; <span class="dynamic">20</span></td>
-    </tr>
-    <tr>
-      <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
-      <td>Apt/Suite # <span class="dynamic">#101</span></td>
-      <td>City <span class="dynamic">Tulsa</span></td>
-    </tr>
-    <tr>
-      <td>State <span class="dynamic">OK</span></td>
-      <td>Zip Code <span class="dynamic">70371</span></td>
-      <td>Phone Number <span class="dynamic">(321) 321-4132</span></td>
-      <td>SSN <span class="dynamic">432-32-3214</span></td>
-    </tr>
-
-    <tr>
-      <td colspan="2">Name &ast; <span class="dynamic">Caleb</span></td>
-      <td>Relationship &ast; <span class="dynamic">Stipple</span></td>
-      <td>Date of Birth <span class="dynamic">2/14/2013</span></td>
-      <td rowspan="3">Share % &ast; <span class="dynamic">20</span></td>
-    </tr>
-    <tr>
-      <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
-      <td>Apt/Suite # <span class="dynamic">#101</span></td>
-      <td>City <span class="dynamic">Tulsa</span></td>
-    </tr>
-    <tr>
-      <td>State <span class="dynamic">OK</span></td>
-      <td>Zip Code <span class="dynamic">70312</span></td>
-      <td>Phone Number <span class="dynamic">(123) 321-1234</span></td>
-      <td>SSN <span class="dynamic">123-12-1234</span></td>
-    </tr>
-    <tr>
-      <td class="spacer-cell" colspan="4"></td>
-      <td>Total % <span class="dynamic">100</span></td>
-    </tr>
-  </table>
-</p>
-
-
-<hr>
-## Contingent Beneficiaries
-
-<p>18. <small>(Optional)</small> My contingent beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
-  <table class="form">
-    <tr>
-      <td colspan="2">Name &ast; <span class="dynamic">Distant Relative</span></td>
-      <td>Relationship &ast; <span class="dynamic">Trust</span></td>
-      <td>Date of Birth <span class="dynamic">9/1/1989</span></td>
-      <td rowspan="3">Share % &ast; <span class="dynamic">60</span></td>
-    </tr>
-    <tr>
-      <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
-      <td>Apt/Suite # <span class="dynamic">#102</span></td>
-      <td>City <span class="dynamic">Tulsa</span></td>
-    </tr>
-    <tr>
-      <td>State <span class="dynamic">OK</span></td>
-      <td>Zip Code <span class="dynamic">70371</span></td>
-      <td>Phone Number <span class="dynamic">(123) 123-1234</span></td>
-      <td>SSN <span class="dynamic">321-32-3214</span></td>
-    </tr>
-
-    <tr>
-      <td colspan="2">Name &ast; <span class="dynamic">Ex Spouse</span></td>
-      <td>Relationship &ast; <span class="dynamic">Trust</span></td>
-      <td>Date of Birth <span class="dynamic">1/1/2010</span></td>
-      <td rowspan="3">Share % &ast; <span class="dynamic">20</span></td>
-    </tr>
-    <tr>
-      <td colspan="2">Address <span class="dynamic">123 Main St.</span></td>
-      <td>Apt/Suite # <span class="dynamic">#101</span></td>
-      <td>City <span class="dynamic">Tulsa</span></td>
-    </tr>
-    <tr>
-      <td>State <span class="dynamic">OK</span></td>
-      <td>Zip Code <span class="dynamic">70371</span></td>
-      <td>Phone Number <span class="dynamic">(321) 321-4132</span></td>
-      <td>SSN <span class="dynamic">432-32-3214</span></td>
-    </tr>
-
-    <tr>
-      <td class="spacer-cell" colspan="4"></td>
-      <td>Total % <span class="dynamic">100</span></td>
-    </tr>
-  </table>
-</p>
-
-
-<hr>
-## Legal
-
-<hr>
-### IRS Substitute W-9 Social Security Number-Taxpayer Identification Number Certification
-To be completed by Owner. Under penalties of perjury, as Owner of this policy, I certify that:
-1. The taxpayer identification number shown on this application is my correct taxpayer identification number;
-2. I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding. Check this box <input type="checkbox"><label>if you ARE subject to backup withholding;</label>
-3. I am a U.S. citizen or other U.S. person as defined by the IRS for federal tax purposes.
-4. I am exempt from Foreign Account Tax Compliance Act (FATCA) reporting.
-
-<hr>
-### It Is Declared That
-Statements and answers in this application, including statements by me in any medical questionnaire or supplement that become part of this application, are complete and true to the best of my knowledge and belief. IT IS AGREED THAT: (1) any waiver or modification of this application will not be effective unless in writing and signed by the President or the Secretary of North American Company for Life and Health Insurance (the Company); (2) the acceptance of any policy or policy change issued on this application shall constitute a ratification of any correction or amendment made by the Company; and (3) No change in amount, risk classification, plan of insurance, or benefits shall be effective unless agreed to in writing by me. I FURTHER AGREE to immediately advise the Company’s Administrative Office of any change to any of my responses contained in the application, including any change in my health or habits, that arises or is discovered after completing this application, but before the policy or reinstatement is effective, as defined herein.
-
-<hr>
-### Effective Date
-Any insurance issued as a result of this application will not take effect until the full first premium is paid and the contract is delivered to and accepted by the Owner during the lifetime of the Proposed Insured and while such person is in the state of health and financial condition described in all parts of this application. For Reinstatements, the reinstatement is effective as of the date approved by the Company, payment of all required premium and while the insured is living and in the same state of health as stated in all parts of this application.
-
-<hr>
-### Authorization
-To determine eligibility for insurance, I authorize any licensed physician, licensed medical practitioner, health care professional, hospital, clinic, or other medically related facility, laboratory, pharmacy or pharmacy benefit manager, MIB, Inc (MIB), consumer reporting agency, insurance support organization, insurance or reinsuring company, or independent administrator having information available as to diagnosis, prescription history, medications prescribed, treatment and prognosis with respect to information regarding alcoholism, drug abuse, and psychiatric care or any physical or mental condition and/or treatment of me and any other nonmedical information about me to give to North American Company for Life and Health Insurance (the Company’s Administrative Office) or its legal representative, any and all such information. I authorize the Company’s Administrative Office or its reinsurers to make a brief report of my personal health information to MIB. I also authorize the Company’s Administrative Office to conduct a personal telephone interview in connection with my application; to collect information about me from public and nonpublic sources, including my Social Security number, financial and credit history, employment, general character and reputation, personal characteristics and mode of living; and to release any such data to its reinsurers, MIB, or other persons or organizations performing business or legal services in connection with my application, or as required by law when given a copy of this authorization. This authorization is valid from the date signed for the length of time permitted by applicable law in the state where the policy is delivered or issued for delivery. I may revoke this authorization for information not then obtained by notifying the Company’s Administrative Office in writing. Such revocation will not be effective until received by the Company’s Administrative Office. I understand that I or any authorized representative will receive a copy of this authorization upon request.
-
-<hr>
-### Community Property
-We assume that there is no marital property interest in the policy unless we are notified otherwise in writing by you.   We are not responsible to determine whether there are any martial interests in this policy that may be affected by your requested to purchase a policy or making any change to an existing policy.  By signing below, you agree to indemnify and hold us harmless to any marital property claims that are made in connection with purchasing a policy or any requested policy changes.
-
-<hr>
-### Electronic Signature Notice and Consent
-By signing and dating this application, I voluntarily consent to submission of this application electronically and use of my electronic signature, including voice signatures, on this application and related forms. I understand that I may elect to be provided an electronic copy, or paper copy, of the completed application bearing his/her electronic signature at policy delivery. Should the I elect to receive an electronic copy, I agree to provide the Company’s Administrative Office with a current Internet email address and have access to the Internet for the purpose of accepting electronic delivery of the document and a computer with Adobe Acrobat Reader and a Windows Operating System to view the completed application. I understand and agree that if coverage is declined, a copy of the application will not be provided, unless requested.
-I acknowledge receipt of the Consumer Protection Notice that includes the Fair Credit Reporting Act Notice/MIB, Inc., Notice and Notice of Insurance of Information Practices.
-Any person who knowingly presents a false statement in an application for insurance may be guilty of a criminal offense and subject to penalties under state law.
-
-<hr>
-### W-9 Social Security Number--Taxpayer Identification Number Certification
-The Internal Revenue Service does not require the Owner’s consent to any provision of this document other than the certifications required to avoid backup withholding.
-
-<hr>
-## Payment Method
-
-<p>Modal Premium Frequency:<br>
-  <input type="checkbox"><label>Annual</label>  <input type="checkbox"><label>Monthly</label>
-</p>
-
-<p>Payment Type:<br>
-  <input type="checkbox"><label>EFT/ACH </label>  <input type="checkbox"><label>Credit Card</label>
-</p>
-
-<p>Billing Address:<br>
-  <input type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. <small>(If P.O. Box, also include Street Address below)</small></label><br>
-  <table class="form">
-    <tr>
-      <td colspan="2">Street Address <span class="dynamic">Melvin</span></td>
-      <td>Suite/Apt # <span class="dynamic">Melvin</span></td>
-    </tr>
-    <tr>
-      <td>City <span class="dynamic">Melvin</span></td>
-      <td>State <span class="dynamic">Melvin</span></td>
-      <td>ZIP <span class="dynamic">Melvin</span></td>
-    </tr>
-  </table>
-</p>
-
-<hr>
-## Third Party Billing Notification
-
-<p>Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
-  <table class="form">
-    <tr>
-      <td colspan="3">Name <span class="dynamic">Melvin</span></td>
-      <td colspan="2">Phone <span class="dynamic">Melvin</span></td>
-    </tr>
-    <tr>
-      <td colspan="3">Street Address <span class="dynamic">Melvin</span></td>
-      <td colspan="2">Suite/Apt # <span class="dynamic">Melvin</span></td>
-    </tr>
-    <tr>
-      <td colspan="2">City <span class="dynamic">Melvin</span></td>
-      <td>State <span class="dynamic">Melvin</span></td>
-      <td colspan="2">ZIP <span class="dynamic">Melvin</span></td>
-    </tr>
-  </table>
-</p>
-
-<hr>
-## Your Signature
-<table class="form">
-  <tr>
-    <td>Signed At <small>(Resident City and State)</small><span class="dynamic">Melvin</span></td>
-  </tr>
-  <tr>
-    <td>Signature of Owner <span class="dynamic">Melvin</span>
-    </td>
-  </tr>
-</table>
 
 {{/markdown}}
-		</columns>
-	</row>
+    </columns>
+  </row>
 </container>

@@ -1,11 +1,4 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-p {
+h1, h2, h3, h4, h5, h6, li, p {
 	hyphens: none;
 }
 
@@ -16,6 +9,16 @@ h1 {
     font-size: 1.6rem;
     line-height: 1em;
   }
+}
+
+h2 {
+  margin-bottom: .4rem;
+  margin-top: 1.6rem;
+}
+
+h4 {
+  margin-bottom: 0.4rem;
+  margin-top: 1.2rem;
 }
 
 p {
@@ -77,8 +80,7 @@ label {
 	}
 }
 
-ol,
-ul {
+ol, ul {
 	margin-left: 1rem;
 
 	-webkit-padding-start: 0 !important;
@@ -87,4 +89,26 @@ ul {
 hr {
 	border-style: none;
 	border-top: 1px solid #ccc;
+}
+
+
+// REFLEXIVES //////////////////////////////////////////////////////////////////
+
+div.reflex {
+  border-left: 1px solid orange;
+  padding: 10px 15px 5px;
+  margin: 10px 0;
+}
+
+.reflex {
+  h4{
+    margin-top: 0;
+  }
+  small {
+    // display: none;
+  }
+}
+
+#reflex1-1{
+
 }
