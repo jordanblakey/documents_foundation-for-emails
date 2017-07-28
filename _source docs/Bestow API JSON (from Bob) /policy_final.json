@@ -1,0 +1,8 @@
+{
+	"stage": "payment",
+	"pages": [
+		{
+			"pageType": "dashboard"
+		}
+	]
+}
