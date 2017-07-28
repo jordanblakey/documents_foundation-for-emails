@@ -8,7 +8,19 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Lapse Notice</title>
-  <script type="text/javascript" src="css/uniform.js"></script>
+  <script type="text/javascript" src="assets/uniform.js"></script>
+  <script type="text/javascript">
+      ;(function(_) {
+    _.fn.nowidow = function() {
+      return this.html(function() {
+        return _(this).html().replace(/\s([^\s]*)(\s+)?$/, '&nbsp;$1');
+      });
+    }
+    _(document).ready(function(){
+      _('.nowidow').nowidow();
+    });
+    })(jQuery);
+  </script>
 </head>
 <body>
   <table class="body">

@@ -8,7 +8,19 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width">
   <title>10 &amp; 20 Year Term Life Insurance Application</title>
-  <script type="text/javascript" src="css/uniform.js"></script>
+  <script type="text/javascript" src="assets/uniform.js"></script>
+  <script type="text/javascript">
+      ;(function(_) {
+    _.fn.nowidow = function() {
+      return this.html(function() {
+        return _(this).html().replace(/\s([^\s]*)(\s+)?$/, '&nbsp;$1');
+      });
+    }
+    _(document).ready(function(){
+      _('.nowidow').nowidow();
+    });
+    })(jQuery);
+  </script>
 </head>
 <body>
   <table class="body">
@@ -35,6 +47,796 @@
           	<table class="row"><tbody><tr>
           		<th class="small-12 large-12 columns first last"><table><tr><th>
           			<h1>10 &amp; 20 Year Term Life Insurance Application</h1>
+          <h2>Your Basic Information</h2>
+          <table class="form">
+            <tr>
+              <td>1a. Legal First Name <span class="dynamic" reference="firstName" value="">Melvin</span></td>
+              <td>1b. Middle Initial <span class="dynamic" reference="middleName" value="">K.</span></td>
+              <td>1c. Legal Last Name <span class="dynamic" reference="lastName" value="">Stipple</span></td>
+            </tr>
+            <tr>
+              <td>2a. Date of Birth <span class="dynamic" reference="birthdate" value="">09/19/1986</span></td>
+              <td>2b. State/Country of Birth <span class="dynamic" reference="birthstate" value="">TX</span></td>
+              <td>2c. Sex <br><input reference="gender" value="male" type="radio" name="gender"><label>Male</label> <input reference="gender" value="female" type="radio" name="gender"><label>Female</label></td>
+            </tr>
+            <tr>
+              <td colspan="2">3a. Height <span class="height"><span class="dynamic" reference="heightFeet" value="">6</span><span class="dynamic" reference="heightInches">1</span></span><span class="units">Feet, Inches</span></td>
+              <td>3b. Weight <span class="dynamic" reference="weight" value="">190</span><span class="units">Pounds</span></td>
+            </tr>
+            <tr>
+              <td colspan="2">4a. Street Address <span class="dynamic" reference="street" parse="street" value="">123 Main St.</span></td>
+              <td>4b. Suite/Apt # <span class="dynamic" reference="street" parse="suite-apt-num" value="">#101</span></td>
+            </tr>
+            <tr>
+              <td>4c. City <span class="dynamic" reference="street" parse="city" value="">Tulsa</span></td>
+              <td>4d. State <span class="dynamic" reference="street" parse="state" value="">OK</span></td>
+              <td>5. Zip Code <span class="dynamic" reference="zipcode" value="">70371</span></td>
+            </tr>
+            <tr>
+              <td>6. Email <span class="dynamic" reference="email" value="">mstipple@mail.com</span></td>
+              <td>7. Phone <span class="dynamic" reference="phone" value="">(123) 123-1234</span></td>
+              <td>8. Social Security Number <span class="dynamic" reference="ssNum" value="">123-12-1234</span></td>
+            </tr>
+          </table>
+          
+          <!-- # RUN INSTANT ID -->
+          
+          <h2>More About You</h2>
+          <p>9. Are you a U.S. citizen, or do you have a U.S. permanent resident card <small>(green card)?</small><br>
+            <input reference="citizen" name="citizen" value="yes" type="radio"><label>Yes</label>
+            <input reference="citizen" name="citizen" value="no" type="radio"><label>No</label>
+          </p>
+          
+          <p>10. Have you ever been convicted of a (1) felony, (2) DUI/DWI for alcohol or drugs in the past 5 years, or (3) have you had a suspended or revoked license in the past 3 years?<br>
+            <input reference="legalCondition" name="legalCondition" value="yes" type="radio"><label>Yes</label>
+            <input reference="legalCondition" name="legalCondition" value="no" type="radio"><label>No</label>
+          </p>
+          
+          <p>11. In the past 12 months, have you used any tobacco or nicotine products <small>(excluding less than 24 cigars)?</small><br>
+            <input reference="tobacco" name="tobacco" value="yes" type="radio"><label>Yes</label>
+            <input reference="tobacco" name="tobacco" value="no" type="radio"><label>No</label>
+          </p>
+          
+          <p>12. In the past 5 years, have you been declined for life insurance?<br>
+            <input reference="declinedIns" name="declinedIns" value="yes" type="radio"><label>Yes</label>
+            <input reference="declinedIns" name="declinedIns" value="no" type="radio"><label>No</label>
+          </p>
+          
+          <p>13. In the past 2 years or within the next year, have you or do you plan to (1) pilot an airplane (other than as a regularly scheduled commercial airline pilot), or participate in (2) scuba diving deeper than 100 feet, (3) automobile racing over 100 miles per hour, or (4) outdoor climbing requiring specialized equipment?<br>
+            <input reference="riskyBehavior" name="riskyBehavior" value="yes" type="radio"><label>Yes</label>
+            <input reference="riskyBehavior" name="riskyBehavior" value="no" type="radio"><label>No</label>
+          </p>
+          
+          <p>14. In the past 2 years, have you received disability payments for a period in excess of 3 months?<br>
+            <input reference="disabilityPayments" name="disabilityPayments" value="yes" type="radio"><label>Yes</label>
+            <input reference="disabilityPayments" name="disabilityPayments" value="no" type="radio"><label>No</label>
+          </p>
+          
+          <p>15. Have you tested positive for HIV? <br>
+            <input reference="hiv" name="hiv" value="yes" type="radio"><label>Yes</label>
+            <input reference="hiv" name="hiv" value="no" type="radio"><label>No</label>
+          </p>
+          
+          <p>16. In the past 10 years, have you been medically diagnosed or medically treated for: (1) heart disease, (2) cancer (excluding basal and squamous cell skin cancer), (3) organ transplant, (4) peripheral arterial disease, (5) chronic kidney disease, or (6) liver cirrhosis or drug abuse?<br>
+            <input reference="medicalCondition" name="medicalCondition" value="yes" type="radio"><label>Yes</label>
+            <input reference="medicalCondition" name="medicalCondition" value="no" type="radio"><label>No</label>
+          </p>
+          
+          <p>17. Other than routine care, in the past 12 months, have you been advised by a licensed medical professional to have surgery, hospitalization, any diagnostic test (other than for HIV) or any procedure which has not been completed or the results are unknown?<br>
+            <input reference="medicalAdvice" name="medicalAdvice" value="yes" type="radio"><label>Yes</label>
+            <input reference="medicalAdvice" name="medicalAdvice" value="no" type="radio"><label>No</label>
+          </p>
+          
+          <p>18. In the past 3 months, have you unintentionally lost more than 15 pounds [female only]? 20 pounds [male only]?<br>
+            <input reference="weightDiff" name="weightDiff" value="yes" type="radio"><label>Yes</label>
+            <input reference="weightDiff" name="weightDiff" value="no" type="radio"><label>No</label>
+          </p>
+          
+          <p>19. In the past 10 years, have you been medically diagnosed or medically treated for (select all that apply):<br>
+            <input reference="medicalCollection.depressionMentalStress" name="medicalCollection.depressionMentalStress" value="yes" type="checkbox"><label>Depression or other mental disorder</label>
+            <input reference="medicalCollection.alcohol" name="medicalCollection.alcohol" value="yes" type="checkbox"><label>Alcohol abuse</label>
+            <input reference="medicalCollection.chestPain" name="medicalCollection.chestPain" value="yes" type="checkbox"><label>Chest pain</label>
+            <input reference="medicalCollection.diabetes" name="medicalCollection.diabetes" value="yes" type="checkbox"><label>Diabetes</label>
+            <input reference="medicalCollection.strokeTia" name="medicalCollection.strokeTia" value="yes" type="checkbox"><label>Stroke or mini-stroke/TIA</label>
+            <input reference="medicalCollection.seizure" name="medicalCollection.seizure" value="yes" type="checkbox"><label>Seizure disorder</label>
+          </p>
+          
+          <!-- Your Alcohol Use -->
+          <div class="reflex" id="reflex1-1">
+            <h4>Your Alcohol Use <small>Reflex 1.1<small></small></small></h4>
+            <p>In the past 10 years, have you been medically treated, advised to get treatment, or attended a support group for alcohol abuse?<br>
+              <input type="radio" name="alcoholAbuseTreatment" reference="alcoholAbuseTreatment" value="true-or-unknown">
+              <label>Yes, unknown</label>
+              <!-- Decline -->
+              <input type="radio" name="alcoholAbuseTreatment" reference="alcoholAbuseTreatment" value="false">
+              <label>No</label>
+              <!-- Next Question -->
+            </p>
+            <p>In the past 2 years, have you been advised by a medical professional to reduce your alcohol use?<br>
+              <input type="radio" name="alcoholAdvice" reference="alcoholAdvice" value="true-or-unknown">
+              <label>Yes, unknown</label>
+              <!-- Decline -->
+              <input type="radio" name="alcoholAdvice" reference="alcoholAdvice" value="false">
+              <label>No</label>
+              <!-- Next Question -->
+            </p>
+            <p>Do you currently drink alcohol?<br>
+              <input type="radio" name="drink" reference="drink" value="true">
+              <label>Yes</label>
+              <!-- Next Question -->
+              <input type="radio" name="drink" reference="drink" value="false">
+              <label>No</label>
+              <!-- Accept -->
+            </p>
+            <p>How many drinks do you typically consume per day?<br>
+              <input type="radio" name="howManyDrinks" reference="howManyDrinks" value="<=3">
+              <label>0-3</label>
+              <!-- Next Question -->
+              <input type="radio" name="howManyDrinks" reference="howManyDrinks" value=">4">
+              <label>4+</label>
+              <!-- Decline -->
+            </p>
+            <p>How many times per month do you consume more than 6 drinks in a day?<br>
+              <input type="radio" name="excessPerMonthDrinks" reference="excessPerMonthDrinks" value="0">
+              <label>0</label>
+              <!-- Accept -->
+              <input type="radio" name="excessPerMonthDrinks" reference="excessPerMonthDrinks" value=">1">
+              <label>1+</label>
+              <!-- Decline -->
+            </p>
+          
+          </div>
+          
+          
+          <!-- Diabetes -->
+          <div class="reflex" id="reflex1-2">
+            <h4>Diabetes<small>Reflex 1.2<small></small></small></h4>
+          
+              <p>Were you medically diagnosed with gestational diabetes only?<br>
+                <!-- only for female applicants -->
+                <input type="radio" name="diabetesFemaleGestation" reference="diabetesFemaleGestation" value="Yes">
+                <label>Yes</label>
+                <!-- Accept -->
+                <input type="radio" name="diabetesFemaleGestation" reference="diabetesFemaleGestation" value="No">
+                <label>No</label>
+                <!-- Decline -->
+              </p>
+              <!-- System edit:
+              Under age 40
+              Decline
+              Age 40 or higher
+              Next Question
+              -->
+              <p>In the past two years, have you been prescribed insulin by a medical professional?<br>
+                <input type="radio" name="prescribedInsulin" reference="prescribedInsulin" value="Yes-unknown">
+                <label>Yes, unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="prescribedInsulin" reference="prescribedInsulin" value="No">
+                <label>No</label>
+                <!-- Next Question -->
+              </p>
+              <p>In the past 2 years, have you been hospitalized for diabetes?<br>
+                <input type="radio" name="diabetesHospitalized2Years" reference="diabetesHospitalized2Years" value="Yes">
+                <label>Yes</label>
+                <!-- Decline -->
+                <input type="radio" name="diabetesHospitalized2Years" reference="diabetesHospitalized2Years" value="No">
+                <label>No</label>
+                <!-- Next question -->
+              </p>
+              <p>How many times per year do you typically see a medical professional for this condition?<br>
+                <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="0">
+                <label>0</label>
+                <!-- Decline    // Needs to be programmed for a ranged value -->
+                <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="1-4">
+                <label>1-4</label>
+                <!-- Next question -->
+                <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="5+">
+                <label>5+</label>
+                <!-- Decline -->
+              </p>
+              <p>In the past two years, have you been medically diagnosed or medically treated for kidney disease (including protein or microalbumin in the urine) or any type of skin ulcers?<br>
+                <input type="radio" name="kidneyDisease" reference="kidneyDisease" value="Yes-unknown">
+                <label>Yes, unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="kidneyDisease" reference="kidneyDisease" value="No">
+                <label>No</label>
+                <!-- Next question -->
+              </p>
+              <p>What was your most recent Hemoglobin A1c or Glycohemoglobin reading?<br>
+                <input type="radio" name="hemoglobin" reference="hemoglobin" value="Unknown">
+                <label>Unknown</label>
+                <!-- Decline // This needs to be programmed for a ranged value -->
+                <input type="radio" name="hemoglobin" reference="hemoglobin" value="<8">
+                <label> 8.0 or below</label>
+                <!-- Accept    // with these rules listed below -->
+                <input type="radio" name="alcoholAbuseTreatment" reference="alcoholAbuseTreatment" value=">8">
+                <label>&gt; 8.0</label>
+                <!-- Decline -->
+              </p>
+              <p>How old were you when diabetes was diagnosed?<br>
+                <input type="radio" name="ageDiabetesDiagnosed" reference="ageDiabetesDiagnosed" value="<40">
+                <label>&lt; 40, unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="ageDiabetesDiagnosed" reference="ageDiabetesDiagnosed" value=">41">
+                <label>41+</label>
+                <!-- Accept -->
+              </p>
+          
+          </div>
+          
+          
+          <!-- Chest Pain -->
+          <div class="reflex" id="reflex1.3">
+            <h4>Chest Pain <small>Reflex 1.3<small></small></small></h4>
+          
+            <p>Was your chest pain medically diagnosed as heartburn, indigestion, or a muscle strain?<br>
+              <input type="radio" name="chestPainDiagnosed" reference="chestPainDiagnosed" value="yes">
+              <label>Yes</label>
+              <!-- Accept -->
+              <input type="radio" name="chestPainDiagnosed" reference="chestPainDiagnosed" value="no-unknown">
+              <label>No, unknown</label>
+              <!-- Next question -->
+            </p>
+            <p>Was your chest pain medically diagnosed as angina or cardiac chest pain?<br>
+              <input type="radio" name="chestPainAngina" reference="chestPainAngina" value="yes">
+              <label>Yes</label>
+              <!-- Decline -->
+              <input type="radio" name="chestPainAngina" reference="chestPainAngina" value="no">
+              <label>No</label>
+              <!-- Next question -->
+            </p>
+            <p>Were you prescribed Nitroglycerin by a medical professional for your chest pain?<br>
+              <input type="radio" name="chestPainNitro" reference="chestPainNitro" value="yes-unknown">
+              <label>Yes, unknown</label>
+              <!-- Decline -->
+              <input type="radio" name="chestPainNitro" reference="chestPainNitro" value="no">
+              <label>No</label>
+              <!-- Next question -->
+            </p>
+            <p>When did you have your last episode of chest pain?<br>
+              <input type="radio" name="chestPainLast" reference="chestPainLast" value="<=6">
+              <label>0-6 months</label>
+              <!-- Decline -->
+              <input type="radio" name="chestPainLast" reference="chestPainLast" value=">6">
+              <label>&gt;6 months</label>
+              <!-- Accept -->
+            </p>
+          
+          </div>
+          
+          
+          <!-- TIA Stroke -->
+          <div class="reflex" id="reflex1.4">
+            <h4>TIA Stroke <small>Reflex 1.4<small></small></small></h4>
+          
+            <!-- System Edit:
+            Age <40
+            Decline
+            Age 40 and <up></up>
+            Next question
+            -->
+            <p>What were you medically diagnosed with?<br>
+              <input type="radio" name="strokeTiaDiagnosed" reference="strokeTiaDiagnosed" value="//">
+              <label>Stroke</label>
+              <!-- Decline -->
+              <input type="radio" name="strokeTiaDiagnosed" reference="strokeTiaDiagnosed" value="//">
+              <label>Mini-stroke or TIA</label>
+              <!-- Next question -->
+            </p>
+            <p>How many mini-strokes or TIA&#39;s have you had?<br>
+              <input type="radio" name="strokeTiaCount" reference="strokeTiaCount" value="//">
+              <label>1</label>
+              <!-- Next question -->
+              <input type="radio" name="strokeTiaCount" reference="strokeTiaCount" value="//">
+              <label>&gt;1</label>
+              <!-- Decline -->
+            </p>
+            <p>How long ago did you have your TIA?<br>
+              <input type="radio" name="tiaLast" reference="tiaLast" value="//">
+              <label>0-1 year ago</label>
+              <!-- Decline -->
+              <input type="radio" name="tiaLast" reference="tiaLast" value="//">
+              <label>&gt; 1 year  Next</label>
+              <!-- Question -->
+            </p>
+          
+          </div>
+          
+          
+          <!-- Epilepsy, Seizures-->
+          <div class="reflex" id="reflex1.5">
+            <h4>Epilepsy, Seizures <small>Reflex 1.5<small></small></small></h4>
+          
+              <p>Was your first seizure in the last 12 months?<br>
+                <input type="radio" name="1-5-1" value="true-unknown">
+                <label>Yes, unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="1-5-1" value="false">
+                <label>No</label>
+                <!-- Next question -->
+              </p>
+              <p>When was your last seizure?<br>
+                <input type="radio" name="1-5-2" value="<=5">
+                <label>0-5 years ago</label>
+                <!-- Next question    // program as ranged value -->
+                <input type="radio" name="1-5-2" value=">5">
+                <label>5+ years ago</label>
+                <!-- Accept -->
+              </p>
+              <p>How many seizures have you had in the past 12 months?<br>
+                <input type="radio" name="1-5-3" value="<=6">
+                <label>0-6</label>
+                <!-- Next question    // program as ranged value -->
+                <input type="radio" name="1-5-3" value=">6">
+                <label>6+</label>
+                <!-- Decline -->
+              </p>
+              <p>Have you been medically diagnosed or treated for either grand mal seizures or a seizure due to drug or alcohol use?<br>
+                <input type="radio" name="1-5-4" value="true">
+                <label>Yes</label>
+                <!-- Decline -->
+                <input type="radio" name="1-5-4" value="false">
+                <label>No</label>
+                <!-- Next question -->
+              </p>
+              <p>In the past two years, have you been prescribed medication by a medical professional for this condition?<br>
+                <input type="radio" name="1-5-5" value="unknown">
+                <label>Unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="1-5-5" value="false">
+                <label>No</label>
+                <!-- Next question -->
+                <input type="radio" name="1-5-5" value="true-still-taking">
+                <label>Yes and still taking this</label>
+                <!-- Next question -->
+                <input type="radio" name="1-5-5" value="true-stopped-advised">
+                <label>Yes but stopped all medication with medical professional’s advice</label>
+                <!-- Next question -->
+                <input type="radio" name="1-5-5" value="true-stop-unadvised">
+                <label>Yes but stopped taking medication on my own</label>
+                <!-- Decline -->
+              </p>
+              <p>In the past 12 months, have you had a motor vehicle accident due to this condition?<br>
+                <input type="radio" name="1-5-6" value="true-unknown">
+                <label>Yes, unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="1-5-6" value="false">
+                <label>No</label>
+                <!-- Accept -->
+              </p>
+          
+          </div>
+          
+          
+          <!-- Depression, Anxiety, Stress Disorder -->
+          <div class="reflex" id="reflex1.6">
+            <h4>Depression/Anxiety/Stress Disorder <small>Reflex 1.6<small></small></small></h4>
+          
+              <p>What were you medically diagnosed with?<br>
+                <input type="radio" name="1-6-1" value="depression-anxiety-stress">
+                <label>Depression, anxiety, or stress disorder</label>
+                <!-- Next question -->
+                <input type="radio" name="1-6-1" value="other-mental-disorder">
+                <label>Other mental disorder </label>
+                <!-- Decline -->
+              </p>
+              <p>When was this condition first diagnosed?<br>
+                <input type="radio" name="1-6-2" value="<=1">
+                <label>0-1 year, unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="1-6-2" value=">1">
+                <label>&gt;1 year</label>
+                <!-- Next question -->
+              </p>
+              <p>In the past 10 years, have you been hospitalized for an attempted suicide?<br>
+                <input type="radio" name="1-6-3" value="yes-unknown">
+                <label>Yes, unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="1-6-3" value="no">
+                <label>No</label>
+                <!-- Next Question -->
+              </p>
+              <p>In the past 5 years, have you made a claim for or received disability payments, or been hospitalized for this condition?<br>
+                <input type="radio" name="1-6-4" value="yes-unknown">
+                <label>Yes, unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="1-6-4" value="no">
+                <label>No</label>
+                <!-- Next question -->
+              </p>
+              <p>In the past 12 months, have you missed more than three days from your work or duties for this condition?<br>
+                <input type="radio" name="1-6-5" value="yes-unknown">
+                <label>Yes, unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="1-6-5" value="no">
+                <label>No</label>
+                <!-- Next question -->
+              </p>
+              <p>In the past two years, have you been prescribed medication by a medical professional for this condition?<br>
+                <input type="radio" name="1-6-6" value="unknown">
+                <label>Unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="1-6-6" value="no">
+                <label>No</label>
+                <!-- Accept -->
+                <input type="radio" name="1-6-6" value="yes-and-still-taking">
+                <label>Yes and still taking this</label>
+                <!-- Next question -->
+                <input type="radio" name="1-6-6" value="yes-stopped-advised">
+                <label>Yes but stopped all medication with medical professional’s advice</label>
+                <!-- Accept -->
+                <input type="radio" name="1-6-6" value="yes-stopped-unadvised">
+                <label>Yes but stopped taking medication on my own</label>
+                <!-- Decline -->
+              </p>
+              <p>How many medications do you currently take for this condition?<br>
+                <input type="radio" name="1-6-7" value="1">
+                <label>1</label>
+                <!-- Accept -->
+                <input type="radio" name="1-6-7" value=">=2">
+                <label>2+</label>
+                <!-- Decline -->
+              </p>
+          
+          </div>
+          
+          
+          <p>20. Are you: <small>(Select only one)</small><br>
+            <input reference="occupation" name="occupation" value="student" type="radio"><label>A full time student</label>
+            <input reference="occupation" name="occupation" value="homemaker" type="radio"><label>A homemaker</label>
+            <input reference="occupation" name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
+            <input reference="occupation" name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
+          </p>
+          
+          <p>
+            <table class="form">
+              <tr>
+                <td>21. My annual income is $:<span class="dynamic" reference="income" value="">500,000</span><span class="units">USD</span></td>
+              </tr>
+            </table>
+          </p>
+          
+          <p>22. Do you have any life insurance or annuities currently in force or pending?<br>
+            <input type="radio" name="currentInsExists" reference="currentInsExists" value="yes"><label>Yes</label>
+            <input type="radio" name="currentInsExists" reference="currentInsExists" value="no"><label>No</label>
+          </p> 
+          
+          <p>23. In the next 12 months do you plan to travel outside of United States, Canada, or Mexico? <br>
+            <input type="radio" name="travel" reference="travel" value="yes"><label>Yes</label>
+            <input type="radio" name="travel" reference="travel" value="no"><label>No</label>
+          </p>
+          
+          <!-- # RUN MIB -->
+          <!-- # RUN Rx -->
+          
+          <!-- Primary Care Physician -->
+          <div class="reflex" id="reflex2">
+            <h4>MIB Codes <small>Reflex 2<small></small></small></h4>
+          
+            <!-- Medical MIB Code -->
+            <p>Have you seen a medical professional for any of the questions asked previously?<br>
+              <input type="radio" name="2-1" reference="medicalCondition">
+              <label>Yes</label>
+              <input type="radio" name="2-1" reference="medicalCondition">
+              <label>No</label>
+            </p>
+            <!-- Criminal MIB Code -->
+            <p>Have you been convicted of a felony?<br>
+              <input type="radio" name="2-2" reference="legalCondition" value="">
+              <label>No</label>
+              <!-- Next question -->
+              <input type="radio" name="2-2" reference="legalCondition" value="">
+              <label>Yes</label>
+              <!-- Decline -->
+              <input type="radio" name="2-2" reference="legalCondition" value="">
+              <label>Unknown</label>
+              <!-- Decline -->
+            </p>
+            <p>Have you been convicted of a misdemeanor?<br>
+              <input type="radio" name="2-3" reference="legalConditionMisdemeanor" value="">
+              <label>No</label>
+              <!-- Incomplete and send MIB AUD letter -->
+              <input type="radio" name="2-3" reference="legalConditionMisdemeanor" value="">
+              <label>Yes</label>
+              <!-- Accept -->
+              <input type="radio" name="2-3" reference="legalConditionMisdemeanor" value="">
+              <label>Unknown</label>
+              <!-- Accept -->
+            </p>
+          
+          </div>
+          
+          
+          <!-- Medications -->
+          <div class="reflex" id="reflex3">
+            <h4>Medications <small>Reflex 3<small></small></small></h4>
+          
+            <p>In the past 90 days, has your medical professional increased any of your medications (other than for cholesterol treatment)?<br>
+              <input type="radio" name="3-1" value="//">
+              <label>Yes</label>
+              <!-- Decline -->
+              <input type="radio" name="3-1" value="//">
+              <label>No</label>
+              <!-- Accept -->
+            </p>
+          
+          </div>
+          
+          
+          <!-- International Travel -->
+          <div class="reflex" id="reflex4">
+            <h4>International Travel <small>Reflex 4<small></small></small></h4>
+          
+            <p>Which countries do you plan on traveling to?<br>
+              <input type="text" name="4-1" value="">
+              <!-- Any countries on Decline list: Decline -->
+              <!-- Acceptable countries: Reflex question, then next question -->
+            </p>
+            <p>Do you plan to travel for longer than 30 consecutive days or greater than 90 days in total?<br>
+              <input type="radio" name="4-2">
+              <label>Yes</label>
+              <!-- Decline -->
+              <input type="radio" name="4-2">
+              <label>No</label>
+              <!-- Advance -->
+            </p>
+          
+          </div>
+          
+          
+          <!-- Family Health History -->
+          <div class="reflex" id="reflex5">
+            <h4>Family Health History <small>Reflex 5<small></small></small></h4>
+          
+            <p>Did any of your parents or siblings die before the age of 65 from cancer or heart disease?
+              <input type="text">
+              <label>Yes</label>
+              <!-- Standard -->
+              <input type="text">
+              <label>No</label>
+              <!-- Preferred -->
+            </p>
+          
+          </div>
+          
+          
+          <p>24a. I do/do not have a driver&#39;s license in <span class="dynamic inline-block" reference="licenseRetrievedState">TX</span> number <span class="dynamic inline-block" reference="licenseRetrievedNum">9876543219</span>.<br>
+            <input type="radio" name="licenseConfimation" reference="licenseConfimation" value="yes"><label>Yes</label>
+            <input type="radio" name="licenseConfimation" reference="licenseConfimation" value="no"><label>No</label>
+          </p>
+          
+          <p>24b. Do you have a valid driver&#39;s license?<br>
+            <input type="radio" name="licenseExists" reference="licenseExists" value="yes"><label>Yes</label>
+            <input type="radio" name="licenseExists" reference="licenseExists" value="no"><label>No</label>
+          </p>
+          
+          <p>
+            <table class="form">
+              <tr>
+                <td>24c. Driver&#39;s License Number:<span class="dynamic" reference="licenseNum" value=""></span><span class="units">USD</span></td>
+              </tr>
+            </table>
+          </p>
+          
+          <!-- # RUN LexisNexis Life Risk Classifier -->
+          
+          <!-- PREFERRED RATE CHECK -->
+          
+          <div class="reinstatement-hidden">
+          <h2>Primary Beneficiaries</h2>
+          <p>25. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
+            <table class="form">
+              <tr reference="beneficiary" index="1" class="show">
+                <td colspan="2">Name &ast; <span class="dynamic" reference="beneficiary.person.first_name" value="">Sue Stipple</span></td>
+                <td>Relationship &ast; <span class="dynamic" reference="beneficiary.person.relationship" value="">Spouse</span></td>
+                <td>Date of Birth <span class="dynamic" reference="beneficiary.person.dob" value="">9/1/1989</span></td>
+                <td rowspan="3">Share % &ast; <span class="dynamic" reference="beneficiary.allocation" value="">60</span></td>
+              </tr>
+              <tr reference="beneficiary" index="1" class="show">
+                <td colspan="2">Address <span class="dynamic" reference="beneficiary.person.address" parse="street" value="">123 Main St.</span></td>
+                <td>Apt/Suite # <span class="dynamic" reference="beneficiary.person.address" parse="suite-apt-num" value="">#102</span></td>
+                <td>City <span class="dynamic" reference="beneficiary.person.address" parse="city" value="">Tulsa</span></td>
+              </tr>
+              <tr reference="beneficiary" index="1" class="show">
+                <td>State <span class="dynamic" reference="beneficiary.person.address" parse="state" value="">OK</span></td>
+                <td>Zip Code <span class="dynamic" reference="beneficiary.person.zipcode" value="">70371</span></td>
+                <td>Phone Number <span class="dynamic" reference="beneficiary.person.phone" value="">(123) 123-1234</span></td>
+                <td>Social Security Number <span class="dynamic" reference="beneficiary.person.ssNum" value="">321-32-3214</span></td>
+              </tr>
+          
+              <tr reference="beneficiary" index="2" class="show">
+                <td colspan="2">Name &ast; <span class="dynamic" reference="beneficiary.person.first_name" value="">Sarah Stipple</span></td>
+                <td>Relationship &ast; <span class="dynamic" reference="beneficiary.person.relationship" value="">Child</span></td>
+                <td>Date of Birth <span class="dynamic" reference="beneficiary.person.dob" value="">1/1/2010</span></td>
+                <td rowspan="3">Share % &ast; <span class="dynamic" reference="beneficiary.allocation" value="">20</span></td>
+              </tr>
+              <tr reference="beneficiary" index="2" class="show">
+                <td colspan="2">Address <span class="dynamic" reference="beneficiary.person.address" parse="street" value="">123 Main St.</span></td>
+                <td>Apt/Suite # <span class="dynamic" reference="beneficiary.person.address" parse="suite-apt-num" value="">#101</span></td>
+                <td>City <span class="dynamic" reference="beneficiary.person.address" parse="city" value="">Tulsa</span></td>
+              </tr>
+              <tr reference="beneficiary" index="2" class="show">
+                <td>State <span class="dynamic" reference="beneficiary.person.address" parse="state" value="">OK</span></td>
+                <td>Zip Code <span class="dynamic" reference="beneficiary.person.zipcode" value="">70371</span></td>
+                <td>Phone Number <span class="dynamic" reference="beneficiary.person.phone" value="">(321) 321-4132</span></td>
+                <td>Social Security Number <span class="dynamic" reference="beneficiary.person.ssNum" value="">432-32-3214</span></td>
+              </tr>
+          
+              <tr reference="beneficiary" index="3" class="show">
+                <td colspan="2">Name &ast; <span class="dynamic" reference="beneficiary.person.first_name" value="">Caleb Stipple</span></td>
+                <td>Relationship &ast; <span class="dynamic" reference="beneficiary.person.relationship" value="">Stipple</span></td>
+                <td>Date of Birth <span class="dynamic" reference="beneficiary.person.dob" value="">2/14/2013</span></td>
+                <td rowspan="3">Share % &ast; <span class="dynamic" reference="beneficiary.allocation" value="">20</span></td>
+              </tr>
+              <tr reference="beneficiary" index="3" class="show">
+                <td colspan="2">Address <span class="dynamic" reference="beneficiary.person.address" parse="street" value="">123 Main St.</span></td>
+                <td>Apt/Suite # <span class="dynamic" reference="beneficiary.person.address" parse="suite-apt-num" value="">#101</span></td>
+                <td>City <span class="dynamic" reference="beneficiary.person.address" parse="city" value="">Tulsa</span></td>
+              </tr>
+              <tr reference="beneficiary" index="3" class="show">
+                <td>State <span class="dynamic" reference="beneficiary.person.address" parse="state" value="">OK</span></td>
+                <td>Zip Code <span class="dynamic" reference="beneficiary.person.zipcode" value="">70312</span></td>
+                <td>Phone Number <span class="dynamic" reference="beneficiary.person.phone" value="">(123) 321-1234</span></td>
+                <td>Social Security Number <span class="dynamic" reference="beneficiary.person.ssNum" value="">123-12-1234</span></td>
+              </tr>
+              <tr>
+                <td class="spacer-cell" colspan="4"></td>
+                <td>Total % <span class="dynamic" reference="allocationTotal" value="">100</span></td>
+              </tr>
+            </table>
+          </p>
+          </div>
+          
+          <div class="reinstatement-hidden">
+          <h2>Contingent Beneficiaries</h2>
+          
+          <p>26. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
+            <table class="form">
+              <tr reference="contingent" index="1" class="show">
+                <td colspan="2">Name &ast; <span class="dynamic" reference="contingent.person.first_name" value="">Distant Relative</span></td>
+                <td>Relationship &ast; <span class="dynamic" reference="contingent.person.relationship" value="">Trust</span></td>
+                <td>Date of Birth <span class="dynamic" reference="contingent.person.dob" value="">9/1/1989</span></td>
+                <td rowspan="3">Share % &ast; <span class="dynamic" reference="contingent.person.allocation" value="">60</span></td>
+              </tr>
+              <tr reference="contingent" index="1" class="show">
+                <td colspan="2">Address <span class="dynamic" reference="contingent.person.address" parse="street" value="">123 Main St.</span></td>
+                <td>Apt/Suite # <span class="dynamic" reference="contingent.person.address" parse="suite-apt-num" value="">#102</span></td>
+                <td>City <span class="dynamic" reference="contingent.person.address" parse="city" value="">Tulsa</span></td>
+              </tr>
+              <tr reference="contingent" index="1" class="show">
+                <td>State <span class="dynamic" reference="contingent.person.address" parse="state" value="">OK</span></td>
+                <td>Zip Code <span class="dynamic" reference="contingent.person.zipcode" value="">70371</span></td>
+                <td>Phone Number <span class="dynamic" reference="contingent.person.phone" value="">(123) 123-1234</span></td>
+                <td>Social Security Number <span class="dynamic" reference="contingent.person.ssNum" value="">321-32-3214</span></td>
+              </tr>
+          
+              <tr reference="contingent" index="2" class="show">
+                <td colspan="2">Name &ast; <span class="dynamic" reference="contingent.person.first_name" value="">Ex Spouse</span></td>
+                <td>Relationship &ast; <span class="dynamic" reference="contingent.person.relationship" value="">Trust</span></td>
+                <td>Date of Birth <span class="dynamic" reference="contingent.person.dob" value="">1/1/2010</span></td>
+                <td rowspan="3">Share % &ast; <span class="dynamic" reference="contingent.person.allocation" value="">20</span></td>
+              </tr>
+              <tr reference="contingent" index="2" class="show">
+                <td colspan="2">Address <span class="dynamic" reference="contingent.person.address" parse="street" value="">123 Main St.</span></td>
+                <td>Apt/Suite # <span class="dynamic" reference="contingent.person.address" parse="suite-apt-num" value="">#101</span></td>
+                <td>City <span class="dynamic" reference="contingent.person.address" parse="city" value="">Tulsa</span></td>
+              </tr>
+              <tr reference="contingent" index="2" class="show">
+                <td>State <span class="dynamic" reference="contingent.person.address" parse="state" value="">OK</span></td>
+                <td>Zip Code <span class="dynamic" reference="contingent.person.zipcode" value="">70371</span></td>
+                <td>Phone Number <span class="dynamic" reference="contingent.person.phone" value="">(321) 321-4132</span></td>
+                <td>Social Security Number <span class="dynamic" reference="contingent.person.ssNum" value="">432-32-3214</span></td>
+              </tr>
+          
+              <tr>
+                <td class="spacer-cell" colspan="4"></td>
+                <td>Total % <span class="dynamic" reference="contingentAlloctionTotal" value="">100</span></td>
+              </tr>
+            </table>
+          </p>
+          </div>
+          
+          <h2>Legal</h2>
+          
+          <hr>
+          <h4>IRS Substitute W-9 Social Security Number-Taxpayer Identification Number Certification</h4>
+          <p>Under penalties of perjury, as Owner of this policy, I certify that:</p>
+          <ul>
+            <li>The taxpayer identification number shown on this application is my correct taxpayer identification number;</li>
+            <li>I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding. Check this box ☐ if you ARE subject to backup withholding;</li>
+            <li>I am a U.S. citizen or other U.S. person as defined by the IRS for federal tax purposes.</li>
+            <li>I am exempt from Foreign Account Tax Compliance Act (FATCA) reporting.</li>
+          </ul>
+          
+          <hr>
+          <h4>It Is Declared That</h4>
+          <p>Statements and answers in this application, including statements by me in any medical questionnaire or supplement that become part of this application, are complete and true to the best of my knowledge and belief.  IT IS AGREED THAT:  (1) any waiver or modification of this application will not be effective unless in writing and signed by the President or the Secretary of North American Company for Life and Health Insurance (the Company); (2) the acceptance of any policy or policy change issued on this application shall constitute a ratification of any correction or amendment made by the Company; and (3) No change in amount, risk classification, plan of insurance, or benefits shall be effective unless agreed to in writing by me.  I FURTHER AGREE to immediately advise the Company’s Administrative Office (Bestow Agency, LLC, 1920 McKinney Avenue, Dallas, TX 75201) of any change to any of my responses contained in the application, including any change in my health or habits that arises or is discovered after completing this application, but before the policy or reinstatement is effective, as defined herein.</p>
+          
+          <p><hr></p>
+          <p></p><h4>Effective Date</h4><p></p>
+          <p>Any insurance issued as a result of this application will not take effect until the full first premium is paid and the contract is delivered to and accepted by you while you are living and in the state of health and financial condition described in all parts of this application.</p>
+          
+          <p><hr></p>
+          <p></p><h4>Authorization</h4><p></p>
+          <p>In the HIPAA Authorization, you provided consent that North American Company for Life and Health Insurance (the Company) and our third party partners could obtain and use your medical records.</p>
+          <p>Additionally, for the Company to determine eligibility for insurance, you authorize it to collect information about you from public and nonpublic sources, including your Social Security number, financial and credit history, employment, general character and reputation, personal characteristics and mode of living.</p>
+          <p>You further authorize:  (1) the Company to release any such data to its reinsurers, MIB, or other persons or organizations performing business or legal services in connection with your application, or to persons or organizations performing services on behalf of the Company for other business or marketing purposes, or as required by law when given a copy of this authorization; and (2) the Company’s Administrative Office or its reinsurers to make a brief report of my personal health information to MIB.</p>
+          <p>To the extent required by law, the information gathered under this authorization will be maintained as confidential.  The Company will not share your personal information except as stated within this authorization.</p>
+          <p>This authorization is valid from the date signed for the length of time permitted by applicable law in the state where the policy is delivered or issued for delivery.  You may revoke this authorization for information not then obtained by notifying the Company in writing.  Such revocation will not be effective until received by the Company.  You understand that you or an authorized representative will receive a copy of this authorization upon request.</p>
+          
+          <p><hr></p>
+          <p></p><h4>Community Property</h4><p></p>
+          <p>The Company assumes there is no marital property interest in the policy unless the Company is notified otherwise in writing by you.  The Company is not responsible for determining whether there are any marital interests in this policy that may be affected by your requested purchase or any policy change.  By signing below, you agree to indemnify and hold the Company harmless as to any marital property claims that are made in connection with this purchase or any policy change.</p>
+          
+          <p><hr></p>
+          <p></p><h4>Electronic Signature Notice and Consent</h4><p></p>
+          <p>By signing this application, I voluntarily consent to submission of this application electronically and use of my electronic signature, including voice signatures, on this application and related forms.  I understand that I will be provided an electronic copy of the completed application bearing my electronic signature at policy delivery.  I agree to provide the Company’s Administrative Office with a current Internet email address and I have access to the Internet for the purpose of accepting electronic delivery of the document and a computer with Adobe Acrobat Reader and a Windows Operating System to view the completed application. I understand I also have a right to receive a paper copy of the completed application by contacting the Company’s Administrative Office.  I understand and agree that if coverage is declined, a copy of the application will not be provided, unless requested.</p>
+          <hr>
+          
+          <div class="reinstatement-hidden">
+          <h2>Payment Method</h2>
+          
+          <p>Modal Premium Frequency:<br>
+            <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
+            <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
+          </p>
+          
+          <p>Payment Type:<br>
+            <input reference="paymentType" name="paymentType" value="eft-Ach" type="radio"><label>EFT/ACH </label>
+            <input reference="paymentType" name="paymentType" value="creditCard" type="radio"><label>Credit Card</label>
+          </p>
+          
+          <p>Billing Address:<br>
+            <input reference="billingAddressExists" value="yes" type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. <small>(If P.O. Box, also include Street Address below)</small></label><br>
+            <table class="form">
+              <tr>
+                <td colspan="2">Street Address <span class="dynamic" reference="billingAddressStreet" value="">123 Smith St.</span></td>
+                <td>Suite/Apt # <span class="dynamic" reference="billingAddressSuite-AptNum" value="">#101</span></td>
+              </tr>
+              <tr>
+                <td>City <span class="dynamic" reference="billingCity" value="">Richardson</span></td>
+                <td>State <span class="dynamic" reference="billingState" value="">TX</span></td>
+                <td>Zip Code <span class="dynamic" reference="billingZipcode" value="">75082</span></td>
+              </tr>
+            </table>
+          </p>
+          </div>
+          <h2>Third Party Billing Notification</h2>
+          <p>Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
+            <input type="radio" name="thirdPartyBillingExists" reference="thirdPartyBillingExists" value="yes"><label>Yes, complete information below</label>
+            <input type="radio" name="thirdPartyBillingExists" reference="thirdPartyBillingExists" value="no"><label>No</label>
+          
+            <table class="form">
+              <tr>
+                <td colspan="3">Name <span class="dynamic" reference="thirdPartyBillingName" value="">Jack Dorsey</span></td>
+                <td colspan="2">Telephone Number with Area Code <span class="dynamic" reference="thirdPartyBillingPhone" value="">(214) 432-1234</span></td>
+              </tr>
+              <tr>
+                <td colspan="3">Street Address <span class="dynamic" reference="thirdPartyBillingStreet" value="">123 Main St.</span></td>
+                <td colspan="2">Suite/Apt # <span class="dynamic" reference="thirdPartyBillingSuite-AptNum" value="">#808</span></td>
+              </tr>
+              <tr>
+                <td colspan="2">City <span class="dynamic" reference="thirdPartyBillingCity" value="">Kansas City</span></td>
+                <td>State <span class="dynamic" reference="thirdPartyBillingState" value="">MO</span></td>
+                <td colspan="2">Zip Code <span class="dynamic" reference="thirdPartyBillingZipcode" value="">39485</span></td>
+              </tr>
+            </table>
+          </p>
+          <p>I acknowledge receipt of the Consumer Protection Notice that includes the Fair Credit Reporting Act Notice/MIB, Inc., Notice and Notice of Insurance of Information Practices.</p>
+          <p>Any person who knowingly presents a false statement in an application for insurance may be guilty of a criminal offense and subject to penalties under state law.</p>
+          <p>The Internal Revenue Service does not require the Owner’s consent to any provision of this document other than the certifications required to avoid backup withholding.</p>
+          
+          <p></p><h2>Your Signature</h2><p></p>
+          <table class="form">
+            <tr>
+              <td>Signed At <small>(Resident City and State)</small><span class="dynamic" reference="signatureCity" value="">Kansas City, MO</span></td>
+            </tr>
+            <tr>
+              <td>Signature of Owner <span class="dynamic">&nbsp;</span>
+              </td>
+            </tr>
+          </table>
+          
           		</th>
 <th class="expander"></th></tr></table></th>
           	</tr></tbody></table>

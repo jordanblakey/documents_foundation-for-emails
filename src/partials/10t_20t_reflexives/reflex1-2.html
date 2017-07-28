@@ -3,10 +3,10 @@
 
     <p>Were you medically diagnosed with gestational diabetes only?<br>
       <!-- only for female applicants -->
-      <input type="radio" name="1-2-1" value="Yes">
+      <input type="radio" name="diabetesFemaleGestation" reference="diabetesFemaleGestation" value="Yes">
       <label>Yes</label>
       <!-- Accept -->
-      <input type="radio" name="1-2-1" value="No">
+      <input type="radio" name="diabetesFemaleGestation" reference="diabetesFemaleGestation" value="No">
       <label>No</label>
       <!-- Decline -->
     </p>
@@ -17,56 +17,56 @@
     Next Question
     -->
     <p>In the past two years, have you been prescribed insulin by a medical professional?<br>
-      <input type="radio" name="1-2-2" value="Yes-unknown">
+      <input type="radio" name="prescribedInsulin" reference="prescribedInsulin" value="Yes-unknown">
       <label>Yes, unknown</label>
       <!-- Decline -->
-      <input type="radio" name="1-2-2" value="No">
+      <input type="radio" name="prescribedInsulin" reference="prescribedInsulin" value="No">
       <label>No</label>
       <!-- Next Question -->
     </p>
     <p>In the past 2 years, have you been hospitalized for diabetes?<br>
-      <input type="radio" name="1-2-3" value="Yes">
+      <input type="radio" name="diabetesHospitalized2Years" reference="diabetesHospitalized2Years" value="Yes">
       <label>Yes</label>
       <!-- Decline -->
-      <input type="radio" name="1-2-3" value="No">
+      <input type="radio" name="diabetesHospitalized2Years" reference="diabetesHospitalized2Years" value="No">
       <label>No</label>
       <!-- Next question -->
     </p>
     <p>How many times per year do you typically see a medical professional for this condition?<br>
-      <input type="radio" name="1-2-4" value="0">
+      <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="0">
       <label>0</label>
       <!-- Decline	// Needs to be programmed for a ranged value -->
-      <input type="radio" name="1-2-4" value="1-4">
+      <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="1-4">
       <label>1-4</label>
       <!-- Next question -->
-      <input type="radio" name="1-2-4" value="5+">
+      <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="5+">
       <label>5+</label>
       <!-- Decline -->
     </p>
     <p>In the past two years, have you been medically diagnosed or medically treated for kidney disease (including protein or microalbumin in the urine) or any type of skin ulcers?<br>
-      <input type="radio" name="1-2-5" value="Yes-unknown">
+      <input type="radio" name="kidneyDisease" reference="kidneyDisease" value="Yes-unknown">
       <label>Yes, unknown</label>
       <!-- Decline -->
-      <input type="radio" name="1-2-5" value="No">
+      <input type="radio" name="kidneyDisease" reference="kidneyDisease" value="No">
       <label>No</label>
       <!-- Next question -->
     </p>
     <p>What was your most recent Hemoglobin A1c or Glycohemoglobin reading?<br>
-      <input type="radio" name="1-2-6" value="Unknown">
+      <input type="radio" name="hemoglobin" reference="hemoglobin" value="Unknown">
       <label>Unknown</label>
       <!-- Decline // This needs to be programmed for a ranged value -->
-      <input type="radio" name="1-2-6" value="<8">
+      <input type="radio" name="hemoglobin" reference="hemoglobin" value="<8">
       <label> 8.0 or below</label>
       <!-- Accept	// with these rules listed below -->
-      <input type="radio" name="1-2-6" value=">8">
+      <input type="radio" name="alcoholAbuseTreatment" reference="alcoholAbuseTreatment" value=">8">
       <label>> 8.0</label>
       <!-- Decline -->
     </p>
     <p>How old were you when diabetes was diagnosed?<br>
-      <input type="radio" name="1-2-7" value="<40">
+      <input type="radio" name="ageDiabetesDiagnosed" reference="ageDiabetesDiagnosed" value="<40">
       <label>< 40, unknown</label>
       <!-- Decline -->
-      <input type="radio" name="1-2-7" value=">41">
+      <input type="radio" name="ageDiabetesDiagnosed" reference="ageDiabetesDiagnosed" value=">41">
       <label>41+</label>
       <!-- Accept -->
     </p>

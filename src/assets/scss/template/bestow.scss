@@ -91,6 +91,9 @@ hr {
 	border-top: 1px solid #ccc;
 }
 
+.inline-block {
+  display: inline-block !important;
+}
 
 // REFLEXIVES //////////////////////////////////////////////////////////////////
 
@@ -120,8 +123,13 @@ div.reflex {
   }
 }
 
-.radio {
-  margin-right: 0;
+// APPLICATIONS //////////////////////////////////////////////////////////////////
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+.checker {
+  margin-right: 3px !important;
 }
 
 .show {

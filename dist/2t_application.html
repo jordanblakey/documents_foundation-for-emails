@@ -8,7 +8,19 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Individual Life Insurance Application</title>
-  <script type="text/javascript" src="css/uniform.js"></script>
+  <script type="text/javascript" src="assets/uniform.js"></script>
+  <script type="text/javascript">
+      ;(function(_) {
+    _.fn.nowidow = function() {
+      return this.html(function() {
+        return _(this).html().replace(/\s([^\s]*)(\s+)?$/, '&nbsp;$1');
+      });
+    }
+    _(document).ready(function(){
+      _('.nowidow').nowidow();
+    });
+    })(jQuery);
+  </script>
 </head>
 <body>
   <table class="body">
@@ -46,21 +58,21 @@
                 <td>1c. Legal Last Name <span class="dynamic" reference="lastName" value="">Stipple</span></td>
               </tr>
               <tr>
-                <td>2. Date of Birth <span class="dynamic" reference="birthdate" value="">09/19/1986</span></td>
-                <td>2. Sex <br><input reference="gender" value="male" type="radio" name="gender"><label>Male</label> <input reference="gender" value="female" type="radio" name="gender"><label>Female</label></td>
+                <td>2a. Date of Birth <span class="dynamic" reference="birthdate" value="">09/19/1986</span></td>
                 <td>2b. State/Country of Birth <span class="dynamic" reference="birthstate" value="">TX</span></td>
+                <td>2c. Sex <br><input reference="gender" value="male" type="radio" name="gender"><label>Male</label> <input reference="gender" value="female" type="radio" name="gender"><label>Female</label></td>
               </tr>
               <tr>
                 <td colspan="2">3a. Height <span class="height"><span class="dynamic" reference="heightFeet" value="">6</span><span class="dynamic" reference="heightInches">1</span></span><span class="units">Feet, Inches</span></td>
                 <td>3b. Weight <span class="dynamic" reference="weight" value="">190</span><span class="units">Pounds</span></td>
               </tr>
               <tr>
-                <td colspan="2">4a. Street Address <span class="dynamic" reference="street" value="">123 Main St.</span></td>
-                <td>4b. Suite/Apt # <span class="dynamic" reference="street" value="">#101</span></td>
+                <td colspan="2">4a. Street Address <span class="dynamic" reference="street" parse="street" value="">123 Main St.</span></td>
+                <td>4b. Suite/Apt # <span class="dynamic" reference="street" parse="suite-apt-num" value="">#101</span></td>
               </tr>
               <tr>
-                <td>4c. City <span class="dynamic" reference="street" value="">Tulsa</span></td>
-                <td>4d. State <span class="dynamic" reference="street" value="">OK</span></td>
+                <td>4c. City <span class="dynamic" reference="street" parse="city" value="">Tulsa</span></td>
+                <td>4d. State <span class="dynamic" reference="street" parse="state" value="">OK</span></td>
                 <td>5. Zip Code <span class="dynamic" reference="zipcode" value="">70371</span></td>
               </tr>
               <tr>
@@ -76,16 +88,12 @@
               <input reference="citizen" name="citizen" value="yes" type="radio"><label>Yes</label>
               <input reference="citizen" name="citizen" value="no" type="radio"><label>No</label>
             </p>
-            <p>10. In the past 10 years, have you been medically diagnosed or medically treated or tested positive for: <small>(Select all that apply)</small><br>
-              <input reference="medicalCondition" value="yes" type="checkbox"><label>Heart disease</label><br>
-              <input reference="medicalCondition" value="yes" type="checkbox"><label>Stroke</label><br>
-              <input reference="medicalCondition" value="yes" type="checkbox"><label>Cancer <small>(excluding basal and squamous cell skin cancer)</small></label><br>
-              <input reference="medicalCondition" value="yes" type="checkbox"><label>Organ transplant</label><br>
-              <input reference="medicalCondition" value="yes" type="checkbox"><label>Diabetes before age 30 <small>(excluding gestational diabetes)</small></label><br>
-              <input reference="medicalCondition" value="yes" type="checkbox"><label>Alcohol or drug abuse</label><br>
-              <input reference="medicalCondition" value="yes" type="checkbox"><label>HIV</label><br>
-              <input reference="medicalCondition" value="yes" type="checkbox"><label>Kidney disease requiring dialysis</label>
+          
+            <p>10. In the past 10 years, have you been medically diagnosed or medically treated or tested positive for: (1) heart disease, (2) stroke, (3) cancer (excluding basal and squamous cell skin cancer), (4) organ transplant, (5) diabetes before age 30 (excluding gestational diabetes), (6) alcohol or drug abuse, (7) HIV, or (8) kidney disease requiring dialysis?<br>
+              <input reference="medicalCondition" name="medicalCondition" value="yes" type="radio"><label>Yes</label>
+              <input reference="medicalCondition" name="medicalCondition" value="no" type="radio"><label>No</label>
             </p>
+          
           
             <!-- MIB Codes -->
             <div class="reflex" id="reflex2">
@@ -141,19 +149,19 @@
               <input reference="occupation" name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
             </p>
           
-            <p>14. My annual income is $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;.
+            <p>
               <table class="form">
                 <tr>
-                  <td>Annual Income<span class="dynamic" reference="income" value="">$500,000</span><span class="units">USD</span></td>
+                  <td>14. My annual income is $:<span class="dynamic" reference="income" value="">500,000</span><span class="units">USD</span></td>
                 </tr>
               </table>
             </p>
           
             <p>15. Do you have any life insurance or annuities currently in force or pending?<br>
-              <input type="radio" name="1-1-6" reference="currentInsValueExists" value="yes">
+              <input type="radio" name="currentInsExists" reference="currentInsExists" value="yes">
               <label>Yes</label>
               <!-- Next question -->
-              <input type="radio" name="1-1-6" reference="currentInsValueExists" value="no">
+              <input type="radio" name="currentInsExists" reference="currentInsExists" value="no">
               <label>No</label>
               <!-- Stop -->
             </p> 
@@ -301,12 +309,12 @@
             <hr>
             <h4>IRS Substitute W-9 Social Security Number-Taxpayer Identification Number Certification</h4>
             <p>Under penalties of perjury, as Owner of this policy, I certify that:</p>
-            <ul>
+            <!-- <ul> -->
               <li>The taxpayer identification number shown on this application is my correct taxpayer identification number;</li>
               <li>I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding. Check this box ☐ if you ARE subject to backup withholding;</li>
               <li>I am a U.S. citizen or other U.S. person as defined by the IRS for federal tax purposes.</li>
               <li>I am exempt from Foreign Account Tax Compliance Act (FATCA) reporting.</li>
-            </ul>
+            
           
             <hr>
             <h4>It Is Declared That</h4>
@@ -331,12 +339,11 @@
             <hr>
             <h4>Electronic Signature Notice and Consent</h4>
             <p>By signing this application, I voluntarily consent to submission of this application electronically and use of my electronic signature, including voice signatures, on this application and related forms.  I understand that I will be provided an electronic copy of the completed application bearing my electronic signature at policy delivery.  I agree to provide the Company’s Administrative Office with a current Internet email address and I have access to the Internet for the purpose of accepting electronic delivery of the document and a computer with Adobe Acrobat Reader and a Windows Operating System to view the completed application. I understand I also have a right to receive a paper copy of the completed application by contacting the Company’s Administrative Office.  I understand and agree that if coverage is declined, a copy of the application will not be provided, unless requested.</p>
+            <hr>
           
-          <p>  <hr>
-            </p><h4>W-9 Social Security Number&mdash;Taxpayer Identification Number Certification</h4>
-            <p>The Internal Revenue Service does not require the Owner’s consent to any provision of this document other than the certifications required to avoid backup withholding.</p><p></p>
-          <p>  <div class="reinstatement-hidden">
-            <h2>Payment Method</h2></div></p>
+            <div class="reinstatement-hidden">
+            <h2>Payment Method</h2>
+          
             <p>Modal Premium Frequency:<br>
               <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
               <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
@@ -361,7 +368,7 @@
                 </tr>
               </table>
             </p>
-          
+          </div>
           <h2>Third Party Billing Notification</h2>
             <p>Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
               <table class="form">
