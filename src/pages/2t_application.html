@@ -19,11 +19,9 @@ title: Individual Life Insurance Application
       <td>1c. Legal Last Name <span class="dynamic" reference="lastName" value="">Stipple</span></td>
     </tr>
     <tr>
-      <td>2a. Date of Birth <span class="dynamic" reference="birthdate" value="">09/19/1986</span></td>
+      <td>2. Date of Birth <span class="dynamic" reference="birthdate" value="">09/19/1986</span></td>
+      <td>2. Sex <br><input reference="gender" value="male" type="radio" name="gender"><label>Male</label> <input reference="gender" value="female" type="radio" name="gender"><label>Female</label></td>
       <td>2b. State/Country of Birth <span class="dynamic" reference="birthstate" value="">TX</span></td>
-      <td>
-        2c. Sex <br><input reference="gender" value="male" type="radio" name="gender"><label>Male</label> <input reference="gender" value="female" type="radio" name="gender"><label>Female</label>
-      </td>
     </tr>
     <tr>
       <td colspan="2">3a. Height <span class="height"><span class="dynamic" reference="heightFeet" value="">6</span><span class="dynamic" reference="heightInches">1</span></span><span class="units">Feet, Inches</span></td>
@@ -78,7 +76,7 @@ title: Individual Life Insurance Application
     <input reference="occupation" name="occupation" value="student" type="radio"><label>A full time student</label>
     <input reference="occupation" name="occupation" value="homemaker" type="radio"><label>A homemaker</label>
     <input reference="occupation" name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
-    <input reference="occupation" name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week</label>
+    <input reference="occupation" name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
   </p>
 
   <p>14. My annual income is $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;.
@@ -89,28 +87,21 @@ title: Individual Life Insurance Application
     </table>
   </p>
 
-  <p class="reinstatement-hidden">15. I currently have $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar; in existing life insurance or annuity contracts with this company <small>(or any other company).</small>
-    <table class="form">
-      <tr>
-        <td>Current Life Insurance or Annuity Contract Amount<span class="dynamic" reference="currentInsValue" value="">$250,000</span><span class="units">USD</span></td>
-      </tr>
-    </table>
-  </p>
+  <p>15. Do you have any life insurance or annuities currently in force or pending?<br>
+    <input type="radio" name="1-1-6" reference="currentInsValueExists" value="yes">
+    <label>Yes</label>
+    <!-- Next question -->
+    <input type="radio" name="1-1-6" reference="currentInsValueExists" value="no">
+    <label>No</label>
+    <!-- Stop -->
+  </p> 
 
   <!-- In Force Policies -->
   {{> reflex1}}
 
-  <p>16. I am planning to replace or change $&lowbar;&lowbar;&lowbar;&lowbar;&lowbar;&lowbar; of my existing life insurance or annuity contracts in force with this company <small>(or any other company)</small>.
-    <table class="form">
-      <tr>
-        <td>Amount of Current Life Insurance or Annuity Contract Being Replaced<span class="dynamic" reference="replacementInsValue" value="">$100,000</span><span class="units">USD</span></td>
-      </tr>
-    </table>
-  </p>
-
   <div class="reinstatement-hidden">
   <h2>Primary Beneficiaries</h2>
-  <p>17. My beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
+  <p>16. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
     <table class="form">
       <tr reference="beneficiary" index="1" class="show">
         <td colspan="2">Name &ast; <span class="dynamic" reference="beneficiary.person.first_name" value="">Sue Stipple</span></td>
@@ -176,7 +167,7 @@ title: Individual Life Insurance Application
   <div class="reinstatement-hidden">
   <h2>Contingent Beneficiaries</h2>
 
-  <p>18. <small>(Optional)</small> My contingent beneficiary is [name], my [relationship], who will receive a [percentage] share. &ast;Required Fields<br>
+  <p>17. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
     <table class="form">
       <tr reference="contingent" index="1" class="show">
         <td colspan="2">Name &ast; <span class="dynamic" reference="contingent.person.first_name" value="">Distant Relative</span></td>
