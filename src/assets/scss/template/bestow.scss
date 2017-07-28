@@ -125,8 +125,11 @@ div.reflex {
 
 // APPLICATIONS //////////////////////////////////////////////////////////////////
 
-input[type="radio"] {
-  margin-right: 5px;
+input[type="radio"], .radio {
+  margin-right: 0px !important;
+}
+label {
+  margin-top: 1px;
 }
 .checker {
   margin-right: 3px !important;
