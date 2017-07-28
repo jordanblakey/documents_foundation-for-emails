@@ -1,0 +1,24 @@
+{
+	"stage": "beneficiaries",
+	"pages": [
+		{
+			"title": "Beneficiaries",
+			"overview": "Add one or more beneficiaries to your policy and determine the percentage of payout",
+			"image": "beneficiaries",
+			"pageType": "intro"
+		},
+		{
+			"elements": [
+				{
+					"reference": "faceValue",
+					"type": "input",
+					"subType": "currency",
+					"label": "How much coverage would you like to have?"
+				}
+			]
+		},
+		{
+			"pageType": "beneficiaries"
+		}
+	]
+}

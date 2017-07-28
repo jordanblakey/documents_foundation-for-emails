@@ -1,0 +1,24 @@
+{
+	"stage": "payment",
+	"pages": [
+		{
+			"title": "Last Steps",
+			"overview": "Lastly, you'll submit payment, create a password to activate, and review your policy documents.",
+			"image": "laststeps",
+			"pageType": "intro"
+		},
+		{
+			"pageType": "exclusions",
+			"stage": "Exclusions"
+		},
+		{
+			"pageType": "billing"
+		},
+		{
+			"pageType": "register"
+		},
+		{
+			"pageType": "review"
+		}
+	]
+}
