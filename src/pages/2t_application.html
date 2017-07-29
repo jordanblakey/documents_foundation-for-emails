@@ -8,7 +8,7 @@ title: Individual Life Insurance Application
       <hr>
       <spacer size="16"></spacer>
 
-      <h1>{{title}}</h1>
+      <h1>{{title}} <span class="reinstatement-shown">For Reinstatements</span></h1>
 {{#markdown}}
 
   <h2>Your Basic Information</h2>
@@ -45,59 +45,57 @@ title: Individual Life Insurance Application
 
   <!-- <hr> -->
   <h2>More About You</h2>
-  <p>9. Are you a U.S. citizen, or do you have a U.S. permanent resident card <small>(green card)?</small><br>
+  <div class="question">9. Are you a U.S. citizen, or do you have a U.S. permanent resident card <small>(green card)?</small><br>
     <input reference="citizen" name="citizen" value="yes" type="radio"><label>Yes</label>
     <input reference="citizen" name="citizen" value="no" type="radio"><label>No</label>
-  </p>
+  </div>
 
-  <p>10. In the past 10 years, have you been medically diagnosed or medically treated or tested positive for: (1) heart disease, (2) stroke, (3) cancer (excluding basal and squamous cell skin cancer), (4) organ transplant, (5) diabetes before age 30 (excluding gestational diabetes), (6) alcohol or drug abuse, (7) HIV, or (8) kidney disease requiring dialysis?<br>
+  <div class="question">10. In the past 10 years, have you been medically diagnosed or medically treated or tested positive for: (1) heart disease, (2) stroke, (3) cancer (excluding basal and squamous cell skin cancer), (4) organ transplant, (5) diabetes before age 30 (excluding gestational diabetes), (6) alcohol or drug abuse, (7) HIV, or (8) kidney disease requiring dialysis?<br>
     <input reference="medicalCondition" name="medicalCondition" value="yes" type="radio"><label>Yes</label>
     <input reference="medicalCondition" name="medicalCondition" value="no" type="radio"><label>No</label>
-  </p>
+  </div>
 
 
   <!-- MIB Codes -->
-  {{> reflex2}}
+  {{> reflex1-2t}}
 
-  <p>11. Have you ever been convicted of a felony?<br>
+  <div class="question">11. Have you ever been convicted of a felony?<br>
     <input reference="legalCondition" name="legalCondition" value="yes" type="radio"><label>Yes</label>
     <input reference="legalCondition" name="legalCondition" value="no" type="radio"><label>No</label>
-  </p>
+  </div>
 
-  <p>12. In the past 12 months, have you used any tobacco or nicotine products <small>(excluding less than 24 cigars)?</small><br>
+  <div class="question">12. In the past 12 months, have you used any tobacco or nicotine products <small>(excluding less than 24 cigars)?</small><br>
     <input reference="tobacco" name="tobacco" value="yes" type="radio"><label>Yes</label>
     <input reference="tobacco" name="tobacco" value="no" type="radio"><label>No</label>
-  </p>
-  <p>13. Are you: <small>(Select only one)</small><br>
+  </div>
+  <div class="question">13. Are you: <small>(Select only one)</small><br>
     <input reference="occupation" name="occupation" value="student" type="radio"><label>A full time student</label>
     <input reference="occupation" name="occupation" value="homemaker" type="radio"><label>A homemaker</label>
     <input reference="occupation" name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
     <input reference="occupation" name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
-  </p>
+  </div>
 
-  <p>14. Annual Income
     <table class="form">
       <tr>
-        <td>My annual income is $:<span class="dynamic" reference="income" value="">500,000</span><span class="units">USD</span></td>
+        <td>14. My annual income is $:<span class="dynamic" reference="income" value="">&nbsp;</span><span class="units">USD</span></td>
       </tr>
     </table>
-  </p>
 
-  <p>15. Do you have any life insurance or annuities currently in force or pending?<br>
+  <div class="question">15. Do you have any life insurance or annuities currently in force or pending?<br>
     <input type="radio" name="currentInsExists" reference="currentInsExists" value="yes">
     <label>Yes</label>
     <!-- Next question -->
     <input type="radio" name="currentInsExists" reference="currentInsExists" value="no">
     <label>No</label>
     <!-- Stop -->
-  </p> 
+  </div> 
 
   <!-- In Force Policies -->
-  {{> reflex1}}
+  {{> reflex2-2t}}
 
   <div class="reinstatement-hidden">
   <h2>Primary Beneficiaries</h2>
-  <p>16. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
+  <div class="question">16. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
     <table class="form">
       <tr reference="beneficiary" index="1" class="show">
         <td colspan="2">Name &ast; <span class="dynamic" reference="beneficiary.person.first_name" value="">Sue Stipple</span></td>
@@ -157,13 +155,13 @@ title: Individual Life Insurance Application
         <td>Total % <span class="dynamic" reference="allocationTotal" value="">100</span></td>
       </tr>
     </table>
-  </p>
+  </div>
   </div>
 
   <div class="reinstatement-hidden">
   <h2>Contingent Beneficiaries</h2>
 
-  <p>17. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
+  <div class="question">17. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
     <table class="form">
       <tr reference="contingent" index="1" class="show">
         <td colspan="2">Name &ast; <span class="dynamic" reference="contingent.person.first_name" value="">Distant Relative</span></td>
@@ -206,7 +204,7 @@ title: Individual Life Insurance Application
         <td>Total % <span class="dynamic" reference="contingentAlloctionTotal" value="">100</span></td>
       </tr>
     </table>
-  </p>
+  </div>
 </div>
   <!-- <hr> -->
   <h2>Legal</h2>
@@ -216,7 +214,7 @@ title: Individual Life Insurance Application
   <p>Under penalties of perjury, as Owner of this policy, I certify that:</p>
   <!-- <ul> -->
     <li>The taxpayer identification number shown on this application is my correct taxpayer identification number;</li>
-    <li>I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding. Check this box ☐ if you ARE subject to backup withholding;</li>
+    <li>I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding. Check this box &nbsp;<input type="checkbox" reference="backupWithholding" value="yes"> if you ARE subject to backup withholding;</li>
     <li>I am a U.S. citizen or other U.S. person as defined by the IRS for federal tax purposes.</li>
     <li>I am exempt from Foreign Account Tax Compliance Act (FATCA) reporting.</li>
   </ul>
@@ -248,20 +246,16 @@ title: Individual Life Insurance Application
   <p>By signing this application, I voluntarily consent to submission of this application electronically and use of my electronic signature, including voice signatures, on this application and related forms.  I understand that I will be provided an electronic copy of the completed application bearing my electronic signature at policy delivery.  I agree to provide the Company’s Administrative Office with a current Internet email address and I have access to the Internet for the purpose of accepting electronic delivery of the document and a computer with Adobe Acrobat Reader and a Windows Operating System to view the completed application. I understand I also have a right to receive a paper copy of the completed application by contacting the Company’s Administrative Office.  I understand and agree that if coverage is declined, a copy of the application will not be provided, unless requested.</p>
   <hr>
 
-  <div class="reinstatement-hidden">
   <h2>Payment Method</h2>
-
-  <p>Modal Premium Frequency:<br>
+  <div class="question">Modal Premium Frequency:<br>
     <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
     <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
-  </p>
-
-  <p>Payment Type:<br>
+  </div>
+  <div class="question">Payment Type:<br>
     <input reference="paymentType" name="paymentType" value="eft-Ach" type="radio"><label>EFT/ACH </label>
     <input reference="paymentType" name="paymentType" value="creditCard" type="radio"><label>Credit Card</label>
-  </p>
-
-  <p>Billing Address:<br>
+  </div>
+  <div class="question">Billing Address:<br>
     <input reference="billingAddressExists" value="yes" type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. <small>(If P.O. Box, also include Street Address below)</small></label><br>
     <table class="form">
       <tr>
@@ -274,10 +268,9 @@ title: Individual Life Insurance Application
         <td>Zip Code <span class="dynamic" reference="billingZipcode" value="">75082</span></td>
       </tr>
     </table>
-  </p>
-</div>
+  </div>
 <h2>Third Party Billing Notification</h2>
-  <p>Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
+  <div class="question">Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
     <table class="form">
       <tr>
         <td colspan="3">Name <span class="dynamic" reference="thirdPartyBillingName" value="">Jack Dorsey</span></td>
@@ -293,7 +286,7 @@ title: Individual Life Insurance Application
         <td colspan="2">Zip Code <span class="dynamic" reference="thirdPartyBillingZipcode" value="">39485</span></td>
       </tr>
     </table>
-  </p>
+  </div>
 <p>I acknowledge receipt of the Consumer Protection Notice that includes the Fair Credit Reporting Act Notice/MIB, Inc., Notice and Notice of Insurance of Information Practices.</p>
 <p>Any person who knowingly presents a false statement in an application for insurance may be guilty of a criminal offense and subject to penalties under state law.</p>
 <p>The Internal Revenue Service does not require the Owner’s consent to any provision of this document other than the certifications required to avoid backup withholding.</p>

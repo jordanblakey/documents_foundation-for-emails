@@ -1,11 +1,11 @@
 ---
-title: 10 & 20 Year Term Life Insurance Application
+title: Individual Life Insurance Application
 ---
 
 <container>
 	<row>
 		<columns>
-			<h1>{{title}}</h1>
+			<h1>{{title}} <span class="reinstatement-shown">For Reinstatements</span></h1>
 {{#markdown}}
 
 <h2>Your Basic Information</h2>
@@ -43,64 +43,68 @@ title: 10 & 20 Year Term Life Insurance Application
 <!-- # RUN INSTANT ID -->
 
 <h2>More About You</h2>
-<p>9. Are you a U.S. citizen, or do you have a U.S. permanent resident card <small>(green card)?</small><br>
+<div class="question">9. Are you a U.S. citizen, or do you have a U.S. permanent resident card (green card)?<br>
   <input reference="citizen" name="citizen" value="yes" type="radio"><label>Yes</label>
   <input reference="citizen" name="citizen" value="no" type="radio"><label>No</label>
-</p>
+</div>
 
-<p>10. Have you ever been convicted of a (1) felony, (2) DUI/DWI for alcohol or drugs in the past 5 years, or (3) have you had a suspended or revoked license in the past 3 years?<br>
+<div class="question">10. Have you ever been convicted of a (1) felony, (2) DUI/DWI for alcohol or drugs in the past 5 years, or (3) have you had a suspended or revoked license in the past 3 years?<br>
   <input reference="legalCondition" name="legalCondition" value="yes" type="radio"><label>Yes</label>
   <input reference="legalCondition" name="legalCondition" value="no" type="radio"><label>No</label>
-</p>
+</div>
 
-<p>11. In the past 12 months, have you used any tobacco or nicotine products <small>(excluding less than 24 cigars)?</small><br>
+<div class="question">11. In the past 12 months, have you used any tobacco or nicotine products (excluding less than 24 cigars)?<br>
   <input reference="tobacco" name="tobacco" value="yes" type="radio"><label>Yes</label>
   <input reference="tobacco" name="tobacco" value="no" type="radio"><label>No</label>
-</p>
+</div>
 
-<p>12. In the past 5 years, have you been declined for life insurance?<br>
+<div class="question">12. In the past 5 years, have you been declined for life insurance?<br>
   <input reference="declinedIns" name="declinedIns" value="yes" type="radio"><label>Yes</label>
   <input reference="declinedIns" name="declinedIns" value="no" type="radio"><label>No</label>
-</p>
+</div>
 
-<p>13. In the past 2 years or within the next year, have you or do you plan to (1) pilot an airplane (other than as a regularly scheduled commercial airline pilot), or participate in (2) scuba diving deeper than 100 feet, (3) automobile racing over 100 miles per hour, or (4) outdoor climbing requiring specialized equipment?<br>
+<div class="question">13. In the past 2 years or within the next year, have you or do you plan to (1) pilot an airplane (other than as a regularly scheduled commercial airline pilot), or participate in (2) scuba diving deeper than 100 feet, (3) automobile racing over 100 miles per hour, or (4) outdoor climbing requiring specialized equipment?<br>
   <input reference="riskyBehavior" name="riskyBehavior" value="yes" type="radio"><label>Yes</label>
   <input reference="riskyBehavior" name="riskyBehavior" value="no" type="radio"><label>No</label>
-</p>
+</div>
 
-<p>14. In the past 2 years, have you received disability payments for a period in excess of 3 months?<br>
+<div class="question">14. In the past 2 years, have you received disability payments for a period in excess of 3 months?<br>
   <input reference="disabilityPayments" name="disabilityPayments" value="yes" type="radio"><label>Yes</label>
   <input reference="disabilityPayments" name="disabilityPayments" value="no" type="radio"><label>No</label>
-</p>
+</div>
 
-<p>15. Have you tested positive for HIV? <br>
+<div class="question">15. Have you tested positive for HIV? <br>
   <input reference="hiv" name="hiv" value="yes" type="radio"><label>Yes</label>
   <input reference="hiv" name="hiv" value="no" type="radio"><label>No</label>
-</p>
+</div>
 
-<p>16. In the past 10 years, have you been medically diagnosed or medically treated for: (1) heart disease, (2) cancer (excluding basal and squamous cell skin cancer), (3) organ transplant, (4) peripheral arterial disease, (5) chronic kidney disease, or (6) liver cirrhosis or drug abuse?<br>
-  <input reference="medicalCondition" name="medicalCondition" value="yes" type="radio"><label>Yes</label>
-  <input reference="medicalCondition" name="medicalCondition" value="no" type="radio"><label>No</label>
-</p>
+<div class="question">16. In the past 10 years, have you been medically diagnosed or medically treated for (Select all that apply):<br>
+  <input reference="medicalCollection" ref="heartDisease" value="yes" type="checkbox"><label>Heart Disease</label>
+  <input reference="medicalCollection" ref="cancer" value="yes" type="checkbox"><label>Cancer (excluding basal and squamous cell skin cancer)</label>
+  <input reference="medicalCollection" ref="organTransplant" value="yes" type="checkbox"><label>Organ transplant</label><br>
+  <input reference="medicalCollection" ref="arterialDisease" value="yes" type="checkbox"><label>Peripheral arterial disease</label>
+  <input reference="medicalCollection" ref="kidneyDisease" value="yes" type="checkbox"><label>Chronic kidney disease </label>
+  <input reference="medicalCollection" ref="cirrhosisDrugAbuse" value="yes" type="checkbox"><label>Liver cirrhosis or drug abuse</label>
+</div>
 
-<p>17. Other than routine care, in the past 12 months, have you been advised by a licensed medical professional to have surgery, hospitalization, any diagnostic test (other than for HIV) or any procedure which has not been completed or the results are unknown?<br>
+<div class="question">17. Other than routine care, in the past 12 months, have you been advised by a licensed medical professional to have surgery, hospitalization, any diagnostic test (other than for HIV) or any procedure which has not been completed or the results are unknown?<br>
   <input reference="medicalAdvice" name="medicalAdvice" value="yes" type="radio"><label>Yes</label>
   <input reference="medicalAdvice" name="medicalAdvice" value="no" type="radio"><label>No</label>
-</p>
+</div>
 
-<p>18. In the past 3 months, have you unintentionally lost more than 15 pounds [female only]? 20 pounds [male only]?<br>
+<div class="question">18. In the past 3 months, have you unintentionally lost more than 15 pounds [female only]? 20 pounds [male only]?<br>
   <input reference="weightDiff" name="weightDiff" value="yes" type="radio"><label>Yes</label>
   <input reference="weightDiff" name="weightDiff" value="no" type="radio"><label>No</label>
-</p>
+</div>
 
-<p>19. In the past 10 years, have you been medically diagnosed or medically treated for (select all that apply):<br>
+<div class="question">19. In the past 10 years, have you been medically diagnosed or medically treated for (select all that apply):<br>
   <input reference="medicalCollection" refcollection="depressionMentalStress" name="depressionMentalStress" value="yes" type="checkbox"><label>Depression or other mental disorder</label>
   <input reference="medicalCollection" refcollection="alcohol" name="alcohol" value="yes" type="checkbox"><label>Alcohol abuse</label>
-  <input reference="medicalCollection" refcollection="chestPain" name="chestPain" value="yes" type="checkbox"><label>Chest pain</label>
+  <input reference="medicalCollection" refcollection="chestPain" name="chestPain" value="yes" type="checkbox"><label>Chest pain</label><br>
   <input reference="medicalCollection" refcollection="diabetes" name="diabetes" value="yes" type="checkbox"><label>Diabetes</label>
   <input reference="medicalCollection" refcollection="strokeTia" name="strokeTia" value="yes" type="checkbox"><label>Stroke or mini-stroke/TIA</label>
   <input reference="medicalCollection" refcollection="seizure" name="seizure" value="yes" type="checkbox"><label>Seizure disorder</label>
-</p>
+</div>
 
 <!-- Your Alcohol Use -->
 {{> reflex1-1}}
@@ -120,71 +124,62 @@ title: 10 & 20 Year Term Life Insurance Application
 <!-- Depression, Anxiety, Stress Disorder -->
 {{> reflex1-6}}
 
-<p>20. Are you: <small>(Select only one)</small><br>
+<div class="question">20. Are you: (Select only one)<br>
   <input reference="occupation" name="occupation" value="student" type="radio"><label>A full time student</label>
-  <input reference="occupation" name="occupation" value="homemaker" type="radio"><label>A homemaker</label>
+  <input reference="occupation" name="occupation" value="homemaker" type="radio"><label>A homemaker</label><br>
   <input reference="occupation" name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
   <input reference="occupation" name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
-</p>
+</div>
 
-<p>21. Annual Income
-  <table class="form">
-    <tr>
-      <td>My annual income is $:<span class="dynamic" reference="income" value="">500,000</span><span class="units">USD</span></td>
-    </tr>
-  </table>
-</p>
+<table class="form">
+  <tr>
+    <td>21. My annual income is $:<span class="dynamic" reference="income" value="">&nbsp;</span><span class="units">USD</span></td>
+  </tr>
+</table>
 
-<p>22. Do you have any life insurance or annuities currently in force or pending?<br>
-  <input type="radio" name="currentInsExists" reference="currentInsExists" value="yes"><label>Yes</label>
-  <input type="radio" name="currentInsExists" reference="currentInsExists" value="no"><label>No</label>
-</p> 
-
-<p>23. In the next 12 months do you plan to travel outside of United States, Canada, or Mexico? <br>
-  <input type="radio" name="travel" reference="travel" value="yes"><label>Yes</label>
-  <input type="radio" name="travel" reference="travel" value="no"><label>No</label>
-</p>
-
-<!-- # RUN MIB -->
-<!-- # RUN Rx -->
-
-<!-- Primary Care Physician -->
+<!-- In Force Policies -->
 {{> reflex2}}
 
-<!-- Medications -->
-{{> reflex3}}
+<div class="question">22. In the next 12 months do you plan to travel outside of United States, Canada, or Mexico? <br>
+  <input type="radio" name="travel" reference="travel" value="yes"><label>Yes</label>
+  <input type="radio" name="travel" reference="travel" value="no"><label>No</label>
+</div>
 
 <!-- International Travel -->
+{{> reflex3}}
+
+<!-- # RUN MIB -->
+
+<!-- Primary Care Physician -->
 {{> reflex4}}
 
-<!-- Family Health History -->
+<!-- # RUN Rx -->
+
+<!-- Medications -->
 {{> reflex5}}
 
-<p>24a. I do/do not have a driver's license in <span class="dynamic inline-block" reference="licenseRetrievedState">TX</span> number <span class="dynamic inline-block" reference="licenseRetrievedNum">9876543219</span>.<br>
-  <input type="radio" name="licenseConfimation" reference="licenseConfimation" value="yes"><label>Yes</label>
-  <input type="radio" name="licenseConfimation" reference="licenseConfimation" value="no"><label>No</label>
-</p>
-
-<p>24b. Do you have a valid driver's license?<br>
+<div class="question">23a. Do you have a valid driver's license?<br>
   <input type="radio" name="licenseExists" reference="licenseExists" value="yes"><label>Yes</label>
   <input type="radio" name="licenseExists" reference="licenseExists" value="no"><label>No</label>
-</p>
+</div>
 
-<p>
   <table class="form">
     <tr>
-      <td>24c. Driver's License Number:<span class="dynamic" reference="licenseNum" value=""></span><span class="units">USD</span></td>
+      <td>23b. Driver's License Number:<span class="dynamic" reference="licenseNum" value="">&nbsp;</span></td>
+      <td>23c. State of Issue:<span class="dynamic" reference="licenseState" value="">&nbsp;</span></td>
     </tr>
   </table>
-</p>
 
 <!-- # RUN LexisNexis Life Risk Classifier -->
 
 <!-- PREFERRED RATE CHECK -->
 
+<!-- Family Health History -->
+{{> reflex6}}
+
 <div class="reinstatement-hidden">
 <h2>Primary Beneficiaries</h2>
-<p>25. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
+<div class="question">24. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
   <table class="form">
     <tr reference="beneficiary" index="1" class="show">
       <td colspan="2">Name &ast; <span class="dynamic" reference="beneficiary.person.first_name" value="">Sue Stipple</span></td>
@@ -244,13 +239,13 @@ title: 10 & 20 Year Term Life Insurance Application
       <td>Total % <span class="dynamic" reference="allocationTotal" value="">100</span></td>
     </tr>
   </table>
-</p>
+</div>
 </div>
 
 <div class="reinstatement-hidden">
 <h2>Contingent Beneficiaries</h2>
 
-<p>26. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
+<div class="question">25. Share percentages must equal 100%. Use whole numbers only, no decimals. Provide Beneficiary(ies) Full Name(s). &ast;indicates Required Fields.<br>
   <table class="form">
     <tr reference="contingent" index="1" class="show">
       <td colspan="2">Name &ast; <span class="dynamic" reference="contingent.person.first_name" value="">Distant Relative</span></td>
@@ -293,7 +288,7 @@ title: 10 & 20 Year Term Life Insurance Application
       <td>Total % <span class="dynamic" reference="contingentAlloctionTotal" value="">100</span></td>
     </tr>
   </table>
-</p>
+</div>
 </div>
 
 <h2>Legal</h2>
@@ -303,7 +298,7 @@ title: 10 & 20 Year Term Life Insurance Application
 <p>Under penalties of perjury, as Owner of this policy, I certify that:</p>
 <ul>
   <li>The taxpayer identification number shown on this application is my correct taxpayer identification number;</li>
-  <li>I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding. Check this box ☐ if you ARE subject to backup withholding;</li>
+  <li>I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding. Check this box &nbsp;<input type="checkbox" reference="backupWithholding" value="yes"> if you ARE subject to backup withholding;</li>
   <li>I am a U.S. citizen or other U.S. person as defined by the IRS for federal tax purposes.</li>
   <li>I am exempt from Foreign Account Tax Compliance Act (FATCA) reporting.</li>
 </ul>
@@ -333,21 +328,20 @@ title: 10 & 20 Year Term Life Insurance Application
 <p>By signing this application, I voluntarily consent to submission of this application electronically and use of my electronic signature, including voice signatures, on this application and related forms.  I understand that I will be provided an electronic copy of the completed application bearing my electronic signature at policy delivery.  I agree to provide the Company’s Administrative Office with a current Internet email address and I have access to the Internet for the purpose of accepting electronic delivery of the document and a computer with Adobe Acrobat Reader and a Windows Operating System to view the completed application. I understand I also have a right to receive a paper copy of the completed application by contacting the Company’s Administrative Office.  I understand and agree that if coverage is declined, a copy of the application will not be provided, unless requested.</p>
 <hr>
 
-<div class="reinstatement-hidden">
 <h2>Payment Method</h2>
 
-<p>Modal Premium Frequency:<br>
+<div class="question">Modal Premium Frequency:<br>
   <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
   <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
-</p>
+</div>
 
-<p>Payment Type:<br>
+<div class="question">Payment Type:<br>
   <input reference="paymentType" name="paymentType" value="eft-Ach" type="radio"><label>EFT/ACH </label>
   <input reference="paymentType" name="paymentType" value="creditCard" type="radio"><label>Credit Card</label>
-</p>
+</div>
 
-<p>Billing Address:<br>
-  <input reference="billingAddressExists" value="yes" type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. <small>(If P.O. Box, also include Street Address below)</small></label><br>
+<div class="question">Billing Address:<br>
+  <input reference="billingAddressExists" value="yes" type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. (If P.O. Box, also include Street Address below)</label><br>
   <table class="form">
     <tr>
       <td colspan="2">Street Address <span class="dynamic" reference="billingAddressStreet" value="">123 Smith St.</span></td>
@@ -359,10 +353,9 @@ title: 10 & 20 Year Term Life Insurance Application
       <td>Zip Code <span class="dynamic" reference="billingZipcode" value="">75082</span></td>
     </tr>
   </table>
-</p>
 </div>
 <h2>Third Party Billing Notification</h2>
-<p>Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
+<div class="question">Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
   <input type="radio" name="thirdPartyBillingExists" reference="thirdPartyBillingExists" value="yes"><label>Yes, complete information below</label>
   <input type="radio" name="thirdPartyBillingExists" reference="thirdPartyBillingExists" value="no"><label>No</label>
 
@@ -381,7 +374,7 @@ title: 10 & 20 Year Term Life Insurance Application
       <td colspan="2">Zip Code <span class="dynamic" reference="thirdPartyBillingZipcode" value="">39485</span></td>
     </tr>
   </table>
-</p>
+</div>
 <p>I acknowledge receipt of the Consumer Protection Notice that includes the Fair Credit Reporting Act Notice/MIB, Inc., Notice and Notice of Insurance of Information Practices.</p>
 <p>Any person who knowingly presents a false statement in an application for insurance may be guilty of a criminal offense and subject to penalties under state law.</p>
 <p>The Internal Revenue Service does not require the Owner’s consent to any provision of this document other than the certifications required to avoid backup withholding.</p>
@@ -389,7 +382,7 @@ title: 10 & 20 Year Term Life Insurance Application
 <h2>Your Signature</h2>
 <table class="form">
   <tr>
-    <td>Signed At <small>(Resident City and State)</small><span class="dynamic" reference="signatureCity" value="">Kansas City, MO</span></td>
+    <td>Signed At (Resident City and State)<span class="dynamic" reference="signatureCity" value="">Kansas City, MO</span></td>
   </tr>
   <tr>
     <td>Signature of Owner <span class="dynamic">&nbsp;</span>

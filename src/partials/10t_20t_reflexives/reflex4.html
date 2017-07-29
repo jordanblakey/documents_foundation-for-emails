@@ -1,18 +1,32 @@
 <div class="reflex" id="reflex4">
-  <h4>International Travel <small>Reflex 4<small></h4>
+  <h4>Primary Care Physician <small>Reflex 4<small></h4>
+  <!-- // Need acceptable code filters. -->
 
-  <p>Which countries do you plan on traveling to?<br>
-    <input type="text" name="4-1" value="">
-    <!-- Any countries on Decline list: Decline -->
-    <!-- Acceptable countries: Reflex question, then next question -->
+  <p>Please provide the name, address and phone number of your primary care physician.<br>
+  <table class="form">
+    <tr>
+      <td>Physician Name<span class="dynamic" type="text" name="pcpFirstName" reference="pcpFirstName">&nbsp;</span></td>
+      <td colspan="2">Street Address<span class="dynamic" type="text" name="pcpAddressStreet" reference="pcpAddressStreet">&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td>Suite/Apt Number<span class="dynamic" type="text" name="pcpAddressApt-SuiteNum" reference="pcpAddressApt-SuiteNum">&nbsp;</span></td>
+      <td>City<span class="dynamic" type="text" name="pcpAddressCity" reference="pcpAddressCity">&nbsp;</span></td>
+      <td>State<span class="dynamic" name="pcpAddressState" reference="pcpAddressState">&nbsp;</span></td>
+    </tr>
+  </table>
+
   </p>
-  <p>Do you plan to travel for longer than 30 consecutive days or greater than 90 days in total?<br>
-    <input type="radio" name="4-2">
-    <label>Yes</label>
+  <p>Have you been convicted of a felony? <br>
+    <input type="radio" name="legalCondition" reference="legalCondition" value="yes"><label>Yes</label>
     <!-- Decline -->
-    <input type="radio" name="4-2">
-    <label>No</label>
-    <!-- Advance -->
+    <input type="radio" name="legalCondition" reference="legalCondition" value="no"><label>No</label>
+    <!-- Next question -->
+   </p>
+  <p>Have you been convicted of a misdemeanor? <br>
+    <input type="radio" name="legalConditionMisdemeanor" reference="legalConditionMisdemeanor" value="yes"><label>Yes</label>
+    <!-- Accept -->
+    <input type="radio" name="legalConditionMisdemeanor" reference="legalConditionMisdemeanor" value="yes"><label>No</label>
+    <!-- Incomplete and send MIB AUD letter -->
   </p>
 
 </div>

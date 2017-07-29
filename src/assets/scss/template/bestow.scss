@@ -125,14 +125,22 @@ div.reflex {
 
 // APPLICATIONS //////////////////////////////////////////////////////////////////
 
-input[type="radio"], .radio {
-  margin-right: 3px !important;
+// input[type="radio"] {
+//   margin-right: 0px !important;
+// }
+// label {
+//   padding-top: 2px;
+// }
+// .checker {
+//   margin-right: 3px !important;
+// }
+
+.question {
+  margin-bottom: 1em;
 }
-label {
-  margin-top: 1px;
-}
-.checker {
-  margin-right: 3px !important;
+
+.form {
+  margin-top: 1em;
 }
 
 .show {
@@ -143,6 +151,12 @@ tr.show {
   display: table-row;
 }
 
-.reinstatement-hidden, .hide {
+.reinstatement-shown {
+  display: inline-block;
+}
+.reinstatement-hidden {
+  display: none;
+}
+.hide {
   display: block;
 }

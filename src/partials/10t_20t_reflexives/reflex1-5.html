@@ -2,60 +2,47 @@
   <h4>Epilepsy, Seizures <small>Reflex 1.5<small></h4>
 
     <p>Was your first seizure in the last 12 months?<br>
-      <input type="radio" name="1-5-1" value="true-unknown">
-      <label>Yes, unknown</label>
+      <input type="radio" name="firstSeizure" reference="firstSeizure" value="yes"><label>Yes</label>
+      <input type="radio" name="firstSeizure" reference="firstSeizure" value="unknown"><label>Unknown</label>
       <!-- Decline -->
-      <input type="radio" name="1-5-1" value="false">
-      <label>No</label>
+      <input type="radio"  name="firstSeizure" reference="firstSeizure" value="no"><label>No</label>
       <!-- Next question -->
     </p>
     <p>When was your last seizure?<br>
-      <input type="radio" name="1-5-2" value="<=5">
-      <label>0-5 years ago</label>
+      <input type="radio"  name="lastSeizure" reference="lastSeizure" value="0"><label>0-5 years ago</label>
       <!-- Next question	// program as ranged value -->
-      <input type="radio" name="1-5-2" value=">5">
-      <label>5+ years ago</label>
+      <input type="radio"  name="lastSeizure" reference="lastSeizure" value="1, 2, 3"><label>5+ years ago</label>
       <!-- Accept -->
     </p>
     <p>How many seizures have you had in the past 12 months?<br>
-      <input type="radio" name="1-5-3" value="<=6">
-      <label>0-6</label>
+      <input type="radio"  name="howManySeizures" reference="howManySeizures" value="0, 1, 2"><label>0-6</label>
       <!-- Next question	// program as ranged value -->
-      <input type="radio" name="1-5-3" value=">6">
-      <label>6+</label>
+      <input type="radio"  name="howManySeizures" reference="howManySeizures" value="3"><label>6+</label>
       <!-- Decline -->
     </p>
     <p>Have you been medically diagnosed or treated for either grand mal seizures or a seizure due to drug or alcohol use?<br>
-      <input type="radio" name="1-5-4" value="true">
-      <label>Yes</label>
+      <input type="radio"  name="grandMalSeizure" reference="grandMalSeizure" value="yes"><label>Yes</label>
       <!-- Decline -->
-      <input type="radio" name="1-5-4" value="false">
-      <label>No</label>
+      <input type="radio"  name="grandMalSeizure" reference="grandMalSeizure" value="no"><label>No</label>
       <!-- Next question -->
     </p>
     <p>In the past two years, have you been prescribed medication by a medical professional for this condition?<br>
-      <input type="radio" name="1-5-5" value="unknown">
-      <label>Unknown</label>
+      <input type="radio"  name="prescribedForSeizures" reference="prescribedForSeizures" value="unknown"><label>Unknown</label>
       <!-- Decline -->
-      <input type="radio" name="1-5-5" value="false">
-      <label>No</label>
+      <input type="radio"  name="prescribedForSeizures" reference="prescribedForSeizures" value="no"><label>No</label>
       <!-- Next question -->
-      <input type="radio" name="1-5-5" value="true-still-taking">
-      <label>Yes and still taking this</label>
+      <input type="radio"  name="prescribedForSeizures" reference="prescribedForSeizures" value="0"><label>Yes and still taking this</label>
       <!-- Next question -->
-      <input type="radio" name="1-5-5" value="true-stopped-advised">
-      <label>Yes but stopped all medication with medical professional’s advice</label>
+      <input type="radio"  name="prescribedForSeizures" reference="prescribedForSeizures" value="1"><label>Yes but stopped all medication with medical professional’s advice</label>
       <!-- Next question -->
-      <input type="radio" name="1-5-5" value="true-stop-unadvised">
-      <label>Yes but stopped taking medication on my own</label>
+      <input type="radio"  name="prescribedForSeizures" reference="prescribedForSeizures" value="2"><label>Yes but stopped taking medication on my own</label>
       <!-- Decline -->
     </p>
     <p>In the past 12 months, have you had a motor vehicle accident due to this condition?<br>
-      <input type="radio" name="1-5-6" value="true-unknown">
-      <label>Yes, unknown</label>
+      <input type="radio"  name="carAccidentSeizure" reference="carAccidentSeizure" value="yes"><label>Yes</label>
+      <input type="radio"  name="carAccidentSeizure" reference="carAccidentSeizure" value="unknown"><label>Unknown</label>
       <!-- Decline -->
-      <input type="radio" name="1-5-6" value="false">
-      <label>No</label>
+      <input type="radio"  name="carAccidentSeizure" reference="carAccidentSeizure" value="false"><label>No</label>
       <!-- Accept -->
     </p>
 

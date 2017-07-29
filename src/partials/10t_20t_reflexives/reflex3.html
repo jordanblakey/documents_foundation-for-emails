@@ -1,13 +1,16 @@
 <div class="reflex" id="reflex3">
-  <h4>Medications <small>Reflex 3<small></h4>
+  <h4>International Travel <small>Reflex 3<small></h4>
 
-  <p>In the past 90 days, has your medical professional increased any of your medications (other than for cholesterol treatment)?<br>
-    <input type="radio" name="3-1" value="//">
-    <label>Yes</label>
+  <p>Which countries do you plan on traveling to?<br>
+    <input type="text" name="travel" reference="travel" value="">
+    <!-- Any countries on Decline list: Decline -->
+    <!-- Acceptable countries: Reflex question, then next question -->
+  </p>
+  <p>Do you plan to travel for longer than 30 consecutive days or greater than 90 days in total?<br>
+    <input type="radio" name="travelInternational" reference="travelInternational"><label>Yes</label>
     <!-- Decline -->
-    <input type="radio" name="3-1" value="//">
-    <label>No</label>
-    <!-- Accept -->
+    <input type="radio" name="travelInternational" reference="travelInternational"><label>No</label>
+    <!-- Advance -->
   </p>
 
 </div>
