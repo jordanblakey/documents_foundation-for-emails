@@ -164,3 +164,13 @@ tr.show {
 .reinstatement-hidden {
   display: none;
 }
+
+// DISCLOSURES /////////////////////////////////////////////////////////////////
+
+.signature-row {
+  .columns:first-child th { padding: 0 14px 0 0; }
+  .columns:last-child th { padding: 0 0 0 14px; }
+  th {
+    padding: 0 7px;
+      }
+}
