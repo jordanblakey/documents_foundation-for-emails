@@ -137,6 +137,9 @@ div.reflex {
 
 .question {
   margin-bottom: 1em;
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .form {
@@ -146,21 +149,18 @@ div.reflex {
 .show {
   display: block;
 }
+.hide {
+  display: block;
+}
 
 tr.show {
   display: table-row;
 }
 
-.question p {
-  margin-bottom: 0;
-}
-
 .reinstatement-shown {
   display: inline-block;
 }
+
 .reinstatement-hidden {
   display: none;
-}
-.hide {
-  display: block;
 }
