@@ -1,21 +1,26 @@
 <div class="reflex" id="reflex1">
-  <h4>In Force Policies <small>Reflex 1<small></h4>
+  <h4>In Force Policies <small>Reflex 1</small></h4>
 
-  <p>What is the total amount of all coverage in force or pending?<br>
-    <input type="text" name="currentInsValue" reference="currentInsValue" value="">
+  <div class="question" reference="currentInsValue">
+    <p>What is the total amount of all coverage in force or pending?</p>
+    <input type="text" value="">
     <!-- ranged value -->
-  </p>
-  <p>Is the coverage being applied for intended to replace or change any existing life insurance or annuity contract?<br>
-    <input type="radio" name="replacementInsExists" reference="replacementInsExists" value="yes">
+  </div>
+
+  <div class="question" reference="replacementInsExists">
+    <p>Is the coverage being applied for intended to replace or change any existing life insurance or annuity contract?</p>
+    <input type="radio" name="replacementInsExists" value="yes">
     <label>Yes</label>
     <!-- Next question -->
-    <input type="radio" name="replacementInsExists" reference="replacementInsExists" value="no">
+    <input type="radio" name="replacementInsExists" value="no">
     <label>No</label>
     <!-- Stop -->
-  </p>
-  <p>What amount is being replaced?<br>
-    <input type="text" reference="replacementInsValue" value="">
+  </div>
+
+  <div class="question" reference="replacementInsValue">
+    <p>What amount is being replaced?</p>
+    <input type="text" value="">
     <!-- ranged value -->
-  </p>
+  </div>
 
 </div>

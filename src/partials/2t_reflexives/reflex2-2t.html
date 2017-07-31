@@ -1,35 +1,38 @@
 <div class="reflex" id="reflex2">
-  <h4>MIB Codes <small>Reflex 2<small></h4>
-
-  <!-- Medical MIB Code -->
-  <p>Have you seen a medical professional for any of the questions asked previously?<br>
-    <input type="radio" name="medicalCondition" reference="medicalCondition">
+  <h4>MIB Codes <small>Reflex 2</small></h4>
+  <div class="question" reference="medicalCondition">
+    <!-- Medical MIB Code -->
+    <p>Have you seen a medical professional for any of the questions asked previously?</p>
+    <input type="radio" name="medicalCondition">
     <label>Yes</label>
-    <input type="radio" name="medicalCondition" reference="medicalCondition">
+    <input type="radio" name="medicalCondition">
     <label>No</label>
-  </p>
-  <!-- Criminal MIB Code -->
-  <p>Have you been convicted of a felony?<br>
-    <input type="radio" name="legalCondition" reference="legalCondition" value="">
+  </div>
+
+  <div class="question" reference="legalCondition">
+    <!-- Criminal MIB Code -->
+    <p>Have you been convicted of a felony?</p>
+    <input type="radio" name="legalCondition" value="no">
     <label>No</label>
     <!-- Next question -->
-    <input type="radio" name="legalCondition" reference="legalCondition" value="">
+    <input type="radio" name="legalCondition" value="yes">
     <label>Yes</label>
     <!-- Decline -->
-    <input type="radio" name="legalCondition" reference="legalCondition" value="">
+    <input type="radio" name="legalCondition" value="unknown">
     <label>Unknown</label>
-    <!-- Decline -->
-  </p>
-  <p>Have you been convicted of a misdemeanor?<br>
-    <input type="radio" name="legalConditionMisdemeanor" reference="legalConditionMisdemeanor" value="">
+  </div>
+
+  <div class="question" reference="legalConditionMisdemeanor">
+    <p>Have you been convicted of a misdemeanor?</p>
+    <input type="radio" name="" value="no">
     <label>No</label>
     <!-- Incomplete and send MIB AUD letter -->
-    <input type="radio" name="legalConditionMisdemeanor" reference="legalConditionMisdemeanor" value="">
+    <input type="radio" name="legalConditionMisdemeanor" value="yes">
     <label>Yes</label>
     <!-- Accept -->
-    <input type="radio" name="legalConditionMisdemeanor" reference="legalConditionMisdemeanor" value="">
+    <input type="radio" name="legalConditionMisdemeanor" value="unkown">
     <label>Unknown</label>
     <!-- Accept -->
-  </p>
+  </div>
 
 </div>

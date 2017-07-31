@@ -1,60 +1,75 @@
 <div class="reflex" id="reflex1-2">
-  <h4>Diabetes<small>Reflex 1.2<small></h4>
+  <h4>Diabetes<small>Reflex 1.2</small></h4>
 
-    <p>Were you medically diagnosed with gestational diabetes only?<br>
-      <!-- only for female applicants -->
-      <input type="radio" name="diabetesFemaleGestation" reference="diabetesFemaleGestation" value="Yes"><label>Yes</label>
-      <!-- Accept -->
-      <input type="radio" name="diabetesFemaleGestation" reference="diabetesFemaleGestation" value="No"><label>No</label>
+  <div class="question" reference="diabetesFemaleGestation">
+      <p>Were you medically diagnosed with gestational diabetes only?</p>
+    <!-- only for female applicants -->
+    <input type="radio" name="diabetesFemaleGestation" value="Yes"><label>Yes</label>
+    <!-- Accept -->
+    <input type="radio" name="diabetesFemaleGestation" value="No"><label>No</label>
+    <!-- Decline -->
+  </p>
+  </div>
+
+  <!-- System edit: Under age 40 Decline Age 40 or higher Next Question -->
+
+  <div class="question" reference="prescribedInsulin">
+      <p>In the past two years, have you been prescribed insulin by a medical professional?</p>
+      <input type="radio" name="prescribedInsulin" value="yes"><label>Yes</label>
       <!-- Decline -->
-    </p>
-    <!-- System edit:
-    Under age 40
-    Decline
-    Age 40 or higher
-    Next Question
-    -->
-    <p>In the past two years, have you been prescribed insulin by a medical professional?<br>
-      <input type="radio" name="prescribedInsulin" reference="prescribedInsulin" value="yes"><label>Yes</label>
-      <!-- Decline -->
-      <input type="radio" name="prescribedInsulin" reference="prescribedInsulin" value="no"><label>No</label>
-      <input type="radio" name="prescribedInsulin" reference="prescribedInsulin" value="unknown"><label>Unknown</label>
+      <input type="radio" name="prescribedInsulin" value="no"><label>No</label>
+      <input type="radio" name="prescribedInsulin" value="unknown"><label>Unknown</label>
       <!-- Next Question -->
-    </p>
-    <p>In the past 2 years, have you been hospitalized for diabetes?<br>
-      <input type="radio" name="diabetesHospitalized2Years" reference="diabetesHospitalized2Years" value="Yes"><label>Yes</label>
+  </div>
+
+  <div class="question" reference="diabetesHospitalized2Years">
+      <p>In the past 2 years, have you been hospitalized for diabetes?</p>
+      <input type="radio" name="diabetesHospitalized2Years" value="yes"><label>Yes</label>
       <!-- Decline -->
-      <input type="radio" name="diabetesHospitalized2Years" reference="diabetesHospitalized2Years" value="No"><label>No</label>
+      <input type="radio" name="diabetesHospitalized2Years" value="no"><label>No</label>
       <!-- Next question -->
-    </p>
-    <p>How many times per year do you typically see a medical professional for this condition?<br>
-      <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="0"><label>0</label>
+  </div>
+
+  <div class="question" reference="seeDrDiabetes">
+      <p>How many times per year do you typically see a medical professional for this condition?</p>
+      <input type="radio" name="seeDrDiabetes" value="0"><label>0</label>
       <!-- Decline	// Needs to be programmed for a ranged value -->
-      <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="1, 2, 3, 4"><label>1-4</label>
+      <input type="radio" name="seeDrDiabetes" value="1, 2, 3, 4"><label>1-4</label>
       <!-- Next question -->
-      <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="5+"><label>5+</label>
+      <input type="radio" name="seeDrDiabetes" value="5+"><label>5+</label>
       <!-- Decline -->
-    </p>
-    <p>In the past two years, have you been medically diagnosed or medically treated for kidney disease (including protein or microalbumin in the urine) or any type of skin ulcers?<br>
-      <input type="radio" name="kidneyDisease" reference="kidneyDisease" value="yes"><label>Yes</label>
-      <!-- Decline -->
-      <input type="radio" name="kidneyDisease" reference="kidneyDisease" value="no"><label>No</label>
-      <input type="radio" name="kidneyDisease" reference="kidneyDisease" value="unknown"><label>Unknown</label>
-      <!-- Next question -->
-    </p>
-    <p>What was your most recent Hemoglobin A1c or Glycohemoglobin reading?<br>
-      <input type="radio" name="hemoglobin" reference="hemoglobin" value="unknown"><label>Unknown</label>
+  </div>
+
+  <div class="question" reference="kidneyDisease">
+      <p>In the past two years, have you been medically diagnosed or medically treated for kidney disease (including protein or microalbumin in the urine) or any type of skin ulcers?</p>
+          <input type="radio" name="kidneyDisease" value="yes"><label>Yes</label>
+          <!-- Decline -->
+          <input type="radio" name="kidneyDisease" value="no"><label>No</label>
+          <input type="radio" name="kidneyDisease" value="unknown"><label>Unknown</label>
+          <!-- Next question -->
+  </div>
+
+  <div class="question" reference="hemoglobin">
+      <p>What was your most recent Hemoglobin A1c or Glycohemoglobin reading?</p>
+      <input type="radio" name="hemoglobin" reference="" value="unknown"><label>Unknown</label>
       <!-- Decline // This needs to be programmed for a ranged value -->
       <input type="radio" name="hemoglobin" reference="hemoglobin" value="0, 1, 2, 3"><label> 8.0 or below</label>
       <!-- Accept	// with these rules listed below -->
       <input type="radio" name="hemoglobin" reference="hemoglobin" value="4"><label>> 8.0</label>
       <!-- Decline -->
-    </p>
-    <p>How old were you when diabetes was diagnosed?<br>
-      <input type="radio" name="ageDiabetesDiagnosed" reference="ageDiabetesDiagnosed" value="0, 1, 2"><label>< 40, unknown</label>
-      <!-- Decline -->
-      <input type="radio" name="ageDiabetesDiagnosed" reference="ageDiabetesDiagnosed" value="3, 4"><label>41+</label>
-      <!-- Accept -->
-    </p>
+  </div>
+
+  <div class="question" reference="ageDiabetesDiagnosed">
+      <p>How old were you when diabetes was diagnosed?</p>
+    <input type="radio" name="ageDiabetesDiagnosed" reference="" value="0, 1, 2"><label>< 40, unknown</label>
+    <!-- Decline -->
+    <input type="radio" name="ageDiabetesDiagnosed" reference="ageDiabetesDiagnosed" value="3, 4"><label>41+</label>
+    <!-- Accept -->
+  </div>
+
+
+
+
+
 
 </div>

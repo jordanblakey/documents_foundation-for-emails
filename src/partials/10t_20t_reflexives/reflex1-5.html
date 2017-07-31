@@ -1,49 +1,59 @@
 <div class="reflex" id="reflex1.5">
-  <h4>Epilepsy, Seizures <small>Reflex 1.5<small></h4>
+  <h4>Epilepsy, Seizures <small>Reflex 1.5</small></h4>
 
-    <p>Was your first seizure in the last 12 months?<br>
-      <input type="radio" name="firstSeizure" reference="firstSeizure" value="yes"><label>Yes</label>
-      <input type="radio" name="firstSeizure" reference="firstSeizure" value="unknown"><label>Unknown</label>
+    <div class="question" reference="firstSeizure">
+      <p>Was your first seizure in the last 12 months?</p>
+      <input type="radio" name="firstSeizure" value="yes"><label>Yes</label>
+      <input type="radio" name="firstSeizure" value="unknown"><label>Unknown</label>
       <!-- Decline -->
-      <input type="radio"  name="firstSeizure" reference="firstSeizure" value="no"><label>No</label>
+      <input type="radio"  name="firstSeizure" value="no"><label>No</label>
       <!-- Next question -->
-    </p>
-    <p>When was your last seizure?<br>
-      <input type="radio"  name="lastSeizure" reference="lastSeizure" value="0"><label>0-5 years ago</label>
-      <!-- Next question	// program as ranged value -->
-      <input type="radio"  name="lastSeizure" reference="lastSeizure" value="1, 2, 3"><label>5+ years ago</label>
-      <!-- Accept -->
-    </p>
-    <p>How many seizures have you had in the past 12 months?<br>
-      <input type="radio"  name="howManySeizures" reference="howManySeizures" value="0, 1, 2"><label>0-6</label>
-      <!-- Next question	// program as ranged value -->
-      <input type="radio"  name="howManySeizures" reference="howManySeizures" value="3"><label>6+</label>
-      <!-- Decline -->
-    </p>
-    <p>Have you been medically diagnosed or treated for either grand mal seizures or a seizure due to drug or alcohol use?<br>
-      <input type="radio"  name="grandMalSeizure" reference="grandMalSeizure" value="yes"><label>Yes</label>
-      <!-- Decline -->
-      <input type="radio"  name="grandMalSeizure" reference="grandMalSeizure" value="no"><label>No</label>
-      <!-- Next question -->
-    </p>
-    <p>In the past two years, have you been prescribed medication by a medical professional for this condition?<br>
-      <input type="radio"  name="prescribedForSeizures" reference="prescribedForSeizures" value="unknown"><label>Unknown</label>
-      <!-- Decline -->
-      <input type="radio"  name="prescribedForSeizures" reference="prescribedForSeizures" value="no"><label>No</label>
-      <!-- Next question -->
-      <input type="radio"  name="prescribedForSeizures" reference="prescribedForSeizures" value="0"><label>Yes and still taking this</label>
-      <!-- Next question -->
-      <input type="radio"  name="prescribedForSeizures" reference="prescribedForSeizures" value="1"><label>Yes but stopped all medication with medical professional’s advice</label>
-      <!-- Next question -->
-      <input type="radio"  name="prescribedForSeizures" reference="prescribedForSeizures" value="2"><label>Yes but stopped taking medication on my own</label>
-      <!-- Decline -->
-    </p>
-    <p>In the past 12 months, have you had a motor vehicle accident due to this condition?<br>
-      <input type="radio"  name="carAccidentSeizure" reference="carAccidentSeizure" value="yes"><label>Yes</label>
-      <input type="radio"  name="carAccidentSeizure" reference="carAccidentSeizure" value="unknown"><label>Unknown</label>
-      <!-- Decline -->
-      <input type="radio"  name="carAccidentSeizure" reference="carAccidentSeizure" value="false"><label>No</label>
-      <!-- Accept -->
-    </p>
+    </div>
 
-</div>
+    <div class="question" reference="lastSeizure">
+      <p>When was your last seizure?</p>
+      <input type="radio"  name="lastSeizure" value="0"><label>0-5 years ago</label>
+      <!-- Next question	// program as ranged value -->
+      <input type="radio"  name="lastSeizure" value="1, 2, 3"><label>5+ years ago</label>
+      <!-- Accept -->
+    </div>
+
+    <div class="question" reference="howManySeizures">
+      <p>How many seizures have you had in the past 12 months?</p>
+      <input type="radio"  name="howManySeizures" value="0, 1, 2"><label>0-6</label>
+      <!-- Next question	// program as ranged value -->
+      <input type="radio"  name="howManySeizures" value="3"><label>6+</label>
+      <!-- Decline -->
+    </div>
+
+    <div class="question" reference="grandMalSeizure">
+      <p>Have you been medically diagnosed or treated for either grand mal seizures or a seizure due to drug or alcohol use?</p>
+      <input type="radio"  name="grandMalSeizure" value="yes"><label>Yes</label>
+      <!-- Decline -->
+      <input type="radio"  name="grandMalSeizure" value="no"><label>No</label>
+      <!-- Next question -->
+    </div>
+
+    <div class="question" reference="prescribedForSeizures">
+      <p>In the past two years, have you been prescribed medication by a medical professional for this condition?</p>
+      <input type="radio"  name="prescribedForSeizures" value="unknown"><label>Unknown</label>
+      <!-- Decline -->
+      <input type="radio"  name="prescribedForSeizures" value="no"><label>No</label>
+      <!-- Next question -->
+      <input type="radio"  name="prescribedForSeizures" value="0"><label>Yes and still taking this</label>
+      <!-- Next question -->
+      <input type="radio"  name="prescribedForSeizures" value="1"><label>Yes but stopped all medication with medical professional’s advice</label>
+      <!-- Next question -->
+      <input type="radio"  name="prescribedForSeizures" value="2"><label>Yes but stopped taking medication on my own</label>
+      <!-- Decline -->
+    </div>
+
+    <div class="question" ref<p>In the past 12 months, have you had a motor vehicle accident due to this condition?</p>cle accident due to this condition?
+      <input type="radio"  name="carAccidentSeizure" value="yes"><label>Yes</label>
+      <input type="radio"  name="carAccidentSeizure" value="unknown"><label>Unknown</label>
+      <!-- Decline -->
+      <input type="radio"  name="carAccidentSeizure" value="false"><label>No</label>
+      <!-- Accept -->
+    </div>
+
+  </div>

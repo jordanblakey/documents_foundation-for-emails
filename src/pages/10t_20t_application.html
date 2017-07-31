@@ -3,9 +3,9 @@ title: Individual Life Insurance Application
 ---
 
 <container>
-	<row>
-		<columns>
-			<h1>{{title}} <span class="reinstatement-shown">For Reinstatements</span></h1>
+  <row>
+  <columns>
+  <h1>{{title}} <span class="reinstatement-shown">For Reinstatements</span></h1>
 {{#markdown}}
 
 <h2>Your Basic Information</h2>
@@ -43,67 +43,67 @@ title: Individual Life Insurance Application
 <!-- # RUN INSTANT ID -->
 
 <h2>More About You</h2>
-<div class="question">9. Are you a U.S. citizen, or do you have a U.S. permanent resident card (green card)?<br>
-  <input reference="citizen" name="citizen" value="yes" type="radio"><label>Yes</label>
-  <input reference="citizen" name="citizen" value="no" type="radio"><label>No</label>
+<div class="question" reference="citizen">9. Are you a U.S. citizen, or do you have a U.S. permanent resident card (green card)?<br>
+  <input name="citizen" value="yes" type="radio"><label>Yes</label>
+  <input name="citizen" value="no" type="radio"><label>No</label>
 </div>
 
-<div class="question">10. Have you ever been convicted of a (1) felony, (2) DUI/DWI for alcohol or drugs in the past 5 years, or (3) have you had a suspended or revoked license in the past 3 years?<br>
-  <input reference="legalCondition" name="legalCondition" value="yes" type="radio"><label>Yes</label>
-  <input reference="legalCondition" name="legalCondition" value="no" type="radio"><label>No</label>
+<div class="question" reference="legalCondition">10. Have you ever been convicted of a (1) felony, (2) DUI/DWI for alcohol or drugs in the past 5 years, or (3) have you had a suspended or revoked license in the past 3 years?<br>
+  <input name="legalCondition" value="yes" type="radio"><label>Yes</label>
+  <input name="legalCondition" value="no" type="radio"><label>No</label>
 </div>
 
-<div class="question">11. In the past 12 months, have you used any tobacco or nicotine products (excluding less than 24 cigars)?<br>
-  <input reference="tobacco" name="tobacco" value="yes" type="radio"><label>Yes</label>
-  <input reference="tobacco" name="tobacco" value="no" type="radio"><label>No</label>
+<div class="question" reference="tobacco">11. In the past 12 months, have you used any tobacco or nicotine products (excluding less than 24 cigars)?<br>
+  <input name="tobacco" value="yes" type="radio"><label>Yes</label>
+  <input name="tobacco" value="no" type="radio"><label>No</label>
 </div>
 
-<div class="question">12. In the past 5 years, have you been declined for life insurance?<br>
-  <input reference="declinedIns" name="declinedIns" value="yes" type="radio"><label>Yes</label>
-  <input reference="declinedIns" name="declinedIns" value="no" type="radio"><label>No</label>
+<div class="question" reference="declinedIns">12. In the past 5 years, have you been declined for life insurance?<br>
+  <input name="declinedIns" value="yes" type="radio"><label>Yes</label>
+  <input name="declinedIns" value="no" type="radio"><label>No</label>
 </div>
 
-<div class="question">13. In the past 2 years or within the next year, have you or do you plan to (1) pilot an airplane (other than as a regularly scheduled commercial airline pilot), or participate in (2) scuba diving deeper than 100 feet, (3) automobile racing over 100 miles per hour, or (4) outdoor climbing requiring specialized equipment?<br>
-  <input reference="riskyBehavior" name="riskyBehavior" value="yes" type="radio"><label>Yes</label>
-  <input reference="riskyBehavior" name="riskyBehavior" value="no" type="radio"><label>No</label>
+<div class="question" reference="riskyBehavior">13. In the past 2 years or within the next year, have you or do you plan to (1) pilot an airplane (other than as a regularly scheduled commercial airline pilot), or participate in (2) scuba diving deeper than 100 feet, (3) automobile racing over 100 miles per hour, or (4) outdoor climbing requiring specialized equipment?<br>
+  <input name="riskyBehavior" value="yes" type="radio"><label>Yes</label>
+  <input name="riskyBehavior" value="no" type="radio"><label>No</label>
 </div>
 
-<div class="question">14. In the past 2 years, have you received disability payments for a period in excess of 3 months?<br>
-  <input reference="disabilityPayments" name="disabilityPayments" value="yes" type="radio"><label>Yes</label>
-  <input reference="disabilityPayments" name="disabilityPayments" value="no" type="radio"><label>No</label>
+<div class="question" reference="disabilityPayments">14. In the past 2 years, have you received disability payments for a period in excess of 3 months?<br>
+  <input name="disabilityPayments" value="yes" type="radio"><label>Yes</label>
+  <input name="disabilityPayments" value="no" type="radio"><label>No</label>
 </div>
 
-<div class="question">15. Have you tested positive for HIV? <br>
-  <input reference="hiv" name="hiv" value="yes" type="radio"><label>Yes</label>
-  <input reference="hiv" name="hiv" value="no" type="radio"><label>No</label>
+<div class="question" reference="hiv">15. Have you tested positive for HIV? <br>
+  <input name="hiv" value="yes" type="radio"><label>Yes</label>
+  <input name="hiv" value="no" type="radio"><label>No</label>
 </div>
 
-<div class="question">16. In the past 10 years, have you been medically diagnosed or medically treated for (Select all that apply):<br>
-  <input reference="medicalCollection" ref="heartDisease" value="yes" type="checkbox"><label>Heart Disease</label>
-  <input reference="medicalCollection" ref="cancer" value="yes" type="checkbox"><label>Cancer (excluding basal and squamous cell skin cancer)</label>
-  <input reference="medicalCollection" ref="organTransplant" value="yes" type="checkbox"><label>Organ transplant</label><br>
-  <input reference="medicalCollection" ref="arterialDisease" value="yes" type="checkbox"><label>Peripheral arterial disease</label>
-  <input reference="medicalCollection" ref="kidneyDisease" value="yes" type="checkbox"><label>Chronic kidney disease </label>
-  <input reference="medicalCollection" ref="cirrhosisDrugAbuse" value="yes" type="checkbox"><label>Liver cirrhosis or drug abuse</label>
+<div class="question" reference="medicalCollection">16. In the past 10 years, have you been medically diagnosed or medically treated for (Select all that apply):<br>
+  <input ref="heartDisease" value="yes" type="checkbox"><label>Heart Disease</label>
+  <input ref="cancer" value="yes" type="checkbox"><label>Cancer (excluding basal and squamous cell skin cancer)</label>
+  <input ref="organTransplant" value="yes" type="checkbox"><label>Organ transplant</label><br>
+  <input ref="arterialDisease" value="yes" type="checkbox"><label>Peripheral arterial disease</label>
+  <input ref="kidneyDisease" value="yes" type="checkbox"><label>Chronic kidney disease </label>
+  <input ref="cirrhosisDrugAbuse" value="yes" type="checkbox"><label>Liver cirrhosis or drug abuse</label>
 </div>
 
-<div class="question">17. Other than routine care, in the past 12 months, have you been advised by a licensed medical professional to have surgery, hospitalization, any diagnostic test (other than for HIV) or any procedure which has not been completed or the results are unknown?<br>
-  <input reference="medicalAdvice" name="medicalAdvice" value="yes" type="radio"><label>Yes</label>
-  <input reference="medicalAdvice" name="medicalAdvice" value="no" type="radio"><label>No</label>
+<div class="question" reference="medicalAdvice">17. Other than routine care, in the past 12 months, have you been advised by a licensed medical professional to have surgery, hospitalization, any diagnostic test (other than for HIV) or any procedure which has not been completed or the results are unknown?<br>
+  <input name="medicalAdvice" value="yes" type="radio"><label>Yes</label>
+  <input name="medicalAdvice" value="no" type="radio"><label>No</label>
 </div>
 
-<div class="question">18. In the past 3 months, have you unintentionally lost more than 15 pounds [female only]? 20 pounds [male only]?<br>
-  <input reference="weightDiff" name="weightDiff" value="yes" type="radio"><label>Yes</label>
-  <input reference="weightDiff" name="weightDiff" value="no" type="radio"><label>No</label>
+<div class="question" reference="weightDiff">18. In the past 3 months, have you unintentionally lost more than 15 pounds [female only]? 20 pounds [male only]?<br>
+  <input name="weightDiff" value="yes" type="radio"><label>Yes</label>
+  <input name="weightDiff" value="no" type="radio"><label>No</label>
 </div>
 
-<div class="question">19. In the past 10 years, have you been medically diagnosed or medically treated for (select all that apply):<br>
-  <input reference="medicalCollection" refcollection="depressionMentalStress" name="depressionMentalStress" value="yes" type="checkbox"><label>Depression or other mental disorder</label>
-  <input reference="medicalCollection" refcollection="alcohol" name="alcohol" value="yes" type="checkbox"><label>Alcohol abuse</label>
-  <input reference="medicalCollection" refcollection="chestPain" name="chestPain" value="yes" type="checkbox"><label>Chest pain</label><br>
-  <input reference="medicalCollection" refcollection="diabetes" name="diabetes" value="yes" type="checkbox"><label>Diabetes</label>
-  <input reference="medicalCollection" refcollection="strokeTia" name="strokeTia" value="yes" type="checkbox"><label>Stroke or mini-stroke/TIA</label>
-  <input reference="medicalCollection" refcollection="seizure" name="seizure" value="yes" type="checkbox"><label>Seizure disorder</label>
+<div class="question" reference="medicalCollection">19. In the past 10 years, have you been medically diagnosed or medically treated for (select all that apply):<br>
+  <input refcollection="depressionMentalStress" name="depressionMentalStress" value="yes" type="checkbox"><label>Depression or other mental disorder</label>
+  <input refcollection="alcohol" name="alcohol" value="yes" type="checkbox"><label>Alcohol abuse</label>
+  <input refcollection="chestPain" name="chestPain" value="yes" type="checkbox"><label>Chest pain</label><br>
+  <input refcollection="diabetes" name="diabetes" value="yes" type="checkbox"><label>Diabetes</label>
+  <input refcollection="strokeTia" name="strokeTia" value="yes" type="checkbox"><label>Stroke or mini-stroke/TIA</label>
+  <input refcollection="seizure" name="seizure" value="yes" type="checkbox"><label>Seizure disorder</label>
 </div>
 
 <!-- Your Alcohol Use -->
@@ -124,11 +124,11 @@ title: Individual Life Insurance Application
 <!-- Depression, Anxiety, Stress Disorder -->
 {{> reflex1-6}}
 
-<div class="question">20. Are you: (Select only one)<br>
-  <input reference="occupation" name="occupation" value="student" type="radio"><label>A full time student</label>
-  <input reference="occupation" name="occupation" value="homemaker" type="radio"><label>A homemaker</label><br>
-  <input reference="occupation" name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
-  <input reference="occupation" name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
+<div class="question" reference="occupation">20. Are you: (Select only one)<br>
+  <input name="occupation" value="student" type="radio"><label>A full time student</label>
+  <input name="occupation" value="homemaker" type="radio"><label>A homemaker</label><br>
+  <input name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
+  <input name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
 </div>
 
 <table class="form">
@@ -140,9 +140,9 @@ title: Individual Life Insurance Application
 <!-- In Force Policies -->
 {{> reflex2}}
 
-<div class="question">22. In the next 12 months do you plan to travel outside of United States, Canada, or Mexico? <br>
-  <input type="radio" name="travel" reference="travel" value="yes"><label>Yes</label>
-  <input type="radio" name="travel" reference="travel" value="no"><label>No</label>
+<div class="question" reference="travel">22. In the next 12 months do you plan to travel outside of United States, Canada, or Mexico? <br>
+  <input type="radio" name="travel" value="yes"><label>Yes</label>
+  <input type="radio" name="travel" value="no"><label>No</label>
 </div>
 
 <!-- International Travel -->
@@ -158,9 +158,9 @@ title: Individual Life Insurance Application
 <!-- Medications -->
 {{> reflex5}}
 
-<div class="question">23a. Do you have a valid driver's license?<br>
-  <input type="radio" name="licenseExists" reference="licenseExists" value="yes"><label>Yes</label>
-  <input type="radio" name="licenseExists" reference="licenseExists" value="no"><label>No</label>
+<div class="question" reference="licenseExists">23a. Do you have a valid driver's license?<br>
+  <input type="radio" name="licenseExists" value="yes"><label>Yes</label>
+  <input type="radio" name="licenseExists" value="no"><label>No</label>
 </div>
 
   <table class="form">
@@ -330,14 +330,14 @@ title: Individual Life Insurance Application
 
 <h2>Payment Method</h2>
 
-<div class="question">Modal Premium Frequency:<br>
-  <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
-  <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
+<div class="question" reference="modalPremiumFrequency" >Modal Premium Frequency:<br>
+  <input name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
+  <input name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
 </div>
 
-<div class="question">Payment Type:<br>
-  <input reference="paymentType" name="paymentType" value="eft-Ach" type="radio"><label>EFT/ACH </label>
-  <input reference="paymentType" name="paymentType" value="creditCard" type="radio"><label>Credit Card</label>
+<div class="question" reference="paymentType">Payment Type:<br>
+  <input name="paymentType" value="eft-Ach" type="radio"><label>EFT/ACH </label>
+  <input name="paymentType" value="creditCard" type="radio"><label>Credit Card</label>
 </div>
 
 <div class="question">Billing Address:<br>
@@ -355,9 +355,9 @@ title: Individual Life Insurance Application
   </table>
 </div>
 <h2>Third Party Billing Notification</h2>
-<div class="question">Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
-  <input type="radio" name="thirdPartyBillingExists" reference="thirdPartyBillingExists" value="yes"><label>Yes, complete information below</label>
-  <input type="radio" name="thirdPartyBillingExists" reference="thirdPartyBillingExists" value="no"><label>No</label>
+<div class="question" reference="thirdPartyBillingExists">Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
+  <input type="radio" name="thirdPartyBillingExists" value="yes"><label>Yes, complete information below</label>
+  <input type="radio" name="thirdPartyBillingExists" value="no"><label>No</label>
 
   <table class="form">
     <tr>
@@ -391,6 +391,6 @@ title: Individual Life Insurance Application
 </table>
 
 {{/markdown}}
-		</columns>
-	</row>
+  </columns>
+  </row>
 </container>

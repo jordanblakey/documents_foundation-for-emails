@@ -49,9 +49,9 @@
           
           
           <table align="center" class="container float-center"><tbody><tr><td>
-          	<table class="row"><tbody><tr>
-          		<th class="small-12 large-12 columns first last"><table><tr><th>
-          			<h1>Individual Life Insurance Application <span class="reinstatement-shown">For Reinstatements</span></h1>
+            <table class="row"><tbody><tr>
+            <th class="small-12 large-12 columns first last"><table><tr><th>
+            <h1>Individual Life Insurance Application <span class="reinstatement-shown">For Reinstatements</span></h1>
           <h2>Your Basic Information</h2>
           <table class="form">
             <tr>
@@ -87,353 +87,412 @@
           <!-- # RUN INSTANT ID -->
           
           <h2>More About You</h2>
-          <div class="question">9. Are you a U.S. citizen, or do you have a U.S. permanent resident card (green card)?<br>
-            <input reference="citizen" name="citizen" value="yes" type="radio"><label>Yes</label>
-            <input reference="citizen" name="citizen" value="no" type="radio"><label>No</label>
+          <div class="question" reference="citizen">9. Are you a U.S. citizen, or do you have a U.S. permanent resident card (green card)?<br>
+            <input name="citizen" value="yes" type="radio"><label>Yes</label>
+            <input name="citizen" value="no" type="radio"><label>No</label>
           </div>
           
-          <div class="question">10. Have you ever been convicted of a (1) felony, (2) DUI/DWI for alcohol or drugs in the past 5 years, or (3) have you had a suspended or revoked license in the past 3 years?<br>
-            <input reference="legalCondition" name="legalCondition" value="yes" type="radio"><label>Yes</label>
-            <input reference="legalCondition" name="legalCondition" value="no" type="radio"><label>No</label>
+          <div class="question" reference="legalCondition">10. Have you ever been convicted of a (1) felony, (2) DUI/DWI for alcohol or drugs in the past 5 years, or (3) have you had a suspended or revoked license in the past 3 years?<br>
+            <input name="legalCondition" value="yes" type="radio"><label>Yes</label>
+            <input name="legalCondition" value="no" type="radio"><label>No</label>
           </div>
           
-          <div class="question">11. In the past 12 months, have you used any tobacco or nicotine products (excluding less than 24 cigars)?<br>
-            <input reference="tobacco" name="tobacco" value="yes" type="radio"><label>Yes</label>
-            <input reference="tobacco" name="tobacco" value="no" type="radio"><label>No</label>
+          <div class="question" reference="tobacco">11. In the past 12 months, have you used any tobacco or nicotine products (excluding less than 24 cigars)?<br>
+            <input name="tobacco" value="yes" type="radio"><label>Yes</label>
+            <input name="tobacco" value="no" type="radio"><label>No</label>
           </div>
           
-          <div class="question">12. In the past 5 years, have you been declined for life insurance?<br>
-            <input reference="declinedIns" name="declinedIns" value="yes" type="radio"><label>Yes</label>
-            <input reference="declinedIns" name="declinedIns" value="no" type="radio"><label>No</label>
+          <div class="question" reference="declinedIns">12. In the past 5 years, have you been declined for life insurance?<br>
+            <input name="declinedIns" value="yes" type="radio"><label>Yes</label>
+            <input name="declinedIns" value="no" type="radio"><label>No</label>
           </div>
           
-          <div class="question">13. In the past 2 years or within the next year, have you or do you plan to (1) pilot an airplane (other than as a regularly scheduled commercial airline pilot), or participate in (2) scuba diving deeper than 100 feet, (3) automobile racing over 100 miles per hour, or (4) outdoor climbing requiring specialized equipment?<br>
-            <input reference="riskyBehavior" name="riskyBehavior" value="yes" type="radio"><label>Yes</label>
-            <input reference="riskyBehavior" name="riskyBehavior" value="no" type="radio"><label>No</label>
+          <div class="question" reference="riskyBehavior">13. In the past 2 years or within the next year, have you or do you plan to (1) pilot an airplane (other than as a regularly scheduled commercial airline pilot), or participate in (2) scuba diving deeper than 100 feet, (3) automobile racing over 100 miles per hour, or (4) outdoor climbing requiring specialized equipment?<br>
+            <input name="riskyBehavior" value="yes" type="radio"><label>Yes</label>
+            <input name="riskyBehavior" value="no" type="radio"><label>No</label>
           </div>
           
-          <div class="question">14. In the past 2 years, have you received disability payments for a period in excess of 3 months?<br>
-            <input reference="disabilityPayments" name="disabilityPayments" value="yes" type="radio"><label>Yes</label>
-            <input reference="disabilityPayments" name="disabilityPayments" value="no" type="radio"><label>No</label>
+          <div class="question" reference="disabilityPayments">14. In the past 2 years, have you received disability payments for a period in excess of 3 months?<br>
+            <input name="disabilityPayments" value="yes" type="radio"><label>Yes</label>
+            <input name="disabilityPayments" value="no" type="radio"><label>No</label>
           </div>
           
-          <div class="question">15. Have you tested positive for HIV? <br>
-            <input reference="hiv" name="hiv" value="yes" type="radio"><label>Yes</label>
-            <input reference="hiv" name="hiv" value="no" type="radio"><label>No</label>
+          <div class="question" reference="hiv">15. Have you tested positive for HIV? <br>
+            <input name="hiv" value="yes" type="radio"><label>Yes</label>
+            <input name="hiv" value="no" type="radio"><label>No</label>
           </div>
           
-          <div class="question">16. In the past 10 years, have you been medically diagnosed or medically treated for (Select all that apply):<br>
-            <input reference="medicalCollection" ref="heartDisease" value="yes" type="checkbox"><label>Heart Disease</label>
-            <input reference="medicalCollection" ref="cancer" value="yes" type="checkbox"><label>Cancer (excluding basal and squamous cell skin cancer)</label>
-            <input reference="medicalCollection" ref="organTransplant" value="yes" type="checkbox"><label>Organ transplant</label><br>
-            <input reference="medicalCollection" ref="arterialDisease" value="yes" type="checkbox"><label>Peripheral arterial disease</label>
-            <input reference="medicalCollection" ref="kidneyDisease" value="yes" type="checkbox"><label>Chronic kidney disease </label>
-            <input reference="medicalCollection" ref="cirrhosisDrugAbuse" value="yes" type="checkbox"><label>Liver cirrhosis or drug abuse</label>
+          <div class="question" reference="medicalCollection">16. In the past 10 years, have you been medically diagnosed or medically treated for (Select all that apply):<br>
+            <input ref="heartDisease" value="yes" type="checkbox"><label>Heart Disease</label>
+            <input ref="cancer" value="yes" type="checkbox"><label>Cancer (excluding basal and squamous cell skin cancer)</label>
+            <input ref="organTransplant" value="yes" type="checkbox"><label>Organ transplant</label><br>
+            <input ref="arterialDisease" value="yes" type="checkbox"><label>Peripheral arterial disease</label>
+            <input ref="kidneyDisease" value="yes" type="checkbox"><label>Chronic kidney disease </label>
+            <input ref="cirrhosisDrugAbuse" value="yes" type="checkbox"><label>Liver cirrhosis or drug abuse</label>
           </div>
           
-          <div class="question">17. Other than routine care, in the past 12 months, have you been advised by a licensed medical professional to have surgery, hospitalization, any diagnostic test (other than for HIV) or any procedure which has not been completed or the results are unknown?<br>
-            <input reference="medicalAdvice" name="medicalAdvice" value="yes" type="radio"><label>Yes</label>
-            <input reference="medicalAdvice" name="medicalAdvice" value="no" type="radio"><label>No</label>
+          <div class="question" reference="medicalAdvice">17. Other than routine care, in the past 12 months, have you been advised by a licensed medical professional to have surgery, hospitalization, any diagnostic test (other than for HIV) or any procedure which has not been completed or the results are unknown?<br>
+            <input name="medicalAdvice" value="yes" type="radio"><label>Yes</label>
+            <input name="medicalAdvice" value="no" type="radio"><label>No</label>
           </div>
           
-          <div class="question">18. In the past 3 months, have you unintentionally lost more than 15 pounds [female only]? 20 pounds [male only]?<br>
-            <input reference="weightDiff" name="weightDiff" value="yes" type="radio"><label>Yes</label>
-            <input reference="weightDiff" name="weightDiff" value="no" type="radio"><label>No</label>
+          <div class="question" reference="weightDiff">18. In the past 3 months, have you unintentionally lost more than 15 pounds [female only]? 20 pounds [male only]?<br>
+            <input name="weightDiff" value="yes" type="radio"><label>Yes</label>
+            <input name="weightDiff" value="no" type="radio"><label>No</label>
           </div>
           
-          <div class="question">19. In the past 10 years, have you been medically diagnosed or medically treated for (select all that apply):<br>
-            <input reference="medicalCollection" refcollection="depressionMentalStress" name="depressionMentalStress" value="yes" type="checkbox"><label>Depression or other mental disorder</label>
-            <input reference="medicalCollection" refcollection="alcohol" name="alcohol" value="yes" type="checkbox"><label>Alcohol abuse</label>
-            <input reference="medicalCollection" refcollection="chestPain" name="chestPain" value="yes" type="checkbox"><label>Chest pain</label><br>
-            <input reference="medicalCollection" refcollection="diabetes" name="diabetes" value="yes" type="checkbox"><label>Diabetes</label>
-            <input reference="medicalCollection" refcollection="strokeTia" name="strokeTia" value="yes" type="checkbox"><label>Stroke or mini-stroke/TIA</label>
-            <input reference="medicalCollection" refcollection="seizure" name="seizure" value="yes" type="checkbox"><label>Seizure disorder</label>
+          <div class="question" reference="medicalCollection">19. In the past 10 years, have you been medically diagnosed or medically treated for (select all that apply):<br>
+            <input refcollection="depressionMentalStress" name="depressionMentalStress" value="yes" type="checkbox"><label>Depression or other mental disorder</label>
+            <input refcollection="alcohol" name="alcohol" value="yes" type="checkbox"><label>Alcohol abuse</label>
+            <input refcollection="chestPain" name="chestPain" value="yes" type="checkbox"><label>Chest pain</label><br>
+            <input refcollection="diabetes" name="diabetes" value="yes" type="checkbox"><label>Diabetes</label>
+            <input refcollection="strokeTia" name="strokeTia" value="yes" type="checkbox"><label>Stroke or mini-stroke/TIA</label>
+            <input refcollection="seizure" name="seizure" value="yes" type="checkbox"><label>Seizure disorder</label>
           </div>
           
           <!-- Your Alcohol Use -->
           <div class="reflex" id="reflex1-1">
-            <h4>Your Alcohol Use <small>Reflex 1.1<small></small></small></h4>
-            <p>In the past 10 years, have you been medically treated, advised to get treatment, or attended a support group for alcohol abuse?<br>
-              <input type="radio" name="alcoholAbuseTreatment" reference="alcoholAbuseTreatment" value="yes"><label>Yes</label>
-              <!-- Decline -->
-              <input type="radio" name="alcoholAbuseTreatment" reference="alcoholAbuseTreatment" value="no"><label>No</label>
-              <input type="radio" name="alcoholAbuseTreatment" reference="alcoholAbuseTreatment" value="unknown"><label>Unknown</label>
-              <!-- Next Question -->
-            </p>
-            <p>In the past 2 years, have you been advised by a medical professional to reduce your alcohol use?<br>
-              <input type="radio" name="alcoholAdvice" reference="alcoholAdvice" value="yes"><label>Yes</label>
-              <!-- Decline -->
-              <input type="radio" name="alcoholAdvice" reference="alcoholAdvice" value="no"><label>No</label>
-              <input type="radio" name="alcoholAdvice" reference="alcoholAdvice" value="unknown"><label>Unknown</label>
-              <!-- Next Question -->
-            </p>
-            <p>Do you currently drink alcohol?<br>
-              <input type="radio" name="drink" reference="drink" value="true"><label>Yes</label>
-              <!-- Next Question -->
-              <input type="radio" name="drink" reference="drink" value="false"><label>No</label>
-              <!-- Accept -->
-            </p>
-            <p>How many drinks do you typically consume per day?<br>
-              <input type="radio" name="howManyDrinks" reference="howManyDrinks" value="0, 1, 2, 3"><label>0-3</label>
-              <!-- Next Question -->
-              <input type="radio" name="howManyDrinks" reference="howManyDrinks" value="4, 5"><label>4+</label>
-              <!-- Decline -->
-            </p>
-            <p>How many times per month do you consume more than 6 drinks in a day?<br>
-              <input type="radio" name="excessPerMonthDrinks" reference="excessPerMonthDrinks" value="0"><label>0</label>
-              <!-- Accept -->
-              <input type="radio" name="excessPerMonthDrinks" reference="excessPerMonthDrinks" value="1, 2, 3, 4, 5"><label>1+</label>
-              <!-- Decline -->
-            </p>
+            <h4>Your Alcohol Use <small>Reflex 1.1</small></h4>
           
+            <div class="question" reference="alcoholAbuseTreatment">
+              <p>In the past 10 years, have you been medically treated, advised to get treatment, or attended a support group for alcohol abuse?</p>
+              <input type="radio" name="alcoholAbuseTreatment" value="yes"><label>Yes</label>
+              <!-- Decline -->
+              <input type="radio" name="alcoholAbuseTreatment" value="no"><label>No</label>
+              <input type="radio" name="alcoholAbuseTreatment" value="unknown"><label>Unknown</label>
+              <!-- Next Question -->
+            </div>
+          
+            <div class="question" reference="alcoholAdvice">
+              <p>In the past 2 years, have you been advised by a medical professional to reduce your alcohol use?</p>
+              <input type="radio" name="alcoholAdvice" value="yes"><label>Yes</label>
+              <!-- Decline -->
+              <input type="radio" name="alcoholAdvice" value="no"><label>No</label>
+              <input type="radio" name="alcoholAdvice" value="unknown"><label>Unknown</label>
+              <!-- Next Question -->
+            </div>
+          
+            <div class="question" reference="drink">
+              <p>Do you currently drink alcohol?</p>
+              <input type="radio" name="drink" value="true"><label>Yes</label>
+              <!-- Next Question -->
+              <input type="radio" name="drink" value="false"><label>No</label>
+              <!-- Accept -->
+            </div>
+          
+            <div class="question" reference="howManyDrinks">
+              <p>How many drinks do you typically consume per day?</p>
+              <input type="radio" name="howManyDrinks" value="0, 1, 2, 3"><label>0-3</label>
+              <!-- Next Question -->
+              <input type="radio" name="howManyDrinks" value="4, 5"><label>4+</label>
+              <!-- Decline -->
+            </div>
+          
+            <div class="question" reference="excessPerMonthDrinks">
+              <p>How many times per month do you consume more than 6 drinks in a day?</p>
+              <input type="radio" name="excessPerMonthDrinks" value="0"><label>0</label>
+              <!-- Accept -->
+              <input type="radio" name="excessPerMonthDrinks" value="1, 2, 3, 4, 5"><label>1+</label>
+              <!-- Decline -->
+            </div>
           </div>
           
           
           <!-- Diabetes -->
           <div class="reflex" id="reflex1-2">
-            <h4>Diabetes<small>Reflex 1.2<small></small></small></h4>
+            <h4>Diabetes<small>Reflex 1.2</small></h4>
           
-              <p>Were you medically diagnosed with gestational diabetes only?<br>
-                <!-- only for female applicants -->
-                <input type="radio" name="diabetesFemaleGestation" reference="diabetesFemaleGestation" value="Yes"><label>Yes</label>
-                <!-- Accept -->
-                <input type="radio" name="diabetesFemaleGestation" reference="diabetesFemaleGestation" value="No"><label>No</label>
+            <div class="question" reference="diabetesFemaleGestation">
+                <p>Were you medically diagnosed with gestational diabetes only?</p>
+              <!-- only for female applicants -->
+              <input type="radio" name="diabetesFemaleGestation" value="Yes"><label>Yes</label>
+              <!-- Accept -->
+              <input type="radio" name="diabetesFemaleGestation" value="No"><label>No</label>
+              <!-- Decline -->
+            <p></p>
+            </div>
+          
+            <!-- System edit: Under age 40 Decline Age 40 or higher Next Question -->
+          
+            <div class="question" reference="prescribedInsulin">
+                <p>In the past two years, have you been prescribed insulin by a medical professional?</p>
+                <input type="radio" name="prescribedInsulin" value="yes"><label>Yes</label>
                 <!-- Decline -->
-              </p>
-              <!-- System edit:
-              Under age 40
-              Decline
-              Age 40 or higher
-              Next Question
-              -->
-              <p>In the past two years, have you been prescribed insulin by a medical professional?<br>
-                <input type="radio" name="prescribedInsulin" reference="prescribedInsulin" value="yes"><label>Yes</label>
-                <!-- Decline -->
-                <input type="radio" name="prescribedInsulin" reference="prescribedInsulin" value="no"><label>No</label>
-                <input type="radio" name="prescribedInsulin" reference="prescribedInsulin" value="unknown"><label>Unknown</label>
+                <input type="radio" name="prescribedInsulin" value="no"><label>No</label>
+                <input type="radio" name="prescribedInsulin" value="unknown"><label>Unknown</label>
                 <!-- Next Question -->
-              </p>
-              <p>In the past 2 years, have you been hospitalized for diabetes?<br>
-                <input type="radio" name="diabetesHospitalized2Years" reference="diabetesHospitalized2Years" value="Yes"><label>Yes</label>
+            </div>
+          
+            <div class="question" reference="diabetesHospitalized2Years">
+                <p>In the past 2 years, have you been hospitalized for diabetes?</p>
+                <input type="radio" name="diabetesHospitalized2Years" value="yes"><label>Yes</label>
                 <!-- Decline -->
-                <input type="radio" name="diabetesHospitalized2Years" reference="diabetesHospitalized2Years" value="No"><label>No</label>
+                <input type="radio" name="diabetesHospitalized2Years" value="no"><label>No</label>
                 <!-- Next question -->
-              </p>
-              <p>How many times per year do you typically see a medical professional for this condition?<br>
-                <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="0"><label>0</label>
+            </div>
+          
+            <div class="question" reference="seeDrDiabetes">
+                <p>How many times per year do you typically see a medical professional for this condition?</p>
+                <input type="radio" name="seeDrDiabetes" value="0"><label>0</label>
                 <!-- Decline    // Needs to be programmed for a ranged value -->
-                <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="1, 2, 3, 4"><label>1-4</label>
+                <input type="radio" name="seeDrDiabetes" value="1, 2, 3, 4"><label>1-4</label>
                 <!-- Next question -->
-                <input type="radio" name="seeDrDiabetes" reference="seeDrDiabetes" value="5+"><label>5+</label>
+                <input type="radio" name="seeDrDiabetes" value="5+"><label>5+</label>
                 <!-- Decline -->
-              </p>
-              <p>In the past two years, have you been medically diagnosed or medically treated for kidney disease (including protein or microalbumin in the urine) or any type of skin ulcers?<br>
-                <input type="radio" name="kidneyDisease" reference="kidneyDisease" value="yes"><label>Yes</label>
-                <!-- Decline -->
-                <input type="radio" name="kidneyDisease" reference="kidneyDisease" value="no"><label>No</label>
-                <input type="radio" name="kidneyDisease" reference="kidneyDisease" value="unknown"><label>Unknown</label>
-                <!-- Next question -->
-              </p>
-              <p>What was your most recent Hemoglobin A1c or Glycohemoglobin reading?<br>
-                <input type="radio" name="hemoglobin" reference="hemoglobin" value="unknown"><label>Unknown</label>
+            </div>
+          
+            <div class="question" reference="kidneyDisease">
+                <p>In the past two years, have you been medically diagnosed or medically treated for kidney disease (including protein or microalbumin in the urine) or any type of skin ulcers?</p>
+                    <input type="radio" name="kidneyDisease" value="yes"><label>Yes</label>
+                    <!-- Decline -->
+                    <input type="radio" name="kidneyDisease" value="no"><label>No</label>
+                    <input type="radio" name="kidneyDisease" value="unknown"><label>Unknown</label>
+                    <!-- Next question -->
+            </div>
+          
+            <div class="question" reference="hemoglobin">
+                <p>What was your most recent Hemoglobin A1c or Glycohemoglobin reading?</p>
+                <input type="radio" name="hemoglobin" reference="" value="unknown"><label>Unknown</label>
                 <!-- Decline // This needs to be programmed for a ranged value -->
                 <input type="radio" name="hemoglobin" reference="hemoglobin" value="0, 1, 2, 3"><label> 8.0 or below</label>
                 <!-- Accept    // with these rules listed below -->
                 <input type="radio" name="hemoglobin" reference="hemoglobin" value="4"><label>&gt; 8.0</label>
                 <!-- Decline -->
-              </p>
-              <p>How old were you when diabetes was diagnosed?<br>
-                <input type="radio" name="ageDiabetesDiagnosed" reference="ageDiabetesDiagnosed" value="0, 1, 2"><label>&lt; 40, unknown</label>
-                <!-- Decline -->
-                <input type="radio" name="ageDiabetesDiagnosed" reference="ageDiabetesDiagnosed" value="3, 4"><label>41+</label>
-                <!-- Accept -->
-              </p>
+            </div>
+          
+            <div class="question" reference="ageDiabetesDiagnosed">
+                <p>How old were you when diabetes was diagnosed?</p>
+              <input type="radio" name="ageDiabetesDiagnosed" reference="" value="0, 1, 2"><label>&lt; 40, unknown</label>
+              <!-- Decline -->
+              <input type="radio" name="ageDiabetesDiagnosed" reference="ageDiabetesDiagnosed" value="3, 4"><label>41+</label>
+              <!-- Accept -->
+            </div>
+          
+          
+          
+          
+          
           
           </div>
           
           
           <!-- Chest Pain -->
           <div class="reflex" id="reflex1.3">
-            <h4>Chest Pain <small>Reflex 1.3<small></small></small></h4>
+            <h4>Chest Pain <small>Reflex 1.3</small></h4>
           
-            <p>Was your chest pain medically diagnosed as heartburn, indigestion, or a muscle strain?<br>
-              <input type="radio" name="chestPainDiagnosed" reference="chestPainDiagnosed" value="yes"><label>Yes</label>
-              <!-- Accept -->
-              <input type="radio" name="chestPainDiagnosed" reference="chestPainDiagnosed" value="no"><label>No</label>
-              <input type="radio" name="chestPainDiagnosed" reference="chestPainDiagnosed" value="unknown"><label>Unknown</label>
-              <!-- Next question -->
-            </p>
-            <p>Was your chest pain medically diagnosed as angina or cardiac chest pain?<br>
-              <input type="radio" name="chestPainAngina" reference="chestPainAngina" value="yes"><label>Yes</label>
-              <!-- Decline -->
-              <input type="radio" name="chestPainAngina" reference="chestPainAngina" value="no"><label>No</label>
-              <input type="radio" name="chestPainAngina" reference="chestPainAngina" value="unknown"><label>Unknown</label>
-              <!-- Next question -->
-            </p>
-            <p>Were you prescribed Nitroglycerin by a medical professional for your chest pain?<br>
-              <input type="radio" name="chestPainNitro" reference="chestPainNitro" value="yes"><label>Yes</label>
-              <!-- Decline -->
-              <input type="radio" name="chestPainNitro" reference="chestPainNitro" value="no"><label>No</label>
-              <input type="radio" name="chestPainNitro" reference="chestPainNitro" value="unknown"><label>Unknown</label>
-              <!-- Next question -->
-            </p>
-            <p>When did you have your last episode of chest pain?<br>
-              <input type="radio" name="chestPainLast" reference="chestPainLast" value="0, 1"><label>0-6 months</label>
-              <!-- Decline -->
-              <input type="radio" name="chestPainLast" reference="chestPainLast" value="2, 3, 4, 5"><label>&gt;6 months</label>
-              <!-- Accept -->
-            </p>
+              <div class="question" reference="chestPainDiagnosed">
+                <p>Was your chest pain medically diagnosed as heartburn, indigestion, or a muscle strain?</p>
+                <input type="radio" name="chestPainDiagnosed" value="yes"><label>Yes</label>
+                <!-- Accept -->
+                <input type="radio" name="chestPainDiagnosed" value="no"><label>No</label>
+                <input type="radio" name="chestPainDiagnosed" value="unknown"><label>Unknown</label>
+                <!-- Next question -->
+              </div>
           
-          </div>
+              <div class="question" reference="chestPainAngina">
+                <p>Was your chest pain medically diagnosed as angina or cardiac chest pain?</p>
+                <input type="radio" name="chestPainAngina" value="yes"><label>Yes</label>
+                <!-- Decline -->
+                <input type="radio" name="chestPainAngina" value="no"><label>No</label>
+                <input type="radio" name="chestPainAngina" value="unknown"><label>Unknown</label>
+                <!-- Next question -->
+              </div>
+          
+              <div class="question" reference="chestPainNitro">
+                <p>Were you prescribed Nitroglycerin by a medical professional for your chest pain?</p>
+                <input type="radio" name="chestPainNitro" value="yes"><label>Yes</label>
+                <!-- Decline -->
+                <input type="radio" name="chestPainNitro" value="no"><label>No</label>
+                <input type="radio" name="chestPainNitro" value="unknown"><label>Unknown</label>
+                <!-- Next question -->
+              </div>
+          
+              <div class="question" reference="chestPainLast">
+                <p>When did you have your last episode of chest pain?</p>
+                <input type="radio" name="chestPainLast" value="0, 1"><label>0-6 months</label>
+                <!-- Decline -->
+                <input type="radio" name="chestPainLast" value="2, 3, 4, 5"><label>&gt;6 months</label>
+                <!-- Accept -->
+              </div>
+          
+            </div>
           
           
           <!-- TIA Stroke -->
           <div class="reflex" id="reflex1.4">
-            <h4>TIA Stroke <small>Reflex 1.4<small></small></small></h4>
+            <h4>TIA Stroke <small>Reflex 1.4</small></h4>
           
-            <!-- System Edit:
-            Age <40
-            Decline
-            Age 40 and <up></up>
-            Next question
+              <!-- System Edit:
+              Age <40
+              Decline
+              Age 40 and <up></up>
+              Next question
             -->
-            <p>What were you medically diagnosed with?<br>
-              <input type="radio" name="strokeTiaDiagnosed" reference="strokeTiaDiagnosed" value="0"><label>Stroke</label>
+            <div class="question" reference="strokeTiaDiagnosed">
+              <p>What were you medically diagnosed with?</p>
+              <input type="radio" name="strokeTiaDiagnosed" value="0"><label>Stroke</label>
               <!-- Decline -->
-              <input type="radio" name="strokeTiaDiagnosed" reference="strokeTiaDiagnosed" value="1"><label>Mini-stroke or TIA</label>
+              <input type="radio" name="strokeTiaDiagnosed" value="1"><label>Mini-stroke or TIA</label>
               <!-- Next question -->
-            </p>
-            <p>How many mini-strokes or TIA&#39;s have you had?<br>
-              <input type="radio" name="strokeTiaCount" reference="strokeTiaCount" value="1"><label>1</label>
+            </div>
+          
+            <div class="question" reference="strokeTiaCount">
+              <p>How many mini-strokes or TIA&#39;s have you had?</p>
+              <input type="radio" name="strokeTiaCount" value="1"><label>1</label>
               <!-- Next question -->
-              <input type="radio" name="strokeTiaCount" reference="strokeTiaCount" value="2, 3, 4"><label>&gt;1</label>
+              <input type="radio" name="strokeTiaCount" value="2, 3, 4"><label>&gt;1</label>
               <!-- Decline -->
-            </p>
-            <p>How long ago did you have your TIA?<br>
-              <input type="radio" name="tiaLast" reference="tiaLast" value="0, 1, 2"><label>0-1 year ago</label>
+            </div>
+          
+            <div class="question" reference="tiaLast">
+              <p>How long ago did you have your TIA?</p>
+              <input type="radio" name="tiaLast" value="0, 1, 2"><label>0-1 year ago</label>
               <!-- Decline -->
-              <input type="radio" name="tiaLast" reference="tiaLast" value="3"><label>Over a year ago</label>
+              <input type="radio" name="tiaLast" value="3"><label>Over a year ago</label>
               <!-- Next Question -->
-            </p>
+            </div>
           
           </div>
           
           
           <!-- Epilepsy, Seizures-->
           <div class="reflex" id="reflex1.5">
-            <h4>Epilepsy, Seizures <small>Reflex 1.5<small></small></small></h4>
+            <h4>Epilepsy, Seizures <small>Reflex 1.5</small></h4>
           
-              <p>Was your first seizure in the last 12 months?<br>
-                <input type="radio" name="firstSeizure" reference="firstSeizure" value="yes"><label>Yes</label>
-                <input type="radio" name="firstSeizure" reference="firstSeizure" value="unknown"><label>Unknown</label>
+              <div class="question" reference="firstSeizure">
+                <p>Was your first seizure in the last 12 months?</p>
+                <input type="radio" name="firstSeizure" value="yes"><label>Yes</label>
+                <input type="radio" name="firstSeizure" value="unknown"><label>Unknown</label>
                 <!-- Decline -->
-                <input type="radio" name="firstSeizure" reference="firstSeizure" value="no"><label>No</label>
+                <input type="radio" name="firstSeizure" value="no"><label>No</label>
                 <!-- Next question -->
-              </p>
-              <p>When was your last seizure?<br>
-                <input type="radio" name="lastSeizure" reference="lastSeizure" value="0"><label>0-5 years ago</label>
-                <!-- Next question    // program as ranged value -->
-                <input type="radio" name="lastSeizure" reference="lastSeizure" value="1, 2, 3"><label>5+ years ago</label>
-                <!-- Accept -->
-              </p>
-              <p>How many seizures have you had in the past 12 months?<br>
-                <input type="radio" name="howManySeizures" reference="howManySeizures" value="0, 1, 2"><label>0-6</label>
-                <!-- Next question    // program as ranged value -->
-                <input type="radio" name="howManySeizures" reference="howManySeizures" value="3"><label>6+</label>
-                <!-- Decline -->
-              </p>
-              <p>Have you been medically diagnosed or treated for either grand mal seizures or a seizure due to drug or alcohol use?<br>
-                <input type="radio" name="grandMalSeizure" reference="grandMalSeizure" value="yes"><label>Yes</label>
-                <!-- Decline -->
-                <input type="radio" name="grandMalSeizure" reference="grandMalSeizure" value="no"><label>No</label>
-                <!-- Next question -->
-              </p>
-              <p>In the past two years, have you been prescribed medication by a medical professional for this condition?<br>
-                <input type="radio" name="prescribedForSeizures" reference="prescribedForSeizures" value="unknown"><label>Unknown</label>
-                <!-- Decline -->
-                <input type="radio" name="prescribedForSeizures" reference="prescribedForSeizures" value="no"><label>No</label>
-                <!-- Next question -->
-                <input type="radio" name="prescribedForSeizures" reference="prescribedForSeizures" value="0"><label>Yes and still taking this</label>
-                <!-- Next question -->
-                <input type="radio" name="prescribedForSeizures" reference="prescribedForSeizures" value="1"><label>Yes but stopped all medication with medical professional’s advice</label>
-                <!-- Next question -->
-                <input type="radio" name="prescribedForSeizures" reference="prescribedForSeizures" value="2"><label>Yes but stopped taking medication on my own</label>
-                <!-- Decline -->
-              </p>
-              <p>In the past 12 months, have you had a motor vehicle accident due to this condition?<br>
-                <input type="radio" name="carAccidentSeizure" reference="carAccidentSeizure" value="yes"><label>Yes</label>
-                <input type="radio" name="carAccidentSeizure" reference="carAccidentSeizure" value="unknown"><label>Unknown</label>
-                <!-- Decline -->
-                <input type="radio" name="carAccidentSeizure" reference="carAccidentSeizure" value="false"><label>No</label>
-                <!-- Accept -->
-              </p>
+              </div>
           
-          </div>
+              <div class="question" reference="lastSeizure">
+                <p>When was your last seizure?</p>
+                <input type="radio" name="lastSeizure" value="0"><label>0-5 years ago</label>
+                <!-- Next question    // program as ranged value -->
+                <input type="radio" name="lastSeizure" value="1, 2, 3"><label>5+ years ago</label>
+                <!-- Accept -->
+              </div>
+          
+              <div class="question" reference="howManySeizures">
+                <p>How many seizures have you had in the past 12 months?</p>
+                <input type="radio" name="howManySeizures" value="0, 1, 2"><label>0-6</label>
+                <!-- Next question    // program as ranged value -->
+                <input type="radio" name="howManySeizures" value="3"><label>6+</label>
+                <!-- Decline -->
+              </div>
+          
+              <div class="question" reference="grandMalSeizure">
+                <p>Have you been medically diagnosed or treated for either grand mal seizures or a seizure due to drug or alcohol use?</p>
+                <input type="radio" name="grandMalSeizure" value="yes"><label>Yes</label>
+                <!-- Decline -->
+                <input type="radio" name="grandMalSeizure" value="no"><label>No</label>
+                <!-- Next question -->
+              </div>
+          
+              <div class="question" reference="prescribedForSeizures">
+                <p>In the past two years, have you been prescribed medication by a medical professional for this condition?</p>
+                <input type="radio" name="prescribedForSeizures" value="unknown"><label>Unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="prescribedForSeizures" value="no"><label>No</label>
+                <!-- Next question -->
+                <input type="radio" name="prescribedForSeizures" value="0"><label>Yes and still taking this</label>
+                <!-- Next question -->
+                <input type="radio" name="prescribedForSeizures" value="1"><label>Yes but stopped all medication with medical professional’s advice</label>
+                <!-- Next question -->
+                <input type="radio" name="prescribedForSeizures" value="2"><label>Yes but stopped taking medication on my own</label>
+                <!-- Decline -->
+              </div>
+          
+              <div class="question" ref<p="">In the past 12 months, have you had a motor vehicle accident due to this condition?<p></p>cle accident due to this condition?
+                <input type="radio" name="carAccidentSeizure" value="yes"><label>Yes</label>
+                <input type="radio" name="carAccidentSeizure" value="unknown"><label>Unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="carAccidentSeizure" value="false"><label>No</label>
+                <!-- Accept -->
+              </div>
+          
+            </div>
           
           
           <!-- Depression, Anxiety, Stress Disorder -->
           <div class="reflex" id="reflex1.6">
-            <h4>Depression/Anxiety/Stress Disorder <small>Reflex 1.6<small></small></small></h4>
+            <h4>Depression/Anxiety/Stress Disorder <small>Reflex 1.6</small></h4>
           
-              <p>What were you medically diagnosed with?<br>
-                <input type="radio" name="depressionDiagnosed" reference="depressionDiagnosed" value="0"><label>Depression, anxiety, or stress disorder</label>
+              <div class="question" reference="depressionDiagnosed">
+                <p>What were you medically diagnosed with?</p>
+                <input type="radio" name="depressionDiagnosed" value="0"><label>Depression, anxiety, or stress disorder</label>
                 <!-- Next question -->
-                <input type="radio" name="depressionDiagnosed" reference="depressionDiagnosed" value="1"><label>Other mental disorder </label>
+                <input type="radio" name="depressionDiagnosed" value="1"><label>Other mental disorder </label>
                 <!-- Decline -->
-              </p>
-              <p>When was this condition first diagnosed?<br>
-                <input type="radio" name="whenDepressionDiagnosed" reference="whenDepressionDiagnosed" value="unknown"><label>Unknown</label>
-                <input type="radio" name="whenDepressionDiagnosed" reference="whenDepressionDiagnosed" value="0"><label>0-1 year</label>
+              </div>
+          
+              <div class="question" reference="whenDepressionDiagnosed">
+                <p>When was this condition first diagnosed?</p>
+                <input type="radio" name="whenDepressionDiagnosed" value="unknown"><label>Unknown</label>
+                <input type="radio" name="whenDepressionDiagnosed" value="0"><label>0-1 year</label>
                 <!-- Decline -->
-                <input type="radio" name="whenDepressionDiagnosed" reference="whenDepressionDiagnosed" value="1, 2, 3"><label>&gt;1 year</label>
+                <input type="radio" name="whenDepressionDiagnosed" value="1, 2, 3"><label>&gt;1 year</label>
                 <!-- Next question -->
-              </p>
-              <p>In the past 10 years, have you been hospitalized for an attempted suicide?<br>
-                <input type="radio" name="suicideDepression" reference="suicideDepression" value="yes"><label>Yes</label>
+              </div>
+          
+              <div class="question" reference="suicideDepression">
+                <p>In the past 10 years, have you been hospitalized for an attempted suicide?</p>
+                <input type="radio" name="suicideDepression" value="yes"><label>Yes</label>
                 <!-- Decline -->
-                <input type="radio" name="suicideDepression" reference="suicideDepression" value="no"><label>No</label>
-                <input type="radio" name="suicideDepression" reference="suicideDepression" value="unknown"><label>Unknown</label>
+                <input type="radio" name="suicideDepression" value="no"><label>No</label>
+                <input type="radio" name="suicideDepression" value="unknown"><label>Unknown</label>
                 <!-- Next Question -->
-              </p>
-              <p>In the past 5 years, have you made a claim for or received disability payments, or been hospitalized for this condition?<br>
-                <input type="radio" name="claimHospitalDepression" reference="claimHospitalDepression" value="yes"><label>Yes</label>
-                <!-- Decline -->
-                <input type="radio" name="claimHospitalDepression" reference="claimHospitalDepression" value="no"><label>No</label>
-                <input type="radio" name="claimHospitalDepression" reference="claimHospitalDepression" value="unknown"><label>Unknown</label>
-                <!-- Next question -->
-              </p>
-              <p>In the past 12 months, have you missed more than three days from your work or duties for this condition?<br>
-                <input type="radio" name="workMissedDepression" reference="workMissedDepression" value="yes"><label>Yes, unknown</label>
-                <!-- Decline -->
-                <input type="radio" name="workMissedDepression" reference="workMissedDepression" value="no"><label>No</label>
-                <input type="radio" name="workMissedDepression" reference="workMissedDepression" value="unknown"><label>Unknown</label>
-                <!-- Next question -->
-              </p>
-              <p>In the past two years, have you been prescribed medication by a medical professional for this condition?<br>
-                <input type="radio" name="prescribedDepression" reference="prescribedDepression" value="no"><label>No</label>
-                <!-- Accept -->
-                <input type="radio" name="prescribedDepression" reference="prescribedDepression" value="yes"><label>Yes and still taking this</label>
-                <!-- Next question -->
-                <input type="radio" name="prescribedDepression" reference="prescribedDepression" value="0"><label>Yes but stopped all medication with medical professional’s advice</label>
-                <!-- Accept -->
-                <input type="radio" name="prescribedDepression" reference="prescribedDepression" value="1"><label>Yes but stopped taking medication on my own</label>
-                <!-- Decline -->
-              </p>
-              <p>How many medications do you currently take for this condition?<br>
-                <input type="radio" name="prescribedQuantityDepression" reference="prescribedQuantityDepression" value="1"><label>1</label>
-                <!-- Accept -->
-                <input type="radio" name="prescribedQuantityDepression" reference="prescribedQuantityDepression" value="2, 3, 4"><label>2+</label>
-                <!-- Decline -->
-              </p>
+              </div>
           
-          </div>
+              <div class="question" reference="claimHospitalDepression">
+                <p>In the past 5 years, have you made a claim for or received disability payments, or been hospitalized for this condition?</p>
+                <input type="radio" name="claimHospitalDepression" value="yes"><label>Yes</label>
+                <!-- Decline -->
+                <input type="radio" name="claimHospitalDepression" value="no"><label>No</label>
+                <input type="radio" name="claimHospitalDepression" value="unknown"><label>Unknown</label>
+                <!-- Next question -->
+              </div>
+          
+              <div class="question" reference="workMissedDepression">
+                <p>In the past 12 months, have you missed more than three days from your work or duties for this condition?</p>
+                <input type="radio" name="workMissedDepression" value="yes"><label>Yes, unknown</label>
+                <!-- Decline -->
+                <input type="radio" name="workMissedDepression" value="no"><label>No</label>
+                <input type="radio" name="workMissedDepression" value="unknown"><label>Unknown</label>
+                <!-- Next question -->
+              </div>
+          
+              <div class="question" reference="prescribedDepression">
+                <p>In the past two years, have you been prescribed medication by a medical professional for this condition?</p>
+                <input type="radio" name="prescribedDepression" value="no"><label>No</label>
+                <!-- Accept -->
+                <input type="radio" name="prescribedDepression" value="yes"><label>Yes and still taking this</label>
+                <!-- Next question -->
+                <input type="radio" name="prescribedDepression" value="0"><label>Yes but stopped all medication with medical professional’s advice</label>
+                <!-- Accept -->
+                <input type="radio" name="prescribedDepression" value="1"><label>Yes but stopped taking medication on my own</label>
+                <!-- Decline -->
+              </div>
+          
+              <div class="question" reference="prescribedQuantityDepression">
+                <p>How many medications do you currently take for this condition?</p>
+                <input type="radio" name="prescribedQuantityDepression" value="1"><label>1</label>
+                <!-- Accept -->
+                <input type="radio" name="prescribedQuantityDepression" value="2, 3, 4"><label>2+</label>
+                <!-- Decline -->
+              </div>
+          
+            </div>
           
           
-          <div class="question">20. Are you: (Select only one)<br>
-            <input reference="occupation" name="occupation" value="student" type="radio"><label>A full time student</label>
-            <input reference="occupation" name="occupation" value="homemaker" type="radio"><label>A homemaker</label><br>
-            <input reference="occupation" name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
-            <input reference="occupation" name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
+          <div class="question" reference="occupation">20. Are you: (Select only one)<br>
+            <input name="occupation" value="student" type="radio"><label>A full time student</label>
+            <input name="occupation" value="homemaker" type="radio"><label>A homemaker</label><br>
+            <input name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
+            <input name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
           </div>
           
           <table class="form">
@@ -444,48 +503,55 @@
           
           <!-- In Force Policies -->
           <div class="reflex" id="reflex2">
-            <h4>In Force Policies <small>Reflex 2<small></small></small></h4>
+            <h4>In Force Policies <small>Reflex 2</small></h4>
           
-            <p>What is the total amount of all coverage in force or pending?<br>
-              <input type="text" name="currentInsValue" reference="currentInsValue" value="">
-              <!-- ranged value -->
-            </p>
-            <p>Is the coverage being applied for intended to replace or change any existing life insurance or annuity contract?<br>
-              <input type="radio" name="replacementInsExists" reference="replacementInsExists" value="yes">
-              <label>Yes</label>
-              <!-- Next question -->
-              <input type="radio" name="replacementInsExists" reference="replacementInsExists" value="no">
-              <label>No</label>
-              <!-- Stop -->
-            </p>
-            <p>What amount is being replaced?<br>
-              <input type="text" name="replacementInsValue" reference="replacementInsValue" value="">
-              <!-- ranged value -->
-            </p>
+              <div class="question" reference="currentInsValue">
+                <p>What is the total amount of all coverage in force or pending?</p>
+                <input type="text" name="currentInsValue" value="">
+                <!-- ranged value -->
+              </div>
           
-          </div>
+              <div class="question" reference="replacementInsExists">
+                <p>Is the coverage being applied for intended to replace or change any existing life insurance or annuity contract?</p>
+                <input type="radio" name="replacementInsExists" value="yes">
+                <label>Yes</label>
+                <!-- Next question -->
+                <input type="radio" name="replacementInsExists" value="no">
+                <label>No</label>
+                <!-- Stop -->
+              </div>
+          
+              <div class="question" reference="replacementInsValue">
+                <p>What amount is being replaced?</p>
+                <input type="text" name="replacementInsValue" value="">
+                <!-- ranged value -->
+              </div>
+            </div>
           
           
-          <div class="question">22. In the next 12 months do you plan to travel outside of United States, Canada, or Mexico? <br>
-            <input type="radio" name="travel" reference="travel" value="yes"><label>Yes</label>
-            <input type="radio" name="travel" reference="travel" value="no"><label>No</label>
+          <div class="question" reference="travel">22. In the next 12 months do you plan to travel outside of United States, Canada, or Mexico? <br>
+            <input type="radio" name="travel" value="yes"><label>Yes</label>
+            <input type="radio" name="travel" value="no"><label>No</label>
           </div>
           
           <!-- International Travel -->
           <div class="reflex" id="reflex3">
-            <h4>International Travel <small>Reflex 3<small></small></small></h4>
+            <h4>International Travel <small>Reflex 3</small></h4>
           
-            <p>Which countries do you plan on traveling to?<br>
-              <input type="text" name="travel" reference="travel" value="">
+            <div class="question" reference="travel">
+              <p>Which countries do you plan on traveling to?</p>
+              <input type="text" name="travel" value="">
               <!-- Any countries on Decline list: Decline -->
               <!-- Acceptable countries: Reflex question, then next question -->
-            </p>
-            <p>Do you plan to travel for longer than 30 consecutive days or greater than 90 days in total?<br>
-              <input type="radio" name="travelInternational" reference="travelInternational"><label>Yes</label>
+            </div>
+          
+            <div class="question" reference="travelInternational">
+              <p>Do you plan to travel for longer than 30 consecutive days or greater than 90 days in total?</p>
+              <input type="radio" name="travelInternational"><label>Yes</label>
               <!-- Decline -->
-              <input type="radio" name="travelInternational" reference="travelInternational"><label>No</label>
+              <input type="radio" name="travelInternational"><label>No</label>
               <!-- Advance -->
-            </p>
+            </div>
           
           </div>
           
@@ -494,58 +560,62 @@
           
           <!-- Primary Care Physician -->
           <div class="reflex" id="reflex4">
-            <h4>Primary Care Physician <small>Reflex 4<small></small></small></h4>
-            <!-- // Need acceptable code filters. -->
+            <h4>Primary Care Physician <small>Reflex 4</small></h4>
+              <!-- // Need acceptable code filters. -->
           
-            <p>Please provide the name, address and phone number of your primary care physician.<br>
-            <table class="form">
-              <tr>
-                <td>Physician Name<span class="dynamic" type="text" name="pcpFirstName" reference="pcpFirstName">&nbsp;</span></td>
-                <td colspan="2">Street Address<span class="dynamic" type="text" name="pcpAddressStreet" reference="pcpAddressStreet">&nbsp;</span></td>
-              </tr>
-              <tr>
-                <td>Suite/Apt Number<span class="dynamic" type="text" name="pcpAddressApt-SuiteNum" reference="pcpAddressApt-SuiteNum">&nbsp;</span></td>
-                <td>City<span class="dynamic" type="text" name="pcpAddressCity" reference="pcpAddressCity">&nbsp;</span></td>
-                <td>State<span class="dynamic" name="pcpAddressState" reference="pcpAddressState">&nbsp;</span></td>
-              </tr>
-            </table>
+              <p>Please provide the name, address and phone number of your primary care physician.</p>
           
-            </p>
-            <p>Have you been convicted of a felony? <br>
-              <input type="radio" name="legalCondition" reference="legalCondition" value="yes"><label>Yes</label>
-              <!-- Decline -->
-              <input type="radio" name="legalCondition" reference="legalCondition" value="no"><label>No</label>
-              <!-- Next question -->
-             </p>
-            <p>Have you been convicted of a misdemeanor? <br>
-              <input type="radio" name="legalConditionMisdemeanor" reference="legalConditionMisdemeanor" value="yes"><label>Yes</label>
-              <!-- Accept -->
-              <input type="radio" name="legalConditionMisdemeanor" reference="legalConditionMisdemeanor" value="yes"><label>No</label>
-              <!-- Incomplete and send MIB AUD letter -->
-            </p>
+              <table class="form">
+                <tr>
+                  <td>Physician Name<span class="dynamic" type="text" name="pcpFirstName" reference="pcpFirstName">&nbsp;</span></td>
+                  <td colspan="2">Street Address<span class="dynamic" type="text" name="pcpAddressStreet" reference="pcpAddressStreet">&nbsp;</span></td>
+                </tr>
+                <tr>
+                  <td>Suite/Apt Number<span class="dynamic" type="text" name="pcpAddressApt-SuiteNum" reference="pcpAddressApt-SuiteNum">&nbsp;</span></td>
+                  <td>City<span class="dynamic" type="text" name="pcpAddressCity" reference="pcpAddressCity">&nbsp;</span></td>
+                  <td>State<span class="dynamic" name="pcpAddressState" reference="pcpAddressState">&nbsp;</span></td>
+                </tr>
+              </table>
           
-          </div>
+              <div class="question" reference="legalCondition">
+                <p>Have you been convicted of a felony?</p>
+                <input type="radio" name="legalCondition" value="yes"><label>Yes</label>
+                <!-- Decline -->
+                <input type="radio" name="legalCondition" value="no"><label>No</label>
+                <!-- Next question -->
+              </div>
+          
+              <div class="question" reference="legalConditionMisdemeanor">
+                <p>Have you been convicted of a misdemeanor?</p>
+                <input type="radio" name="legalConditionMisdemeanor" value="yes"><label>Yes</label>
+                <!-- Accept -->
+                <input type="radio" name="legalConditionMisdemeanor" value="yes"><label>No</label>
+                <!-- Incomplete and send MIB AUD letter -->
+              </div>
+          
+            </div>
           
           
           <!-- # RUN Rx -->
           
           <!-- Medications -->
           <div class="reflex" id="reflex5">
-            <h4>Medications <small>Reflex 5<small></small></small></h4>
+            <h4>Medications <small>Reflex 5</small></h4>
           
-            <p>In the past 90 days, has your medical professional increased any of your medications (other than for cholesterol treatment)?<br>
-              <input type="radio" name="medicationIncreased90Days" reference="medicationIncreased90Days" value=""><label>Yes</label>
+            <div class="question" reference="medicationIncreased90Days">
+              <p>In the past 90 days, has your medical professional increased any of your medications (other than for cholesterol treatment)?</p>
+              <input type="radio" name="medicationIncreased90Days" value=""><label>Yes</label>
               <!-- Decline -->
-              <input type="radio" name="medicationIncreased90Days" reference="medicationIncreased90Days" value=""><label>No</label>
+              <input type="radio" name="medicationIncreased90Days" value=""><label>No</label>
               <!-- Accept -->
-            </p>
+            </div>
           
           </div>
           
           
-          <div class="question">23a. Do you have a valid driver&#39;s license?<br>
-            <input type="radio" name="licenseExists" reference="licenseExists" value="yes"><label>Yes</label>
-            <input type="radio" name="licenseExists" reference="licenseExists" value="no"><label>No</label>
+          <div class="question" reference="licenseExists">23a. Do you have a valid driver&#39;s license?<br>
+            <input type="radio" name="licenseExists" value="yes"><label>Yes</label>
+            <input type="radio" name="licenseExists" value="no"><label>No</label>
           </div>
           
             <table class="form">
@@ -561,14 +631,15 @@
           
           <!-- Family Health History -->
           <div class="reflex" id="reflex6">
-            <h4>Family Health History <small>Reflex 6<small></small></small></h4>
+            <h4>Family Health History <small>Reflex 6</small></h4>
           
-            <p>Did any of your parents or siblings die before the age of 65 from cancer or heart disease?
-              <input type="radio" name="familyHealthHistory" reference="familyHealthHistory" value="yes"><label>Yes</label>
-              <!-- Standard -->
-              <input type="radio" name="familyHealthHistory" reference="familyHealthHistory" value="no"><label>No</label>
-              <!-- Preferred -->
-            </p>
+          <div class="question" reference="familyHealthHistory">
+            <p>Did any of your parents or siblings die before the age of 65 from cancer or heart disease?</p>
+            <input type="radio" name="familyHealthHistory" value="yes"><label>Yes</label>
+            <!-- Standard -->
+            <input type="radio" name="familyHealthHistory" value="no"><label>No</label>
+            <!-- Preferred -->
+          </div>
           
           </div>
           
@@ -726,14 +797,14 @@
           
           <h2>Payment Method</h2>
           
-          <div class="question">Modal Premium Frequency:<br>
-            <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
-            <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
+          <div class="question" reference="modalPremiumFrequency">Modal Premium Frequency:<br>
+            <input name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
+            <input name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
           </div>
           
-          <div class="question">Payment Type:<br>
-            <input reference="paymentType" name="paymentType" value="eft-Ach" type="radio"><label>EFT/ACH </label>
-            <input reference="paymentType" name="paymentType" value="creditCard" type="radio"><label>Credit Card</label>
+          <div class="question" reference="paymentType">Payment Type:<br>
+            <input name="paymentType" value="eft-Ach" type="radio"><label>EFT/ACH </label>
+            <input name="paymentType" value="creditCard" type="radio"><label>Credit Card</label>
           </div>
           
           <div class="question">Billing Address:<br>
@@ -751,9 +822,9 @@
             </table>
           </div>
           <h2>Third Party Billing Notification</h2>
-          <div class="question">Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
-            <input type="radio" name="thirdPartyBillingExists" reference="thirdPartyBillingExists" value="yes"><label>Yes, complete information below</label>
-            <input type="radio" name="thirdPartyBillingExists" reference="thirdPartyBillingExists" value="no"><label>No</label>
+          <div class="question" reference="thirdPartyBillingExists">Do you want to designate an additional person to receive Grace Period notices for insufficient premium and lapse notices?<br>
+            <input type="radio" name="thirdPartyBillingExists" value="yes"><label>Yes, complete information below</label>
+            <input type="radio" name="thirdPartyBillingExists" value="no"><label>No</label>
           
             <table class="form">
               <tr>
@@ -786,9 +857,9 @@
             </tr>
           </table>
           
-          		</th>
+            </th>
 <th class="expander"></th></tr></table></th>
-          	</tr></tbody></table>
+            </tr></tbody></table>
           </td></tr></tbody></table>
           
           <table align="center" class="wrapper footer float-center"><tr><td class="wrapper-inner">

@@ -89,55 +89,60 @@
           
             <!-- <hr> -->
             <h2>More About You</h2>
-            <div class="question">9. Are you a U.S. citizen, or do you have a U.S. permanent resident card <small>(green card)?</small><br>
-              <input reference="citizen" name="citizen" value="yes" type="radio"><label>Yes</label>
-              <input reference="citizen" name="citizen" value="no" type="radio"><label>No</label>
+            <div class="question" reference="citizen">9. Are you a U.S. citizen, or do you have a U.S. permanent resident card <small>(green card)?</small><br>
+              <input name="citizen" value="yes" type="radio"><label>Yes</label>
+              <input name="citizen" value="no" type="radio"><label>No</label>
             </div>
           
-            <div class="question">10. In the past 10 years, have you been medically diagnosed or medically treated or tested positive for: (1) heart disease, (2) stroke, (3) cancer (excluding basal and squamous cell skin cancer), (4) organ transplant, (5) diabetes before age 30 (excluding gestational diabetes), (6) alcohol or drug abuse, (7) HIV, or (8) kidney disease requiring dialysis?<br>
-              <input reference="medicalCondition" name="medicalCondition" value="yes" type="radio"><label>Yes</label>
-              <input reference="medicalCondition" name="medicalCondition" value="no" type="radio"><label>No</label>
+            <div class="question" reference="medicalCondition">10. In the past 10 years, have you been medically diagnosed or medically treated or tested positive for: (1) heart disease, (2) stroke, (3) cancer (excluding basal and squamous cell skin cancer), (4) organ transplant, (5) diabetes before age 30 (excluding gestational diabetes), (6) alcohol or drug abuse, (7) HIV, or (8) kidney disease requiring dialysis?<br>
+              <input name="medicalCondition" value="yes" type="radio"><label>Yes</label>
+              <input name="medicalCondition" value="no" type="radio"><label>No</label>
             </div>
           
           
             <!-- MIB Codes -->
             <div class="reflex" id="reflex1">
-              <h4>In Force Policies <small>Reflex 1<small></small></small></h4>
+              <h4>In Force Policies <small>Reflex 1</small></h4>
           
-              <p>What is the total amount of all coverage in force or pending?<br>
-                <input type="text" name="currentInsValue" reference="currentInsValue" value="">
+              <div class="question" reference="currentInsValue">
+                <p>What is the total amount of all coverage in force or pending?</p>
+                <input type="text" value="">
                 <!-- ranged value -->
-              </p>
-              <p>Is the coverage being applied for intended to replace or change any existing life insurance or annuity contract?<br>
-                <input type="radio" name="replacementInsExists" reference="replacementInsExists" value="yes">
+              </div>
+          
+              <div class="question" reference="replacementInsExists">
+                <p>Is the coverage being applied for intended to replace or change any existing life insurance or annuity contract?</p>
+                <input type="radio" name="replacementInsExists" value="yes">
                 <label>Yes</label>
                 <!-- Next question -->
-                <input type="radio" name="replacementInsExists" reference="replacementInsExists" value="no">
+                <input type="radio" name="replacementInsExists" value="no">
                 <label>No</label>
                 <!-- Stop -->
-              </p>
-              <p>What amount is being replaced?<br>
-                <input type="text" reference="replacementInsValue" value="">
+              </div>
+          
+              <div class="question" reference="replacementInsValue">
+                <p>What amount is being replaced?</p>
+                <input type="text" value="">
                 <!-- ranged value -->
-              </p>
+              </div>
           
             </div>
           
           
-            <div class="question">11. Have you ever been convicted of a felony?<br>
-              <input reference="legalCondition" name="legalCondition" value="yes" type="radio"><label>Yes</label>
-              <input reference="legalCondition" name="legalCondition" value="no" type="radio"><label>No</label>
+            <div class="question" reference="legalCondition">11. Have you ever been convicted of a felony?<br>
+              <input name="legalCondition" value="yes" type="radio"><label>Yes</label>
+              <input name="legalCondition" value="no" type="radio"><label>No</label>
             </div>
           
-            <div class="question">12. In the past 12 months, have you used any tobacco or nicotine products <small>(excluding less than 24 cigars)?</small><br>
-              <input reference="tobacco" name="tobacco" value="yes" type="radio"><label>Yes</label>
-              <input reference="tobacco" name="tobacco" value="no" type="radio"><label>No</label>
+            <div class="question" reference="tobacco">12. In the past 12 months, have you used any tobacco or nicotine products <small>(excluding less than 24 cigars)?</small><br>
+              <input name="tobacco" value="yes" type="radio"><label>Yes</label>
+              <input name="tobacco" value="no" type="radio"><label>No</label>
             </div>
-            <div class="question">13. Are you: <small>(Select only one)</small><br>
-              <input reference="occupation" name="occupation" value="student" type="radio"><label>A full time student</label>
-              <input reference="occupation" name="occupation" value="homemaker" type="radio"><label>A homemaker</label>
-              <input reference="occupation" name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
-              <input reference="occupation" name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
+            <div class="question" reference="occupation">13. Are you: <small>(Select only one)</small><br>
+              <input name="occupation" value="student" type="radio"><label>A full time student</label>
+              <input name="occupation" value="homemaker" type="radio"><label>A homemaker</label>
+              <input name="occupation" value="employed" type="radio"><label>Working more than 30 hours per week</label>
+              <input name="occupation" value="unemployed" type="radio"><label>Working less than 30 hours per week or unemployed</label>
             </div>
           
               <table class="form">
@@ -146,49 +151,52 @@
                 </tr>
               </table>
           
-            <div class="question">15. Do you have any life insurance or annuities currently in force or pending?<br>
-              <input type="radio" name="currentInsExists" reference="currentInsExists" value="yes">
+            <div class="question" reference="currentInsExists">15. Do you have any life insurance or annuities currently in force or pending?<br>
+              <input type="radio" name="currentInsExists" value="yes">
               <label>Yes</label>
               <!-- Next question -->
-              <input type="radio" name="currentInsExists" reference="currentInsExists" value="no">
+              <input type="radio" name="currentInsExists" value="no">
               <label>No</label>
               <!-- Stop -->
             </div> 
           
             <!-- In Force Policies -->
             <div class="reflex" id="reflex2">
-              <h4>MIB Codes <small>Reflex 2<small></small></small></h4>
-          
-              <!-- Medical MIB Code -->
-              <p>Have you seen a medical professional for any of the questions asked previously?<br>
-                <input type="radio" name="medicalCondition" reference="medicalCondition">
+              <h4>MIB Codes <small>Reflex 2</small></h4>
+              <div class="question" reference="medicalCondition">
+                <!-- Medical MIB Code -->
+                <p>Have you seen a medical professional for any of the questions asked previously?</p>
+                <input type="radio" name="medicalCondition">
                 <label>Yes</label>
-                <input type="radio" name="medicalCondition" reference="medicalCondition">
+                <input type="radio" name="medicalCondition">
                 <label>No</label>
-              </p>
-              <!-- Criminal MIB Code -->
-              <p>Have you been convicted of a felony?<br>
-                <input type="radio" name="legalCondition" reference="legalCondition" value="">
+              </div>
+          
+              <div class="question" reference="legalCondition">
+                <!-- Criminal MIB Code -->
+                <p>Have you been convicted of a felony?</p>
+                <input type="radio" name="legalCondition" value="no">
                 <label>No</label>
                 <!-- Next question -->
-                <input type="radio" name="legalCondition" reference="legalCondition" value="">
+                <input type="radio" name="legalCondition" value="yes">
                 <label>Yes</label>
                 <!-- Decline -->
-                <input type="radio" name="legalCondition" reference="legalCondition" value="">
+                <input type="radio" name="legalCondition" value="unknown">
                 <label>Unknown</label>
-                <!-- Decline -->
-              </p>
-              <p>Have you been convicted of a misdemeanor?<br>
-                <input type="radio" name="legalConditionMisdemeanor" reference="legalConditionMisdemeanor" value="">
+              </div>
+          
+              <div class="question" reference="legalConditionMisdemeanor">
+                <p>Have you been convicted of a misdemeanor?</p>
+                <input type="radio" name="" value="no">
                 <label>No</label>
                 <!-- Incomplete and send MIB AUD letter -->
-                <input type="radio" name="legalConditionMisdemeanor" reference="legalConditionMisdemeanor" value="">
+                <input type="radio" name="legalConditionMisdemeanor" value="yes">
                 <label>Yes</label>
                 <!-- Accept -->
-                <input type="radio" name="legalConditionMisdemeanor" reference="legalConditionMisdemeanor" value="">
+                <input type="radio" name="legalConditionMisdemeanor" value="unkown">
                 <label>Unknown</label>
                 <!-- Accept -->
-              </p>
+              </div>
           
             </div>
           
@@ -341,13 +349,13 @@
             <hr>
           
             <h2>Payment Method</h2>
-            <div class="question">Modal Premium Frequency:<br>
-              <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
-              <input reference="modalPremiumFrequency" name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
+            <div class="question" reference="modalPremiumFrequency">Modal Premium Frequency:<br>
+              <input name="modalPremiumFrequency" value="annual" type="radio"><label>Annual</label>
+              <input name="modalPremiumFrequency" value="monthly" type="radio"><label>Monthly</label>
             </div>
-            <div class="question">Payment Type:<br>
-              <input reference="paymentType" name="paymentType" value="eft-Ach" type="radio"><label>EFT/ACH </label>
-              <input reference="paymentType" name="paymentType" value="creditCard" type="radio"><label>Credit Card</label>
+            <div class="question" reference="paymentType">Payment Type:<br>
+              <input name="paymentType" value="eft-Ach" type="radio"><label>EFT/ACH </label>
+              <input name="paymentType" value="creditCard" type="radio"><label>Credit Card</label>
             </div>
             <div class="question">Billing Address:<br>
               <input reference="billingAddressExists" value="yes" type="checkbox"><label>Check this box if billing address is same as residence, otherwise list below. <small>(If P.O. Box, also include Street Address below)</small></label><br>

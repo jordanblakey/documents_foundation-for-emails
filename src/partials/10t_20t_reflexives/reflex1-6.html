@@ -1,55 +1,68 @@
 <div class="reflex" id="reflex1.6">
-  <h4>Depression/Anxiety/Stress Disorder <small>Reflex 1.6<small></h4>
+  <h4>Depression/Anxiety/Stress Disorder <small>Reflex 1.6</small></h4>
 
-    <p>What were you medically diagnosed with?<br>
-      <input type="radio" name="depressionDiagnosed" reference="depressionDiagnosed" value="0"><label>Depression, anxiety, or stress disorder</label>
+    <div class="question" reference="depressionDiagnosed">
+      <p>What were you medically diagnosed with?</p>
+      <input type="radio" name="depressionDiagnosed" value="0"><label>Depression, anxiety, or stress disorder</label>
       <!-- Next question -->
-      <input type="radio" name="depressionDiagnosed" reference="depressionDiagnosed" value="1"><label>Other mental disorder </label>
+      <input type="radio" name="depressionDiagnosed" value="1"><label>Other mental disorder </label>
       <!-- Decline -->
-    </p>
-    <p>When was this condition first diagnosed?<br>
-      <input type="radio" name="whenDepressionDiagnosed" reference="whenDepressionDiagnosed" value="unknown"><label>Unknown</label>
-      <input type="radio" name="whenDepressionDiagnosed" reference="whenDepressionDiagnosed" value="0"><label>0-1 year</label>
+    </div>
+
+    <div class="question" reference="whenDepressionDiagnosed">
+      <p>When was this condition first diagnosed?</p>
+      <input type="radio" name="whenDepressionDiagnosed" value="unknown"><label>Unknown</label>
+      <input type="radio" name="whenDepressionDiagnosed" value="0"><label>0-1 year</label>
       <!-- Decline -->
-      <input type="radio" name="whenDepressionDiagnosed" reference="whenDepressionDiagnosed" value="1, 2, 3"><label>>1 year</label>
+      <input type="radio" name="whenDepressionDiagnosed" value="1, 2, 3"><label>>1 year</label>
       <!-- Next question -->
-    </p>
-    <p>In the past 10 years, have you been hospitalized for an attempted suicide?<br>
-      <input type="radio" name="suicideDepression" reference="suicideDepression" value="yes"><label>Yes</label>
+    </div>
+
+    <div class="question" reference="suicideDepression">
+      <p>In the past 10 years, have you been hospitalized for an attempted suicide?</p>
+      <input type="radio" name="suicideDepression" value="yes"><label>Yes</label>
       <!-- Decline -->
-      <input type="radio" name="suicideDepression" reference="suicideDepression" value="no"><label>No</label>
-      <input type="radio" name="suicideDepression" reference="suicideDepression" value="unknown"><label>Unknown</label>
+      <input type="radio" name="suicideDepression" value="no"><label>No</label>
+      <input type="radio" name="suicideDepression" value="unknown"><label>Unknown</label>
       <!-- Next Question -->
-    </p>
-    <p>In the past 5 years, have you made a claim for or received disability payments, or been hospitalized for this condition?<br>
-      <input type="radio" name="claimHospitalDepression" reference="claimHospitalDepression" value="yes"><label>Yes</label>
-      <!-- Decline -->
-      <input type="radio" name="claimHospitalDepression" reference="claimHospitalDepression" value="no"><label>No</label>
-      <input type="radio" name="claimHospitalDepression" reference="claimHospitalDepression" value="unknown"><label>Unknown</label>
-      <!-- Next question -->
-    </p>
-    <p>In the past 12 months, have you missed more than three days from your work or duties for this condition?<br>
-      <input type="radio" name="workMissedDepression" reference="workMissedDepression" value="yes"><label>Yes, unknown</label>
-      <!-- Decline -->
-      <input type="radio" name="workMissedDepression" reference="workMissedDepression" value="no"><label>No</label>
-      <input type="radio" name="workMissedDepression" reference="workMissedDepression" value="unknown"><label>Unknown</label>
-      <!-- Next question -->
-    </p>
-    <p>In the past two years, have you been prescribed medication by a medical professional for this condition?<br>
-      <input type="radio" name="prescribedDepression" reference="prescribedDepression" value="no"><label>No</label>
-      <!-- Accept -->
-      <input type="radio" name="prescribedDepression" reference="prescribedDepression" value="yes"><label>Yes and still taking this</label>
-      <!-- Next question -->
-      <input type="radio" name="prescribedDepression" reference="prescribedDepression" value="0"><label>Yes but stopped all medication with medical professional’s advice</label>
-      <!-- Accept -->
-      <input type="radio" name="prescribedDepression" reference="prescribedDepression" value="1"><label>Yes but stopped taking medication on my own</label>
-      <!-- Decline -->
-    </p>
-    <p>How many medications do you currently take for this condition?<br>
-      <input type="radio" name="prescribedQuantityDepression" reference="prescribedQuantityDepression" value="1"><label>1</label>
-      <!-- Accept -->
-      <input type="radio" name="prescribedQuantityDepression" reference="prescribedQuantityDepression" value="2, 3, 4"><label>2+</label>
-      <!-- Decline -->
-    </p>
+    </div>
 
-</div>
+    <div class="question" reference="claimHospitalDepression">
+      <p>In the past 5 years, have you made a claim for or received disability payments, or been hospitalized for this condition?</p>
+      <input type="radio" name="claimHospitalDepression" value="yes"><label>Yes</label>
+      <!-- Decline -->
+      <input type="radio" name="claimHospitalDepression" value="no"><label>No</label>
+      <input type="radio" name="claimHospitalDepression" value="unknown"><label>Unknown</label>
+      <!-- Next question -->
+    </div>
+
+    <div class="question" reference="workMissedDepression">
+      <p>In the past 12 months, have you missed more than three days from your work or duties for this condition?</p>
+      <input type="radio" name="workMissedDepression" value="yes"><label>Yes, unknown</label>
+      <!-- Decline -->
+      <input type="radio" name="workMissedDepression" value="no"><label>No</label>
+      <input type="radio" name="workMissedDepression" value="unknown"><label>Unknown</label>
+      <!-- Next question -->
+    </div>
+
+    <div class="question" reference="prescribedDepression">
+      <p>In the past two years, have you been prescribed medication by a medical professional for this condition?</p>
+      <input type="radio" name="prescribedDepression" value="no"><label>No</label>
+      <!-- Accept -->
+      <input type="radio" name="prescribedDepression" value="yes"><label>Yes and still taking this</label>
+      <!-- Next question -->
+      <input type="radio" name="prescribedDepression" value="0"><label>Yes but stopped all medication with medical professional’s advice</label>
+      <!-- Accept -->
+      <input type="radio" name="prescribedDepression" value="1"><label>Yes but stopped taking medication on my own</label>
+      <!-- Decline -->
+    </div>
+
+    <div class="question" reference="prescribedQuantityDepression">
+      <p>How many medications do you currently take for this condition?</p>
+      <input type="radio" name="prescribedQuantityDepression" value="1"><label>1</label>
+      <!-- Accept -->
+      <input type="radio" name="prescribedQuantityDepression" value="2, 3, 4"><label>2+</label>
+      <!-- Decline -->
+    </div>
+
+  </div>

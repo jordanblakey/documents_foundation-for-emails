@@ -1,16 +1,19 @@
 <div class="reflex" id="reflex3">
-  <h4>International Travel <small>Reflex 3<small></h4>
+  <h4>International Travel <small>Reflex 3</small></h4>
 
-  <p>Which countries do you plan on traveling to?<br>
-    <input type="text" name="travel" reference="travel" value="">
+  <div class="question" reference="travel">
+    <p>Which countries do you plan on traveling to?</p>
+    <input type="text" name="travel" value="">
     <!-- Any countries on Decline list: Decline -->
     <!-- Acceptable countries: Reflex question, then next question -->
-  </p>
-  <p>Do you plan to travel for longer than 30 consecutive days or greater than 90 days in total?<br>
-    <input type="radio" name="travelInternational" reference="travelInternational"><label>Yes</label>
+  </div>
+
+  <div class="question" reference="travelInternational">
+    <p>Do you plan to travel for longer than 30 consecutive days or greater than 90 days in total?</p>
+    <input type="radio" name="travelInternational"><label>Yes</label>
     <!-- Decline -->
-    <input type="radio" name="travelInternational" reference="travelInternational"><label>No</label>
+    <input type="radio" name="travelInternational"><label>No</label>
     <!-- Advance -->
-  </p>
+  </div>
 
 </div>
