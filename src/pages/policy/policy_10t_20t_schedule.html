@@ -1,5 +1,5 @@
 ---
-title: Individual Life Insurance Schedule
+title: "Individual Life Insurance Schedule"
 ---
 
 <container>
@@ -8,6 +8,126 @@ title: Individual Life Insurance Schedule
 			<h1>{{title}}</h1>
 {{#markdown}}
 
+<style>
+td {
+  width: 25%;
+}
+</style>
+
+<table>
+  <tr>
+    <td><b>Owner:</b></td>
+    <td><span class="dynamic" reference="policyOwner">[variable]</span></td>
+    <td><b>Policy Number:</b></td>
+    <td><span class="dynamic" reference="policyNumber">[variable]</span></td>
+  </tr>
+  <tr>
+    <td><b>Insured:</b></td>
+    <td><span class="dynamic" reference="policyInsured">[variable]</span></td>
+    <td><b>Policy Date:</b></td>
+    <td><span class="dynamic" reference="policyStartDate">[variable]</span></td>
+  </tr>
+  <tr>
+    <td><b>Sex:</b></td>
+    <td><span class="dynamic" reference="policyInsuredSex">[variable]</span></td>
+    <td><b>Issue Age:</b></td>
+    <td><span class="dynamic" reference="policyIssueAge">[variable]</span></td>
+  </tr>
+  <tr>
+    <td><b>Beneficiary:</b></td>
+    <td><span class="dynamic" reference="policyBeneficiary">[variable]</span></td>
+    <td><b>Premium Class:</b></td>
+    <td><span class="dynamic" reference="policyPremiumClass">[variable]</span></td>
+  </tr>
+  <tr>
+    <td><b>Mode of Premium:</b></td>
+    <td><span class="dynamic" reference="policyPremiumMode">[variable]</span></td>
+    <td><b>Expiry Date:</b></td>
+    <td><span class="dynamic" reference="policyExpiryDate">[variable]</span></td>
+  </tr>
+  <tr>
+    <td><b>Premium Guarantee Period:</b></td>
+    <td><span class="dynamic" reference="policyPremiumGuaranteePeriod">[variable]</span></td>
+    <td><b></b></td>
+    <td><span class="dynamic"></span></td>
+  </tr>
+</table>
+</columns>
+</row>
+<row>
+  <columns>
+
+    <spacer size="24"></spacer>
+    <hr>
+    <h3>Benefits</h3>
+
+    <table>
+      <tr>
+        <td><b>Coverage</b></td>
+        <td><b>Face Amount</b></td>
+        <td><b>Expiry Date</b></td>
+        <td><b>Level Guaranteed Annual Premium</b></td>
+      </tr>
+      <tr>
+        <td><span class="dynamic" reference="//">[variable]</span></td>
+        <td><span class="dynamic" reference="//">[variable]</span></td>
+        <td><span class="dynamic" reference="//">[variable]</span></td>
+        <td><span class="dynamic" reference="//">[variable]</span></td>
+      </tr>
+    </table>
+
+<spacer size="24"></spacer>
+
+<p>This premium amount is guaranteed and will not change. The premium includes a [$65.00] annual policy fee. Inquiries regarding Your policy should be directed to the Administrative Office at the following address.</p>
+
+<spacer size="24"></spacer>
+
+<container>
+  <row>
+    <columns large="2"></columns>
+    <columns small="8">
+      <span class="dynamic" reference="//">North American Company for Life and Health Insurance</span>
+      <span class="dynamic" reference="//">ATTN:  Bestow Agency LLC</span>
+      <span class="dynamic" reference="//">Street</span>
+      <span class="dynamic inline-block" reference="//">City</span>, <span class="dynamic inline-block" reference="//">State</span>, <span class="dynamic inline-block" reference="//">Zip</span>
+      <span class="dynamic" reference="//">Toll-Free: [1-877 000 0000]</span>
+    </columns>
+    <columns large="2"></columns>
+  </row>
+</container>
+
+<spacer size="24"></spacer>
+
+The telephone number for the <span class="dynamic inline-block" reference="//">[variable]</span> is <span class="dynamic inline-block" reference="//">[1-000-000-0000]</span>.
+
+<spacer size="24"></spacer>
+<hr>
+<h3>Modal Premiums</h3>
+
+Modes of premium payment are shown below. Credit Card Authorization and Electronic Funds Transfer Authorization.
+
+<table>
+  <tr>
+    <td><b></b></td>
+    <td><b></b></td>
+    <td><b>Per Mode Premium</b></td>
+    <td><b>Total Yearly Premium</b></td>
+  </tr>
+  <tr>
+    <td><b>Annual</b></td>
+    <td><span class="dynamic" refernce="//">[variable]</span></td>
+    <td><span class="dynamic" refernce="//">[variable]</span></td>
+    <td><span class="dynamic" refernce="//">[variable]</span></td>
+  </tr>
+  <tr>
+    <td><b>Monthly</b></td>
+    <td><span class="dynamic" refernce="//">[variable]</span></td>
+    <td><span class="dynamic" refernce="//">[variable]</span></td>
+    <td><span class="dynamic" refernce="//">[variable]</span></td>
+  </tr>
+</table>
+  </columns>
+</row>
 {{/markdown}}
 		</columns>
 	</row>

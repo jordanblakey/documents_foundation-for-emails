@@ -61,6 +61,12 @@ label {
 	margin-bottom: 16px;
 	table-layout: fixed;
 
+  &.autofit{
+    td, tr, th {
+      color:#000 !important;
+    }
+  }
+
 	td {
 		position: relative;
 		padding: 2px 5px;
@@ -78,6 +84,10 @@ label {
 	.spacer-cell {
 		border: 0;
 	}
+}
+.autofit, .autofit td, .autofit tr {
+  table-layout: auto !important;
+  hyphens: none;
 }
 
 ol, ul {
@@ -173,4 +183,8 @@ tr.show {
   th {
     padding: 0 7px;
       }
+}
+
+.grey, .grey a:visited {
+  color: #eee !important;
 }
