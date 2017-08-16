@@ -85,9 +85,17 @@ label {
 		border: 0;
 	}
 }
+
 .autofit, .autofit td, .autofit tr {
   table-layout: auto !important;
   hyphens: none;
+}
+
+.toc {
+  td {
+    border: 1px solid #fff !important;
+    padding: 2px 5px;
+  }
 }
 
 ol, ul {
@@ -182,6 +190,9 @@ tr.show {
   .columns:nth-child(1) th { padding: 0 14px 0 0; }
   th {
     padding: 0 7px;
+    img {
+      width: 150px;
+    }
       }
 }
 
