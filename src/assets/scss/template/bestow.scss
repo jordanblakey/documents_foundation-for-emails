@@ -178,8 +178,8 @@ tr.show {
 // DISCLOSURES /////////////////////////////////////////////////////////////////
 
 .signature-row {
-  .columns:first-child th { padding: 0 14px 0 0; }
   .columns:last-child th { padding: 0 0 0 14px; }
+  .columns:nth-child(1) th { padding: 0 14px 0 0; }
   th {
     padding: 0 7px;
       }
