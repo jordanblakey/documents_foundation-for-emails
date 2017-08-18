@@ -74,7 +74,6 @@ label {
   li {
     // list-style-position: inside;
   }
-
   .css-colspan {
     column-span: all;
   }
@@ -254,13 +253,13 @@ tr.show {
   display: table-row;
 }
 
-.reinstatement-shown {
-  display: inline-block;
-}
-
-.reinstatement-hidden {
-  display: none;
-}
+// .reinstatement-shown {
+//   display: inline-block;
+// }
+//
+// .reinstatement-hidden {
+//   display: none;
+// }
 
 // DISCLOSURES /////////////////////////////////////////////////////////////////
 
