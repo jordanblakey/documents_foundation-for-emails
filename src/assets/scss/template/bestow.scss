@@ -31,6 +31,11 @@ p {
   }
 }
 
+.padded td {
+  padding: 5px;
+  hyphens: none;
+}
+
 .wrapper.footer {
 	background: #f4f6f8;
 
@@ -42,6 +47,9 @@ p {
 .callout {
 	p {
 		margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
 	}
 }
 
@@ -61,6 +69,21 @@ label {
 	margin-bottom: 16px;
 	table-layout: fixed;
 
+  th {
+    hyphens: none;
+    padding: 5px;
+    background: $primary_color;
+    border-color: $primary_color !important;
+    color: white;
+
+    &.toc-header {
+      background: $primary_color;
+      border-color: $primary_color !important;
+      color: white;
+      font-weight: 500;
+    }
+  }
+
   &.autofit{
     td, tr, th {
       color:#000 !important;
@@ -70,8 +93,8 @@ label {
 	td {
 		position: relative;
 		padding: 2px 5px;
-		border: 1px solid black;
-		color: #ccc;
+		border: 1px solid $primary-color;
+		color: #000;
 
 		span.units {
 			position: absolute;
@@ -92,14 +115,44 @@ label {
 }
 
 .toc {
-  td {
-    border: 1px solid #eee !important;
+  td, th {
+    border: 1px solid $medium-gray !important;
     padding: 2px 5px;
+  }
+  th {
+    background: $medium-gray;
+    border-color: $medium-gray;
+
+    &.toc-header {
+      background: $primary_color;
+      border-color: $primary_color !important;
+      color: white;
+      font-weight: 500;
+    }
+  }
+}
+
+.gray {
+  color: $primary-color;
+  // font-weight: 500;
+}
+
+.outline{
+    border: 1px solid #ccc;
+    padding: 5px !important;
+}
+
+.inline {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  &.short {
+    width: 40px;
   }
 }
 
 .subsections td:first-child{
-  width: 30px;
+  width: 40px;
+  font-weight: 500;
 }
 
 ol, ul {
@@ -207,5 +260,5 @@ tr.show {
 }
 
 .grey, .grey a:visited {
-  color: #eee !important;
+  color: $medium-gray !important;
 }
