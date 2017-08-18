@@ -65,6 +65,22 @@ label {
 	margin-right: 5px;
 }
 
+.css2col th {
+  column-count: 2;
+  column-gap: 2em;
+  h3 {
+    column-span: all;
+  }
+  li {
+    // list-style-position: inside;
+  }
+
+  .css-colspan {
+    column-span: all;
+  }
+
+}
+
 .form {
 	margin-bottom: 16px;
 	table-layout: fixed;
